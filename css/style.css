@@ -4,3 +4,59 @@
     box-sizing: border-box;
 }
 
+/*-------------INDEX.php--------------------*/
+
+/*-------------Carrusel--------------------*/
+
+.carrusel, .carrusel div{
+    
+    height: 20vh;
+
+}
+
+
+/*--------------------FOOTER------------*/
+
+.social{
+    background-color: #2C3E50;
+    color: white;
+    
+    padding: 4rem 1rem;
+}
+
+.a-iconos{
+    
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid white;
+    
+    
+}
+
+.a-iconos i{
+    width: 40px;
+}
+.a-iconos:hover{
+    background-color: white;
+    color: #2C3E50;
+    border: 1px solid #2C3E50;
+    transition: all 1000ms ease;
+}
+.copyright{
+    color: white;
+    text-align: center;
+}
+.copyright span{
+    font-weight: bold;
+}
+.red-social, .mision, .contacto h3{
+    text-align: center;
+
+}
+
+
+
