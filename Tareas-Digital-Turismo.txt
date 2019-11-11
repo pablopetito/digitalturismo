@@ -11,5 +11,7 @@ TAREAS
 		b. Productos e imagenes 
 		c. Preguntas FAQ
 		d. Carrito compras
-	7. BUSQUEDA DE PROMOCIONES Y IMAGENES 
+	7. BUSQUEDA DE PROMOCIONES Y IMAGENES
+	8. PRODCUTOS con CARRO DE COMPRAS 
+	
  
