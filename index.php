@@ -16,8 +16,8 @@
         <div class="row">
           <div class="col-12">
             <header>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#">DigitalTurismo</a>
+                <nav class="navbar navbar-expand-lg navbar-light barraNavegacion">
+                    <a class="navbar-brand" href="#"><img src="images/logoturismo.svg" alt="logo"> </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -50,10 +50,10 @@
                  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="images/bariloche.jpg" class="d-block w-100 img-fluid" alt="...">
+                        <img src="images/dibujo1.svg" class="d-block w-100 img-fluid" alt="...">
                       </div>
                       <div class="carousel-item">
-                        <img src="images/foto.jpg" class="d-block w-100 img-fluid" alt="...">
+                        <img src="images/dibujo2.svg" class="d-block w-100 img-fluid" alt="...">
                       </div>
                       
                     </div>
