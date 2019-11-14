@@ -11,8 +11,11 @@
     <title>digitalturismo</title>
 </head>
 <body>
+
+
+
  
-    <div class="container">
+    <div class="container-fluid contenedor-nav">
         <div class="row">
           <div class="col-12">
             <header>
@@ -68,143 +71,263 @@
                   </div>
                </section>
             </div> 
+            </div>
+          </div>
 
-            <section>
-              <div class="col-12">
-                <h2>
-                    Promociones
-                </h2> 
-              </div>
-            <div class="imagenes-contenedor d-flex flex-wrap">  
-              <div class="col-12 col-sm-6 col-md-4  flex-sm-shrink-0">
-                 <div class="card">
-                  <img src="images/paisaje.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+<!------------------ SECCION DE PRODUCTOS  ----------------- -->
+   <div class="container-fluid ">
+        <div class="row contenedor_seccion_productos">
+            
+                <section class="col-12">
+                      <div class="col-12">
+                        <h2>
+                        <i class="fas fa-percent"><span>off</span></i> Promociones
+                        </h2> 
+                      </div>
+                  
+                <div class="img-cont-promo d-flex flex-wrap">
+                 
+                      <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
+                    
+
+                    
+                        
+                            <div class="card carta-promocion">
+                              <button class="favorito"><i class="fas fa-heart"></i></button>
+                              <img src="images/promoof.svg" alt="promo" class="logo-promo">
+                              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+                              <div class="card-body texto-carta">
+                               <span><h5 class="card-title">Neuquen</h5></span>
+                                <span>Estadia paquete</span>
+                                <p class="card-text">Paquete $4500</p>
+                                <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
+                              </div>
+                            </div>
+                      
+
+                    
+                      </article>
+                      <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
+                    
+
+                    
+                        
+                            <div class="card carta-promocion">
+                              <button class="favorito"><i class="fas fa-heart"></i></button>
+                              <img src="images/promoof.svg" alt="promo" class="logo-promo">
+                              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+                              <div class="card-body texto-carta">
+                               <span><h5 class="card-title">Neuquen</h5></span>
+                                <span>Estadia paquete</span>
+                                <p class="card-text">Paquete $4500</p>
+                                <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
+                              </div>
+                            </div>
+                      
+
+                    
+                      </article>
+                    <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
+                    
+
+                    
+                        
+                            <div class="card carta-promocion">
+                              <button class="favorito"><i class="fas fa-heart"></i></button>
+                              <img src="images/promoof.svg" alt="promo" class="logo-promo">
+                              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+                              <div class="card-body texto-carta">
+                               <span><h5 class="card-title">Neuquen</h5></span>
+                                <span>Estadia paquete</span>
+                                <p class="card-text">Paquete $4500</p>
+                                <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
+                              </div>
+                            </div>
+                      
+
+                    
+                      </article>
+                      
+
+                    
+                      
+
+                    
+                  
                   </div>
-                </div>
+              </section>
 
-              </div>
-              <div class="col-12 col-sm-6 col-md-4  flex-sm-shrink-0">
-                 <div class="card">
-                  <img src="images/paisaje.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+
+                <section class="col-12">
+                  <div class="col-12">
+                    <h2>
+                    <i class="fas fa-star"></i> Destacados
+                    </h2>
+
                   </div>
-                </div>
+                  <div class="imagenes-contenedor d-flex flex-wrap">
 
-              </div>
-              <div class="col-12 col-sm-6 col-md-4  flex-sm-shrink-0">
-                 <div class="card">
-                  <img src="images/paisaje.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
+                  <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
+                    
 
-                </div> 
-
-              </div>
-               
-
-            </section>
+                    
+                        
+                    <div class="card carta-promocion">
+                      <button class="favorito"><i class="fas fa-heart"></i></button>
+                      <img class="star-destacado" src="images/stars.png" alt="">
+                      
+                      <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+                      <div class="card-body texto-carta">
+                       <span><h5 class="card-title">Neuquen</h5></span>
+                        <span>Estadia paquete</span>
+                        <p class="card-text">Paquete $4500</p>
+                        <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
+                      </div>
+                    </div>
               
-            <section>
-              <div class="col-12">
-                <h2>
-                    Destacados
-                </h2> 
-              </div>
-          <div class="imagenes-contenedor d-flex flex-wrap">    
-                    <div class="col-12 col-sm-6 col-md-4  flex-sm-shrink-0">
-                      <div class="card">
-                        <img src="images/foto.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
 
+            
+                </article>
+                <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
+                    
+
+                    
+                        
+                    <div class="card carta-promocion">
+                      <button class="favorito"><i class="fas fa-heart"></i></button>
+                      <img class="star-destacado" src="images/stars.png" alt="">
+                      
+                      <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+                      <div class="card-body texto-carta">
+                       <span><h5 class="card-title">Neuquen</h5></span>
+                        <span>Estadia paquete</span>
+                        <p class="card-text">Paquete $4500</p>
+                        <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
+                      </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4  flex-sm-shrink-0">
-                      <div class="card">
-                        <img src="images/foto.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
+              
 
+            
+                </article>
+                <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
+                    
+
+                    
+                        
+                    <div class="card carta-promocion">
+                      <button class="favorito"><i class="fas fa-heart"></i></button>
+                      <img class="star-destacado" src="images/stars.png" alt="">
+                      
+                      <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+                      <div class="card-body texto-carta">
+                       <span><h5 class="card-title">Neuquen</h5></span>
+                        <span>Estadia paquete</span>
+                        <p class="card-text">Paquete $4500</p>
+                        <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
+                      </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4  flex-sm-shrink-0">
-                      <div class="card">
-                        <img src="images/foto.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
+              
 
+            
+                </article>
+
+
+                  </div>
+
+
+                </section>
+
+
+
+                <section class="col-12">
+                  <div class="col-12">
+                    <h2>
+                    <i class="fas fa-plane-departure"></i>Destinos
+                    </h2> 
+                  </div>
+                  <div class="imagenes-contenedor d-flex flex-wrap"> 
+                    
+                  
+                  <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
+                    
+
+                    
+                        
+                    <div class="card carta-promocion">
+                      <button class="favorito"><i class="fas fa-heart"></i></button>
+                      
+                      
+                      <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+                      <div class="card-body texto-carta">
+                       <span><h5 class="card-title">Neuquen</h5></span>
+                        <span>Estadia paquete</span>
+                        <p class="card-text">Paquete $4500</p>
+                        <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
+                      </div>
                     </div>
-              </div>
-               
+              
 
-            </section>
+            
+                </article>
+                <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
+                    
 
-            <section>
-              <div class="col-12">
-                <h2>
-                    Destinos
-                </h2> 
-              </div>
-              <div class="imagenes-contenedor d-flex flex-wrap">   
-                      <div class="col-12 col-sm-6 col-md-4  flex-sm-shrink-0">
-                        <div class="card">
-                          <img src="images/paisaje.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                          </div>
-                        </div>
-
+                    
+                        
+                    <div class="card carta-promocion">
+                      <button class="favorito"><i class="fas fa-heart"></i></button>
+                      
+                      
+                      <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+                      <div class="card-body texto-carta">
+                       <span><h5 class="card-title">Neuquen</h5></span>
+                        <span>Estadia paquete</span>
+                        <p class="card-text">Paquete $4500</p>
+                        <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
                       </div>
-                      <div class="col-12 col-sm-6 col-md-4  flex-sm-shrink-0">
-                        <div class="card">
-                          <img src="images/paisaje.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                          </div>
-                        </div>
+                    </div>
+              
 
+            
+                </article>
+                <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
+                    
+
+                    
+                        
+                    <div class="card carta-promocion">
+                      <button class="favorito"><i class="fas fa-heart"></i></button>
+                     
+                      
+                      <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+                      <div class="card-body texto-carta">
+                       <span><h5 class="card-title">Neuquen</h5></span>
+                        <span>Estadia paquete</span>
+                        <p class="card-text">Paquete $4500</p>
+                        <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
                       </div>
-                      <div class="col-12 col-sm-6 col-md-4  flex-sm-shrink-0">
-                        <div class="card">
-                          <img src="images/paisaje.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                          </div>
-                        </div>
+                    </div>
+              
 
-                      </div>
-              </div>
-               
+            
+                </article>
 
-            </section>
+                          
+                  </div>
+                  
+                  
 
+                </section>
+        </div>
+   </div>
+
+
+
+
+   <!--------------FOOTER------------------------------->
+
+     <div class="container-fluid">
+        <div class="row">
 
             <div class="col-12">
               <footer>

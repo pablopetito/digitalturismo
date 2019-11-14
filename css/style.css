@@ -1,10 +1,27 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
+}
+body{
+/*
+    background-image: url("../images/fondo.svg");
+     /* Create the parallax scrolling effect */
+ /* background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;*/
+    
+}
+[class ^= "col-"]{
+    padding: 0;
 }
 
+
 /*-------------INDEX.php--------------------*/
+.contenedor-nav{
+    background-color: rgba(0, 0, 0, 0.8);
+}
 .barraNavegacion{
     /*background: rgba(203,96,179,1);
     background: -moz-linear-gradient(-45deg, rgba(203,96,179,1) 0%, rgba(113,134,237,1) 0%, rgba(193,70,161,1) 79%, rgba(160,0,112,1) 100%);
@@ -14,24 +31,142 @@
     background: -ms-linear-gradient(-45deg, rgba(203,96,179,1) 0%, rgba(113,134,237,1) 0%, rgba(193,70,161,1) 79%, rgba(160,0,112,1) 100%);
     background: linear-gradient(135deg, rgba(203,96,179,1) 0%, rgba(113,134,237,1) 0%, rgba(193,70,161,1) 79%, rgba(160,0,112,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#a00070', GradientType=1 );*/
-    background: rgba(183,222,237,1);
+    /*background: rgba(183,222,237,1);
     background: -moz-linear-gradient(-45deg, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 0%, rgba(20,43,51,1) 100%);
     background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(183,222,237,1)), color-stop(0%, rgba(33,180,226,1)), color-stop(100%, rgba(20,43,51,1)));
     background: -webkit-linear-gradient(-45deg, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 0%, rgba(20,43,51,1) 100%);
     background: -o-linear-gradient(-45deg, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 0%, rgba(20,43,51,1) 100%);
     background: -ms-linear-gradient(-45deg, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 0%, rgba(20,43,51,1) 100%);
     background: linear-gradient(135deg, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 0%, rgba(20,43,51,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#142b33', GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#142b33', GradientType=1 );**/
+    background: #20002c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(203, 180, 212, 0.2), rgba(32, 0, 44, 0.2));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(203, 180, 212, 0.2), rgba(32, 0, 44, 0.2)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
 }
 
 /*-------------Carrusel--------------------*/
 
-.carrusel, .carrusel div{
-    
-    /*max-height: 500px;*/
+.carrusel, .carrusel div, img{
+    object-fit: cover;
+    max-height: 500px;
+    width: 100%;
 
 }
 
+/*--------------FIN HEADER---------------------*/
+
+/*----------- Productos -----------------------*/
+.contenedor_seccion_productos{
+    
+    background: #30E8BF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(255, 130, 53, 0.603), rgba(48, 232, 192, 0.603)),url("../images/patagonia.svg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(255, 130, 53, 0.603), rgba(48, 232, 192, 0.603)),url("../images/patagonia.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background-attachment: fixed;
+     background-position: bottom;
+    background-size: cover;
+     background-repeat: no-repeat;
+     padding: 5%;
+
+}
+.contenedor_seccion_productos h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background-color: rgba(255,255,255, 0.6);
+    margin-top: 2%;
+}
+.contenedor_seccion_productos h2 i{
+    font-size: 1rem;
+    margin-right: 2%;
+}
+.contenedor_seccion_productos h2 i span{
+    font-size: .8rem;
+}
+/*--------------- Productos Articulos ----------------------*/
+.carta-promocion{
+    position: relative;
+    margin: 5% 0;
+}
+.carta-promocion .logo-promo{
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+
+}
+.carta-promocion .favorito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 10px;
+    top: 1%;
+    left: 2%;
+    font-size: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    transition: 500ms all ease;
+    
+}
+.carta-promocion .favorito:hover{
+    cursor: pointer;
+    color: red;
+}
+.texto-carta{
+    border-top: 10px goldenrod solid;
+}
+.texto-carta .boton-contenedor{
+    text-align: center;
+}
+.texto-carta .ver-comprar{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    font-weight: bold;
+    transition: 300ms all ease-in-out;
+    
+}
+.texto-carta .ver-comprar:hover{
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:black;
+
+
+}
+.star-destacado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    color: gold;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    font-size: 2.5rem;
+    width: 50px;
+    height: 50px;
+
+}
+/*
+Para poner en Querys más grandes
+.img-cont-promo article{
+
+    padding: 2%;
+
+}*/
 
 /*--------------------FOOTER------------*/
 
