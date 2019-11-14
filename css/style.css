@@ -19,32 +19,64 @@ body{
 
 
 /*-------------INDEX.php--------------------*/
-.contenedor-nav{
-    background-color: rgba(0, 0, 0, 0.8);
-}
+
 .barraNavegacion{
-    /*background: rgba(203,96,179,1);
-    background: -moz-linear-gradient(-45deg, rgba(203,96,179,1) 0%, rgba(113,134,237,1) 0%, rgba(193,70,161,1) 79%, rgba(160,0,112,1) 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(203,96,179,1)), color-stop(0%, rgba(113,134,237,1)), color-stop(79%, rgba(193,70,161,1)), color-stop(100%, rgba(160,0,112,1)));
-    background: -webkit-linear-gradient(-45deg, rgba(203,96,179,1) 0%, rgba(113,134,237,1) 0%, rgba(193,70,161,1) 79%, rgba(160,0,112,1) 100%);
-    background: -o-linear-gradient(-45deg, rgba(203,96,179,1) 0%, rgba(113,134,237,1) 0%, rgba(193,70,161,1) 79%, rgba(160,0,112,1) 100%);
-    background: -ms-linear-gradient(-45deg, rgba(203,96,179,1) 0%, rgba(113,134,237,1) 0%, rgba(193,70,161,1) 79%, rgba(160,0,112,1) 100%);
-    background: linear-gradient(135deg, rgba(203,96,179,1) 0%, rgba(113,134,237,1) 0%, rgba(193,70,161,1) 79%, rgba(160,0,112,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#a00070', GradientType=1 );*/
-    /*background: rgba(183,222,237,1);
-    background: -moz-linear-gradient(-45deg, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 0%, rgba(20,43,51,1) 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(183,222,237,1)), color-stop(0%, rgba(33,180,226,1)), color-stop(100%, rgba(20,43,51,1)));
-    background: -webkit-linear-gradient(-45deg, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 0%, rgba(20,43,51,1) 100%);
-    background: -o-linear-gradient(-45deg, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 0%, rgba(20,43,51,1) 100%);
-    background: -ms-linear-gradient(-45deg, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 0%, rgba(20,43,51,1) 100%);
-    background: linear-gradient(135deg, rgba(183,222,237,1) 0%, rgba(33,180,226,1) 0%, rgba(20,43,51,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#142b33', GradientType=1 );**/
-    background: #20002c;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, rgba(203, 180, 212, 0.2), rgba(32, 0, 44, 0.2));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, rgba(203, 180, 212, 0.2), rgba(32, 0, 44, 0.2)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+   
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(36, 36, 62, 0.6), rgba(48, 43, 99, 0.6), rgba(15, 12, 41, 0.6)),url("../images/imgNav.png");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(36, 36, 62, 0.6), rgba(48, 43, 99, 0.6), rgba(15, 12, 41, 0.6)),url("../images/imgNav.png"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    background-size: cover;
+     background-repeat: no-repeat;
+    border-bottom: 5px solid rgb(211, 182, 17);
     
 }
+.menu-hamburguesa{
+    color: white;
+}
+.items-barra{
+    border-top: 1px solid white;
+    text-align: center;
+}
+.items-barra:last-child{
+    border-bottom: 1px solid white;
+    
+}
+
+
+.items-barra a:hover{
+    
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(44, 83, 100, 0.7), rgba(32, 58, 67, 0.7), rgba(15, 32, 39, 0.7));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(44, 83, 100, 0.7), rgba(32, 58, 67, 0.7), rgba(15, 32, 39, 0.7)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: ease all 1000ms;
+   
+}
+.items-barra a p{
+    
+    margin: 0;
+
+}
+.items-barra a p, .items-barra a i{
+    color: white;
+    font-weight: bold;
+}
+.boton-ingreso{
+    background: #2C3E50; 
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px !important;
+    border: 1px solid black;
+
+}
+.boton-ingreso i{
+    margin-right: 5px;
+}
+.boton-ingreso:hover{
+    background-color: rgba(255, 255, 255, 0.61);
+    color: black;
+}
+
 
 /*-------------Carrusel--------------------*/
 
@@ -208,6 +240,48 @@ Para poner en Querys más grandes
 }
 .red-social, .mision, .contacto h3{
     text-align: center;
+
+}
+
+@media (min-width: 768px){
+    /*-------------CARDS ARTICULOS----------------*/
+    .img-cont-promo article, .img-cont-destacado article, .img-cont-destino article {
+
+        padding: 2%;
+    
+    }
+}
+
+@media (min-width: 992px){
+
+    /*---------------Barra de Navegacion -------------------*/
+
+.div-barralinks{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+}
+.contenedor-links{
+    display: flex;
+    
+    width: 50%;
+}
+.items-barra{
+    flex: 1;
+    border: none;
+   border-left: 1px solid white;
+}
+.items-barra:last-child{
+    border: none;
+    border-left:1px solid white;
+    border-right: 1px solid white;
+}
+.boton-ingreso{
+    background-color: #2C3E50;
+    width: initial;
+   /* margin: initial !important;*/
+}
+
 
 }
 

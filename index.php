@@ -19,28 +19,28 @@
         <div class="row">
           <div class="col-12">
             <header>
-                <nav class="navbar navbar-expand-lg navbar-light barraNavegacion">
+                <nav class="navbar navbar-expand-lg navbar-dark barraNavegacion">
                     <a class="navbar-brand" href="#"><img src="images/logoturismo.svg" alt="logo"> </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon menu-hamburguesa"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">HOME</a>
+                    <div class="collapse navbar-collapse div-barralinks" id="navbarSupportedContent">
+                      <ul class="navbar-nav contenedor-links">
+                        <li class="nav-item items-barra">
+                          <a class="nav-link" href="index.php"><i class="fas fa-home"></i><p>HOME</p></a>
                         </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">FAQ</a>
+                        <li class="nav-item items-barra">
+                          <a class="nav-link" href="#"><i class="far fa-question-circle"></i><p>FAQ</p></a>
                         </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">DESTINOS</a>
+                        <li class="nav-item items-barra">
+                          <a class="nav-link" href="#"><i class="fas fa-suitcase"></i><p>DESTINOS</p></a>
                         </li>
                                                
                       </ul>
                       
                         
-                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">INGRESAR</button>
+                        <button class="btn my-2 my-sm-0 boton-ingreso" type="submit"><i class="fas fa-user"></i>INGRESAR</button>
                      
                     </div>
                   </nav>
@@ -157,7 +157,7 @@
                   </div>
               </section>
 
-
+<!--------------------- DESTACADOS---------------------------->
                 <section class="col-12">
                   <div class="col-12">
                     <h2>
@@ -165,7 +165,7 @@
                     </h2>
 
                   </div>
-                  <div class="imagenes-contenedor d-flex flex-wrap">
+              <div class="img-cont-destacado d-flex flex-wrap">
 
                   <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
                     
@@ -237,7 +237,7 @@
 
                 </section>
 
-
+<!--------------------- DESTINOS---------------------------->
 
                 <section class="col-12">
                   <div class="col-12">
@@ -245,7 +245,7 @@
                     <i class="fas fa-plane-departure"></i>Destinos
                     </h2> 
                   </div>
-                  <div class="imagenes-contenedor d-flex flex-wrap"> 
+                  <div class="img-cont-destino d-flex flex-wrap"> 
                     
                   
                   <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
