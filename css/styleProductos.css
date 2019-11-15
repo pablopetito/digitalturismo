@@ -1,0 +1,204 @@
+
+/* Familia de letras usadas
+font-family: 'Anton', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;
+ */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   background-image: url("../images/Destinos/fondoMinaClavero.jpg");
+}
+
+/* -- Titulo Encabezado Principal */
+.titEncabeza {
+    margin-top: 15px;
+    margin-bottom: 15px;   text-align: center;
+}
+
+.titEncabeza h2 {
+    font-size: 1.6rem;
+    color: black;
+    font-family: 'Anton', sans-serif;
+}
+
+/* -- Imagen Carrusel */
+.imgCarrusel {
+    height: 30vh;
+}
+
+.imgCarruseltamano {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*---- CARDS DESTINOS ----*/
+.destinos article{
+    margin-bottom: 30px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.photo-container{
+    position: relative;
+}
+.photo{
+    width: 100%;
+    border: 3px solid lightgrey;
+    border-radius: 20px;
+}
+.special{
+    position: absolute;
+    top:0;
+    right: 5px;
+    width: 20%;
+    height: auto;
+}
+.tit-Destino{
+    text-decoration: none;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+}
+
+.tit-enca-card {
+    margin-top: 10px;
+    margin-bottom: 5px;    text-align: center;
+    font-family: 'Anton', sans-serif;
+}
+
+.iconos-pie-card {
+    text-align: center;
+}
+
+
+.destino-individual h2{
+    margin: 20px 0;
+}
+.destino-individual p{
+    padding: 5px;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+/* -- Iconos pie Cards */
+.icon-compar {
+    width: 15%;
+    height: auto;
+}
+
+
+
+.barraNavegacion{
+   
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(36, 36, 62, 0.6), rgba(48, 43, 99, 0.6), rgba(15, 12, 41, 0.6)),url("../images/imgNav.png");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(36, 36, 62, 0.6), rgba(48, 43, 99, 0.6), rgba(15, 12, 41, 0.6)),url("../images/imgNav.png"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    background-size: cover;
+     background-repeat: no-repeat;
+    border-bottom: 5px solid rgb(211, 182, 17);
+    
+}
+.menu-hamburguesa{
+    color: white;
+}
+.items-barra{
+    border-top: 1px solid white;
+    text-align: center;
+}
+.items-barra:last-child{
+    border-bottom: 1px solid white;
+    
+}
+
+
+.items-barra a:hover{
+    
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(44, 83, 100, 0.7), rgba(32, 58, 67, 0.7), rgba(15, 32, 39, 0.7));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(44, 83, 100, 0.7), rgba(32, 58, 67, 0.7), rgba(15, 32, 39, 0.7)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: ease all 1000ms;
+   
+}
+.items-barra a p{
+    
+    margin: 0;
+
+}
+.items-barra a p, .items-barra a i{
+    color: white;
+    font-weight: bold;
+}
+.boton-ingreso{
+    background: #2C3E50; 
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px !important;
+    border: 1px solid black;
+
+}
+.boton-ingreso i{
+    margin-right: 5px;
+}
+.boton-ingreso:hover{
+    background-color: rgba(255, 255, 255, 0.61);
+    color: black;
+}
+
+/*--------------------FOOTER------------*/
+
+.social{
+    background-color: #2C3E50;
+    color: white;
+    
+    padding: 4rem 1rem;
+}
+
+.a-iconos{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.a-iconos i{
+    width: 40px;
+}
+.a-iconos:hover{
+    background-color: white;
+    color: #2C3E50;
+    border: 1px solid #2C3E50;
+    transition: all 1000ms ease;
+}
+.copyright{
+    color: white;
+    text-align: center;
+}
+.copyright span{
+    font-weight: bold;
+}
+.red-social, .mision, .contacto h3{
+    text-align: center;
+}
+
