@@ -15,6 +15,11 @@ body {
    background-image: url("../images/Destinos/fondoMinaClavero.jpg");
 }
 
+.logoDigTur {
+    width: 50%;
+    height: auto;
+}
+
 /* -- Titulo Encabezado Principal */
 .titEncabeza {
     margin-top: 15px;

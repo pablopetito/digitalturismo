@@ -19,7 +19,8 @@
             <div class="col-12">
             <header>
                 <nav class="navbar navbar-expand-lg navbar-dark barraNavegacion">
-                    <a class="navbar-brand" href="#"><img src="images/logoturismo.svg" alt="logo"> </a>
+                    <a class="navbar-brand" href="#">
+                    <img class="logoDigTur" src="images/digitalTurismoLogoBlanco.png" alt="logo"> </a>
                     <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon menu-hamburguesa"></span>
                     </button>
