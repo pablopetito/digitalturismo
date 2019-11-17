@@ -30,6 +30,10 @@ body{
     border-bottom: 5px solid rgb(211, 182, 17);
     
 }
+.logo-barra{
+    max-width: 200px;
+    max-height: 75px;
+}
 .menu-hamburguesa{
     color: white;
 }
@@ -79,6 +83,41 @@ body{
 
 
 /*-------------Carrusel--------------------*/
+.carrusel-container{
+    position: relative;
+    border-bottom: 2px solid white;
+}
+.texto-carrusel{
+    position: absolute;
+    z-index: 20;
+    top:0%;
+    bottom: 0%;
+    right: 20%;
+    left: 20%;
+    height: 100%;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0,0, .5);
+    
+    color: white;
+}
+.texto-carrusel h1{
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    text-transform: uppercase;
+    padding: 2% 0;
+    font-size: 1rem;
+    margin-bottom: 0%;
+    text-align: center;
+}
+.texto-carrusel p{
+    text-align: center;
+    margin: 0;
+    font-size: .8rem;
+    color:gold;
+}
 
 .carrusel, .carrusel div, img{
     object-fit: cover;
@@ -103,6 +142,7 @@ body{
 
 }
 .contenedor_seccion_productos h2{
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,10 +177,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     position: absolute;
-    border-radius: 10px;
+    border-radius: 5px;
     top: 1%;
     left: 2%;
     font-size: 2.5rem;
@@ -149,6 +189,11 @@ body{
     border: none;
     transition: 500ms all ease;
     
+}
+
+.carta-promocion .favorito i{
+    font-size: 25px;
+
 }
 .carta-promocion .favorito:hover{
     cursor: pointer;
@@ -244,6 +289,31 @@ Para poner en Querys más grandes
 }
 
 @media (min-width: 768px){
+
+    /*--------------------CARRUSEL---------------*/
+   .carrusel-container{
+       display: flex;
+   }
+    .texto-carrusel{
+        
+        position: static;
+        width: 50%;
+        background-color: rgba(0, 0, 0, 1);
+    }
+    .texto-carrusel h1{
+        border: none;
+        font-size: 1.5rem;
+    }
+    
+    .texto-carrusel p{
+        font-size: 1rem;
+    }
+    .carrusel{
+        width: 50%;
+        
+    }
+    
+
     /*-------------CARDS ARTICULOS----------------*/
     .img-cont-promo article, .img-cont-destacado article, .img-cont-destino article {
 
