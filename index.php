@@ -20,7 +20,7 @@
           <div class="col-12">
             <header>
                 <nav class="navbar navbar-expand-lg navbar-dark barraNavegacion">
-                    <a class="navbar-brand" href="#"><img src="images/logoturismo.svg" alt="logo"> </a>
+                    <a class="navbar-brand" href="index.php"><img class="logo-barra" src="images/digitalTurismoLogoBlanco.png" alt="logo"> </a>
                     <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon menu-hamburguesa"></span>
                     </button>
@@ -34,7 +34,7 @@
                           <a class="nav-link" href="#"><i class="far fa-question-circle"></i><p>FAQ</p></a>
                         </li>
                         <li class="nav-item items-barra">
-                          <a class="nav-link" href="#"><i class="fas fa-suitcase"></i><p>DESTINOS</p></a>
+                          <a class="nav-link" href="productos.php"><i class="fas fa-suitcase"></i><p>DESTINOS</p></a>
                         </li>
                                                
                       </ul>
@@ -48,7 +48,11 @@
         
            </div>
 
-            <div class="col-12 carrusel">
+            <div class="col-12 carrusel-container">
+              <section class="texto-carrusel">
+                
+                <h1>DigitalTurismo <br>te acerca a los mejores destinos de Argentina<p>Veni a conocer nuestros Maravillosos Paisajes</p></h1>
+              </section>
               <section class="carrusel">
                  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
@@ -60,14 +64,14 @@
                       </div>
                       
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                    <!-- <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="sr-only">Next</span>
-                    </a>
+                    </a> -->
                   </div>
                </section>
             </div> 

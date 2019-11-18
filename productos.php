@@ -12,18 +12,18 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid contenedor-nav">
 
 <!-- Cabecera - barra navegadora -->
         <div class="row">
             <div class="col-12">
             <header>
-                <nav class="navbar navbar-expand-lg navbar-dark barraNavegacion">
-                    <a class="navbar-brand" href="#">
-                    <img class="logoDigTur" src="images/digitalTurismoLogoBlanco.png" alt="logo"> </a>
+            <nav class="navbar navbar-expand-lg navbar-dark barraNavegacion">
+                    <a class="navbar-brand" href="#"><img class="logo-barra" src="images/digitalTurismoLogoBlanco.png" alt="logo"> </a>
                     <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon menu-hamburguesa"></span>
                     </button>
+
                     <div class="collapse navbar-collapse div-barralinks" id="navbarSupportedContent">
                       <ul class="navbar-nav contenedor-links">
                         <li class="nav-item items-barra">
@@ -46,17 +46,21 @@
                 </header>
             </div>
         </div>
+    </div>
 
 <!-- titulo pagina -->
-        <div class="row">
-            <div class="col-12">
-                <div class="titEncabeza">
-                    <h2>¡ ENCONTRÁ TU DESTINO ...!</h2> 
+<div class="fondo_productos">
+    <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="titEncabeza">
+                        <h2>¡ ENCONTRÁ TU DESTINO ...!</h2> 
+                    </div>
                 </div>
-            </div>
-        </div>  
-        
+            </div>  
+    </div>     
 <!-- carousel -->
+<div class="container">
         <div class="row">
             <div class="col-12 carrusel">
                 <section class="carrusel">
@@ -106,9 +110,10 @@
                </section>
             </div> 
         </div>
-
+</div>
 <!-- Todos los destinos  -->
-          <section class="destinos">
+<section class="destinos">
+    <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-lg-3">
             
@@ -233,7 +238,11 @@
             </div>
             
         </div>
+        
+    </div>
         </section>
+
+    </div>
         
         <!--------FOOTER------------------------------->
      <div class="container-fluid">
@@ -253,7 +262,9 @@
                           <span>Design DigitalTeam<i class="far fa-copyright"></i> 2020</span>
                     </div>
               </footer>
-
+            </div>
+        </div>
+    </div>
           
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

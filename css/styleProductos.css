@@ -11,7 +11,11 @@ font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
-body {
+[class ^= "col-"]{
+    padding: 0;
+}
+
+.fondo_productos{
    background-image: url("../images/Destinos/fondoMinaClavero.jpg");
 }
 
@@ -121,6 +125,10 @@ body {
     border-bottom: 5px solid rgb(211, 182, 17);
     
 }
+.logo-barra{
+    max-width: 200px;
+    max-height: 75px;
+}
 .menu-hamburguesa{
     color: white;
 }
@@ -168,6 +176,7 @@ body {
     color: black;
 }
 
+
 /*--------------------FOOTER------------*/
 
 .social{
@@ -207,3 +216,35 @@ body {
     text-align: center;
 }
 
+@media (min-width: 992px){
+
+    /*---------------Barra de Navegacion -------------------*/
+
+.div-barralinks{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+}
+.contenedor-links{
+    display: flex;
+    
+    width: 50%;
+}
+.items-barra{
+    flex: 1;
+    border: none;
+   border-left: 1px solid white;
+}
+.items-barra:last-child{
+    border: none;
+    border-left:1px solid white;
+    border-right: 1px solid white;
+}
+.boton-ingreso{
+    background-color: #2C3E50;
+    width: initial;
+   /* margin: initial !important;*/
+}
+
+
+}
