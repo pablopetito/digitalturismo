@@ -1,0 +1,22 @@
+body{
+    background-image: url(../img/fondo.jpg);
+}
+footer{
+    background-color: gray;
+}
+.mapa {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: inline;
+    float: right;
+}
+
+button{
+    border-radius: 50%;
+}
+
+.fab{
+    font-size: 20px;
+}
