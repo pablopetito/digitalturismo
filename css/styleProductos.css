@@ -17,6 +17,8 @@ font-family: 'Roboto', sans-serif;
 
 .fondo_productos{
    background-image: url("../images/Destinos/fondoMinaClavero.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 
 .logoDigTur {
@@ -27,7 +29,8 @@ font-family: 'Roboto', sans-serif;
 /* -- Titulo Encabezado Principal */
 .titEncabeza {
     margin-top: 15px;
-    margin-bottom: 15px;   text-align: center;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 .titEncabeza h2 {
@@ -38,12 +41,29 @@ font-family: 'Roboto', sans-serif;
 
 /* -- Imagen Carrusel */
 .imgCarrusel {
-    height: 30vh;
+    height: 40vh;
 }
 
 .imgCarruseltamano {
     width: 100%;
     height: 100%;
+}
+
+.tit-Destino-carru {
+    text-decoration: none;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
 }
 
 
@@ -57,18 +77,23 @@ font-family: 'Roboto', sans-serif;
 .photo-container{
     position: relative;
 }
+
 .photo{
     width: 100%;
     border: 3px solid lightgrey;
     border-radius: 20px;
+    height: 30vh;
 }
+
 .special{
     position: absolute;
     top:0;
     right: 5px;
     width: 20%;
     height: auto;
+    z-index: 100;
 }
+
 .tit-Destino{
     text-decoration: none;
     text-align: center;
@@ -88,7 +113,8 @@ font-family: 'Roboto', sans-serif;
 
 .tit-enca-card {
     margin-top: 10px;
-    margin-bottom: 5px;    text-align: center;
+    margin-bottom: 5px;
+    text-align: center;
     font-family: 'Anton', sans-serif;
 }
 
@@ -113,6 +139,10 @@ font-family: 'Roboto', sans-serif;
     height: auto;
 }
 
+.control-paginacion {
+    text-align: center;
+}
+ 
 
 
 .barraNavegacion{
@@ -216,6 +246,103 @@ font-family: 'Roboto', sans-serif;
     text-align: center;
 }
 
+@media (min-width : 380px) {
+        
+    /* -- Imagen Carrusel */
+    .imgCarrusel {
+        height: 50vh;
+    }
+
+    .photo{
+        width: 100%;
+        border: 3px solid lightgrey;
+        border-radius: 20px;
+        height: 50vh;
+    }
+
+}
+
+@media (min-width : 576px) {
+
+    /* -- Imagen Carrusel */
+    .imgCarrusel {
+        height: 60vh;
+    }
+
+    /* -- imagen card */
+    .photo {
+        width: 100%;
+        border: 3px solid lightgrey;
+        border-radius: 20px;
+        height: 30vh;
+    }
+
+    /* -- logo oferta en card */
+    .special {
+        position: absolute;
+        top:0;
+        right: 5px;
+        width: 30%;
+        height: auto;
+        z-index: 100;
+    }
+
+    /* -- titulo medio card */
+    .tit-Destino h3 {
+        font-size: 1rem;
+    }
+
+    /* -- titulo principal card */
+    .tit-enca-card h3{
+        font-size: 1.3rem;
+    }
+
+    /* -- parrafo detalle */
+    .destino-individual p{
+        font-size: 1.2rem;
+        height: 45vh;
+    }
+
+    .destinos article {
+        height: 100vh;
+    }
+
+}
+
+
+@media (min-width : 768px) {
+
+    /* -- Imagen Carrusel */
+    .imgCarrusel {
+        height: 60vh;
+    }
+
+    /* -- titulo medio card */
+    .tit-Destino h3 {
+        font-size: 1.2rem;
+    }
+
+    /* -- imagen card */
+    .photo {
+        width: 100%;
+        border: 3px solid lightgrey;
+        border-radius: 20px;
+        height: 25vh;
+    }
+
+    /* -- logo oferta en card */
+    .special {
+        position: absolute;
+        top:0;
+        right: 5px;
+        width: 30%;
+        height: auto;
+        z-index: 100;
+    }
+
+} 
+
+
 @media (min-width: 992px){
 
     /*---------------Barra de Navegacion -------------------*/
@@ -246,5 +373,101 @@ font-family: 'Roboto', sans-serif;
    /* margin: initial !important;*/
 }
 
+    /* -- Titulo Destinos */
+    .titEncabeza h2 {
+        font-size: 1.9rem;
+        color: black;
+        font-family: 'Anton', sans-serif;
+    }
+    /* -- Imagen Carrusel */
+    .imgCarrusel {
+        height: 90vh;
+    }
+
+    /* -- titulo medio card */
+    .tit-Destino h3 {
+        font-size: 1.2rem;
+    }
+
+    /* -- imagen card */
+    .photo {
+        width: 100%;
+        border: 3px solid lightgrey;
+        border-radius: 20px;
+        height: 40vh;
+    }
+
+    /* -- logo oferta en card */
+    .special {
+        position: absolute;
+        top:0;
+        right: 5px;
+        width: 30%;
+        height: auto;
+        z-index: 100;
+    }
+
+    /* -- titulo principal card */
+    .tit-enca-card h3{
+        font-size: 1.6rem;
+    }
+
+    .destinos article {
+        height: 115vh;
+    }
+
+}
+
+@media (min-width : 1200px) {
+    
+    /* -- Titulo Destinos */
+    .titEncabeza h2 {
+        font-size: 2.1rem;
+        color: black;
+        font-family: 'Anton', sans-serif;
+    }
+    /* -- Imagen Carrusel */
+    .imgCarrusel {
+        height: 90vh;
+    }
+
+    .tit-Destino-carru {
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        display: block;
+        width: 100%;
+        padding-top: 5px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        font-size: 2.1rem;
+    }
+
+     /* -- imagen card */
+     .photo {
+        width: 100%;
+        border: 3px solid lightgrey;
+        border-radius: 20px;
+        height: 25vh;
+    }
+
+    /* -- logo oferta en card */
+    .special {
+        position: absolute;
+        top:0;
+        right: 5px;
+        width: 33%;
+        height: auto;
+        z-index: 100;
+    }
+
+    .destinos article {
+        height: 90vh;
+    }
 
 }
