@@ -63,34 +63,34 @@
 <div class="container">
         <div class="row">
             <div class="col-12 carrusel">
-                <section class="carrusel">
+                <section class="carrusel m-3">
                     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                         <!-- imagenes carousel -->
                         <div class="carousel-inner">
                             <div class="carousel-item active imgCarrusel">
                              <img class = "imgCarruseltamano" src="images/Destinos/Bariloche/barilocheBaseNieve.jpg" class="d-block w-100 img-fluid" alt="Bariloche"> 
-                                <div class="tit-Destino" >
+                                <div class="tit-Destino-carru" >
                                     <h3>BARILOCHE SKI</h3>
                                 </div>
                             </div>
 
                             <div class="carousel-item imgCarrusel">
                                 <img class = "imgCarruseltamano" src="images/Destinos/Cataratas/cataratas-iguazu-panoramica.jpg" class="d-block w-100 img-fluid" alt="...">
-                                <div class="tit-Destino" >
+                                <div class="tit-Destino-carru" >
                                     <h3>CATARATAS Extrem</h3>
                                 </div>
                             </div>
                       
                             <div class="carousel-item imgCarrusel">
                                 <img class = "imgCarruseltamano" src="images/Destinos/Mendoza/mendozaUvasMontañas.jpg" class="d-block w-100 img-fluid" alt="...">
-                                <div class="tit-Destino" >
+                                <div class="tit-Destino-carru" >
                                     <h3>MENDOZA CITY TOUR</h3>
                                 </div>
                             </div>
 
                             <div class="carousel-item imgCarrusel">
                                 <img class = "imgCarruseltamano" src="images/Destinos/Salta/saltaMontañaColores.jpg" class="d-block w-100 img-fluid" alt="...">
-                                <div class="tit-Destino" >
+                                <div class="tit-Destino-carru" >
                                     <h3>SALTA "LA LINDA"</h3>
                                 </div>
                             </div>
@@ -114,11 +114,11 @@
 <!-- Todos los destinos  -->
 <section class="destinos">
     <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-lg-3">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
             
             <!-- destinos  -->
-			<article class="borderBox p-3 destino-individual">
+			<article class="borderBox p-3 m-3 destino-individual">
 				<div class="photo-container">
                     <img class="photo" src="images/Destinos/Bariloche/barilocheEsquiando.jpg" alt="Bari Esquiando">
                     <img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
@@ -139,8 +139,8 @@
 			</article>
             </div>
 
-            <div class="col-xs-12 col-sm-6 col-lg-3">
-			<article class="borderBox p-3 rounded destino-individual">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+			<article class="borderBox p-3 m-3 destino-individual">
 				<div class="photo-container">
 					<img class="photo" src="images/Destinos/Salta/saltaTrenLasNubes.jpg" alt="Tren Las Nubes">
                     <div class="tit-Destino" >
@@ -149,7 +149,7 @@
                     </div>
 				</div>
 				<div class=tit-enca-card><h3>SALTA "LA LINDA"</h3></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
+                <p>Una ciudad esplendida de dia y noche. Paseos en bicicleta y Trekking en los valles de sus montañas.</p>
                 
                 <!-- /* iconos pie card */ -->
                 <div class="iconos-pie-card">
@@ -160,14 +160,16 @@
 			</article>
             </div>
 
-            <div class="col-xs-12 col-sm-6 col-lg-3">
-			<article class="borderBox p-3 destino-individual">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+			<article class="borderBox p-3 m-3 destino-individual">
 				<div class="photo-container">
-					<img class="photo" src="images/Destinos/Mendoza/mendozaCiudad.jpg" alt="pdto 03">
-					<a class="tit-Destino" href="#">MENDOZA CITY TOUR</a>
+                    <img class="photo" src="images/Destinos/Mendoza/mendozaCiudad.jpg" alt="pdto 03">
+                    <div class="tit-Destino">
+                        <h3>MENDOZA CITY TOUR</h3>
+                    </div>
                 </div>
                 <div class=tit-enca-card><h3>MENDOZA</h3></div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
+				<p>Dia y Noche recorriendo una de las ciudades mas bella. Los mejores Restaurant y Bodegas. Desgutacion de Vino incluido.</p>
                 
                 <!-- /* iconos pie card */ -->
                 <div class="iconos-pie-card">
@@ -178,8 +180,8 @@
 			</article>
             </div>
 
-            <div class="col-xs-12 col-sm-6 col-lg-3">
-			<article class="borderBox p-3 destino-individual">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+			<article class="borderBox p-3 m-3 destino-individual">
 				<div class="photo-container">
 					<img class="photo" src="images/Destinos/Cataratas/cataratasBote.jpg" alt="cataratas">
 					<img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
@@ -189,25 +191,27 @@
                     </div>
                 </div>
                 <div class=tit-enca-card><h3>CATARATAS</h3></div>
-                <p>¡Visita una de las 7 maravillas naturales del mundo moderno! Las cataratas del Iguazú, nombrada como Patrimonio de la Humanidad y un sitio protegido de la UNESCO.</p>
+                <p>¡Visita una de las 7 maravillas naturales del mundo moderno! Las cataratas del Iguazú, Patrimonio de la Humanidad.</p>
                 
                 <!-- /* iconos pie card */ -->
                 <div class="iconos-pie-card">
-                <img class="icon-compar" src="images/iconos/info-icon.png" alt="informacion">
-                <img class="icon-compar" src="images/iconos/compartir-Icon.png" alt="compartir">
-                <img class="icon-compar" src="images/iconos/botonCarritoCompra-2.png" alt="carrito">
+                    <img class="icon-compar" src="images/iconos/info-icon.png" alt="informacion">
+                    <img class="icon-compar" src="images/iconos/compartir-Icon.png" alt="compartir">
+                    <img class="icon-compar" src="images/iconos/botonCarritoCompra-2.png" alt="carrito">
                 </div>
 			</article>
             </div>
 
-            <div class="col-xs-12 col-sm-6 col-lg-3">
-			<article class="borderBox p-3 destino-individual">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+			<article class="borderBox p-3 m-3 destino-individual">
 				<div class="photo-container">
-					<img class="photo" src="images/Destinos/fondoMinaClavero.jpg" alt="mina clavero">
-					<a class="tit-Destino" href="#">MINA CLAVERO PURA AVENTURA </a>
+                    <img class="photo" src="images/Destinos/fondoMinaClavero.jpg" alt="mina clavero">
+                    <div class="tit-Destino" >
+                        <h3>MINA CLAVERO PURA AVENTURA</h3>
+                    </div>
                 </div>
                 <div class=tit-enca-card><h3>MINA CLAVERO</h3></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
+                <p>En el valle translasierra una de las mejores Localidades de Cordoba. Rios, Montaña y Diversion Nocturna.</p>
                 
                 <!-- /* iconos pie card */ -->
                 <div class="iconos-pie-card">
@@ -218,15 +222,17 @@
 			</article>
             </div>
 
-            <div class="col-xs-12 col-sm-6 col-lg-3">
-			<article class="border-box p-3 destino-individual">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+			<article class="border-box p-3 m-3 destino-individual">
 				<div class="photo-container">
                     <img class="photo" src="images/Destinos/Salta/saltaMontañaAlpinista.jpg" alt="salta">
                     <img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
-					<a class="tit-Destino" href="#">SALTA ALPINISMO EXTREMO</a>
+                    <div class="tit-Destino" >
+                        <h3>SALTA ALPINISMO EXTREMO</h3>
+                    </div>
                 </div>
                 <div class=tit-enca-card><h3>SALTA</h3></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
+                <p>Las montañas mas hermosas de la Argentina. Alpinismo extremo hasta la ultima cima.</p>
                 
                 <!-- /* iconos pie card */ -->
                 <div class="iconos-pie-card">
@@ -236,11 +242,33 @@
                 </div>
 			</article>
             </div>
+  
+
             
+        </div>
+
+        <!-- controles de paginacion -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <nav aria-label="...">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active" aria-current="page">
+                            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         
     </div>
-        </section>
+    </section>
 
     </div>
         
