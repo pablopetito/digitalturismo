@@ -20,3 +20,8 @@ button{
 .fab{
     font-size: 20px;
 }
+.contenedor-contacto{
+    display: flex;
+    justify-content: space-between;
+
+}
