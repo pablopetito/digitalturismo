@@ -11,6 +11,7 @@
     box-sizing: border-box;
 }
 
+
 .barraNavegacion{
    
     background: #0f0c29;  /* fallback for old browsers */
@@ -71,7 +72,7 @@
     background-color: rgba(255, 255, 255, 0.61);
     color: black;
 }
-
+/* FIN DEL HEADER */
 .contenedor{
     width: 100%;
     padding: 15px;
