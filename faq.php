@@ -149,11 +149,14 @@ Condiciones de uso
                 <div id="collapse14" class="collapse" role="tabpanel" aria-labelledby="heading14"
             data-parent="#accordionEx2">
             <div class="card-body rgba-teal-strong white-text">
-              <p><i class="fas fa-phone-alt"> Telefono</i> <h2> (011) 5263-7400</h2> 
+            <div class="contenedor-contacto">
+            <div><i class="fas fa-phone-alt"> Telefono</i> <h2> (011) 5263-7400</h2> 
                 <i class="far fa-clock">Horario de atencion </i> <h2>Lun a Vier 09:00hs a 17:30hs <br>
                   Sab 09:00 a 13:00</h2>
-                  <i class="far fa-envelope">Mail</i> <h2>info@digitalturismo.com.ar</h2><br>
-              <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3313139805828!2d-58.38386198468745!3d-34.62106686592359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb28ea8781cb%3A0x950feb519009506e!2sLima%201111%2C%20C1073AAW%20CABA!5e0!3m2!1ses-419!2sar!4v1573611372545!5m2!1ses-419!2sar" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe></p>
+                  <i class="far fa-envelope">Mail</i> <h2>info@digitalturismo.com.ar</h2>
+            </div>
+              <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3313139805828!2d-58.38386198468745!3d-34.62106686592359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb28ea8781cb%3A0x950feb519009506e!2sLima%201111%2C%20C1073AAW%20CABA!5e0!3m2!1ses-419!2sar!4v1573611372545!5m2!1ses-419!2sar" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
             </div>
           </div>
         </div>
