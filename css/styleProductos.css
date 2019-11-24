@@ -92,6 +92,8 @@ font-family: 'Roboto', sans-serif;
     box-shadow: 0 0 20px rgb(255, 255, 255);
     transition: all .3s ease-in-out;
     border-radius: 20px;
+    background: rgba(0,0,0,.5);
+    z-index: 100;
 }
 
 .photo-container:hover{
@@ -116,6 +118,33 @@ font-family: 'Roboto', sans-serif;
     z-index: 100;
 }
 
+.favorito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    border-radius: 5px;
+    top: 2%;
+    left: 3%;
+    font-size: 2.5rem;
+    background: transparent;
+    color: white;
+    border: none;
+    transition: 500ms all ease;
+    z-index: 20;   
+}
+
+.favorito i{
+    font-size: 20px;
+
+}
+.favorito:hover{
+    cursor: pointer;
+    color: red;
+}
+
 .tit-Destino{
     text-decoration: none;
     text-align: center;
@@ -126,12 +155,17 @@ font-family: 'Roboto', sans-serif;
     display: block;
     width: 100%;
     padding-top: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+.tit-Destino h3 {
     color: white;
     text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
+    /* font-family: 'Oswald', sans-serif; */
+    font-size: 1.8rem;
+    font-weight: bold;
 }
+
 
 .tit-enca-card {
     margin-top: 10px;
