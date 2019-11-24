@@ -16,9 +16,12 @@ font-family: 'Roboto', sans-serif;
 }
 
 .fondo_productos{
-   background-image: url("../images/Destinos/fondoMinaClavero.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
+    background: #30E8BF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(7, 7, 7, 0.603), rgba(10, 10, 10, 0.603)),url("../images/Destinos/fondoMinaClavero.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(10, 10, 10, 0.603), rgba(12, 12, 12, 0.603)),url("../images/Destinos/fondoMinaClavero.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .logoDigTur {
@@ -66,23 +69,42 @@ font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
 }
 
+.tit-Destino-carru a {
+    text-decoration: none;
+    color:white;
+}
+
 
 /*---- CARDS DESTINOS ----*/
 .destinos article{
-    margin-bottom: 30px;
-    margin-top: 20px;
-    background-color: white;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border-radius: 20px;
+}
+
+.destinos article a {
+    text-decoration: none;
+    color: black
 }
 
 .photo-container{
     position: relative;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+    transition: all .3s ease-in-out;
+    border-radius: 20px;
+}
+
+.photo-container:hover{
+    cursor: pointer;
+     border: 3px solid greenyellow;
+     box-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow,0 0 80px greenyellow;
+
 }
 
 .photo{
     width: 100%;
-    border: 3px solid lightgrey;
     border-radius: 20px;
-    height: 30vh;
+    height: 45vh;
 }
 
 .special{
@@ -255,9 +277,8 @@ font-family: 'Roboto', sans-serif;
 
     .photo{
         width: 100%;
-        border: 3px solid lightgrey;
         border-radius: 20px;
-        height: 50vh;
+        height: 40vh;
     }
 
 }
@@ -272,7 +293,6 @@ font-family: 'Roboto', sans-serif;
     /* -- imagen card */
     .photo {
         width: 100%;
-        border: 3px solid lightgrey;
         border-radius: 20px;
         height: 30vh;
     }
@@ -302,11 +322,6 @@ font-family: 'Roboto', sans-serif;
         font-size: 1.2rem;
         height: 45vh;
     }
-
-    .destinos article {
-        height: 100vh;
-    }
-
 }
 
 
@@ -314,7 +329,7 @@ font-family: 'Roboto', sans-serif;
 
     /* -- Imagen Carrusel */
     .imgCarrusel {
-        height: 60vh;
+        height: 70vh;
     }
 
     /* -- titulo medio card */
@@ -325,7 +340,6 @@ font-family: 'Roboto', sans-serif;
     /* -- imagen card */
     .photo {
         width: 100%;
-        border: 3px solid lightgrey;
         border-radius: 20px;
         height: 25vh;
     }
@@ -354,7 +368,6 @@ font-family: 'Roboto', sans-serif;
 }
 .contenedor-links{
     display: flex;
-    
     width: 50%;
 }
 .items-barra{
@@ -381,7 +394,7 @@ font-family: 'Roboto', sans-serif;
     }
     /* -- Imagen Carrusel */
     .imgCarrusel {
-        height: 90vh;
+        height: 85vh;
     }
 
     /* -- titulo medio card */
@@ -392,9 +405,8 @@ font-family: 'Roboto', sans-serif;
     /* -- imagen card */
     .photo {
         width: 100%;
-        border: 3px solid lightgrey;
         border-radius: 20px;
-        height: 40vh;
+        height: 30vh;
     }
 
     /* -- logo oferta en card */
@@ -411,11 +423,6 @@ font-family: 'Roboto', sans-serif;
     .tit-enca-card h3{
         font-size: 1.6rem;
     }
-
-    .destinos article {
-        height: 115vh;
-    }
-
 }
 
 @media (min-width : 1200px) {
@@ -426,9 +433,23 @@ font-family: 'Roboto', sans-serif;
         color: black;
         font-family: 'Anton', sans-serif;
     }
+
+    .carrusel section {
+        text-align: center;
+    }
+
+    .texto-centrado {
+        text-align: center;
+    } 
+
     /* -- Imagen Carrusel */
+    .imgCarruseltamano {
+        width: 75%;
+        height: 100%;
+    }
+
     .imgCarrusel {
-        height: 90vh;
+        height: 60vh;
     }
 
     .tit-Destino-carru {
@@ -436,10 +457,10 @@ font-family: 'Roboto', sans-serif;
         text-align: center;
         position: absolute;
         top: 50%;
-        left: 0;
+        left: 138px;
         transform: translateY(-50%);
         display: block;
-        width: 100%;
+        width: 75%;
         padding-top: 5px;
         background-color: rgba(0, 0, 0, 0.5);
         color: white;
@@ -451,9 +472,8 @@ font-family: 'Roboto', sans-serif;
      /* -- imagen card */
      .photo {
         width: 100%;
-        border: 3px solid lightgrey;
         border-radius: 20px;
-        height: 25vh;
+        height: 30vh;
     }
 
     /* -- logo oferta en card */
@@ -465,9 +485,4 @@ font-family: 'Roboto', sans-serif;
         height: auto;
         z-index: 100;
     }
-
-    .destinos article {
-        height: 90vh;
-    }
-
 }

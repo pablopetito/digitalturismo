@@ -70,28 +70,36 @@
                             <div class="carousel-item active imgCarrusel">
                              <img class = "imgCarruseltamano" src="images/Destinos/Bariloche/barilocheBaseNieve.jpg" class="d-block w-100 img-fluid" alt="Bariloche"> 
                                 <div class="tit-Destino-carru" >
+                                <a href="detalleProducto.php">
                                     <h3>BARILOCHE SKI</h3>
+                                </a>
                                 </div>
                             </div>
 
                             <div class="carousel-item imgCarrusel">
                                 <img class = "imgCarruseltamano" src="images/Destinos/Cataratas/cataratas-iguazu-panoramica.jpg" class="d-block w-100 img-fluid" alt="...">
                                 <div class="tit-Destino-carru" >
+                                <a href="detalleProducto.php">
                                     <h3>CATARATAS Extrem</h3>
+                                </a>
                                 </div>
                             </div>
                       
                             <div class="carousel-item imgCarrusel">
                                 <img class = "imgCarruseltamano" src="images/Destinos/Mendoza/mendozaUvasMontañas.jpg" class="d-block w-100 img-fluid" alt="...">
                                 <div class="tit-Destino-carru" >
+                                <a href="detalleProducto.php">
                                     <h3>MENDOZA CITY TOUR</h3>
+                                </a>
                                 </div>
                             </div>
 
-                            <div class="carousel-item imgCarrusel">
+                            <div class="carousel-item imgCarrusel" >
                                 <img class = "imgCarruseltamano" src="images/Destinos/Salta/saltaMontañaColores.jpg" class="d-block w-100 img-fluid" alt="...">
                                 <div class="tit-Destino-carru" >
+                                <a href="detalleProducto.php">
                                     <h3>SALTA "LA LINDA"</h3>
+                                </a>
                                 </div>
                             </div>
                         </div>
@@ -115,135 +123,93 @@
 <section class="destinos">
     <div class="container">
         <div class="row">
+
+<!-- destinos  -->
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
             
-            <!-- destinos  -->
-			<article class="borderBox p-3 m-3 destino-individual">
-				<div class="photo-container">
-                    <img class="photo" src="images/Destinos/Bariloche/barilocheEsquiando.jpg" alt="Bari Esquiando">
-                    <img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
-					<div class="tit-Destino" >
+			    <article class="borderBox m-3 destino-individual">
+                    <a href="detalleProducto.php" title="Mas Informacion">
+				    <div class="photo-container">
+                        <img class="photo" src="images/Destinos/Bariloche/barilocheEsquiando.jpg" alt="Bari Esquiando">
+                        <img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
+					    <div class="tit-Destino" >
                         <h3>BARILOCHE "SKI"</h3>
                         <h3>7 DIAS  $ 14.500</h3>
-                    </div>
-				</div>
-				<div class=tit-enca-card><h3>BARILOCHE</h3> </div>
-                <p>Cerro Catedral a pleno ...!! Ski libre, equipos e indumentaria incluida. Intructores para todos los niveles.</p>
+                        </div>
+				    </div>
+                    </a>
+			    </article>
 
-                <!-- /* iconos pie card */ -->
-                <div class="iconos-pie-card">
-                <img class="icon-compar" src="images/iconos/info-icon.png" alt="informacion">
-                <img class="icon-compar" src="images/iconos/compartir-Icon.png" alt="compartir">
-                <img class="icon-compar" src="images/iconos/botonCarritoCompra-2.png" alt="carrito">
-                </div>
-			</article>
             </div>
 
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-			<article class="borderBox p-3 m-3 destino-individual">
-				<div class="photo-container">
-					<img class="photo" src="images/Destinos/Salta/saltaTrenLasNubes.jpg" alt="Tren Las Nubes">
+			    <article class="borderBox m-3 destino-individual">
+                <a href="detalleProducto.php" title="Mas Informacion">
+				    <div class="photo-container">
+					    <img class="photo" src="images/Destinos/Salta/saltaTrenLasNubes.jpg" alt="Tren Las Nubes">
                     <div class="tit-Destino" >
                         <h3>SALTA "LA LINDA"</h3>
                         <h3>15 DIAS  $ 28.900</h3>
                     </div>
-				</div>
-				<div class=tit-enca-card><h3>SALTA "LA LINDA"</h3></div>
-                <p>Una ciudad esplendida de dia y noche. Paseos en bicicleta y Trekking en los valles de sus montañas.</p>
-                
-                <!-- /* iconos pie card */ -->
-                <div class="iconos-pie-card">
-                <img class="icon-compar" src="images/iconos/info-icon.png" alt="informacion">
-                <img class="icon-compar" src="images/iconos/compartir-Icon.png" alt="compartir">
-                <img class="icon-compar" src="images/iconos/botonCarritoCompra-2.png" alt="carrito">
-                </div>
-			</article>
+				    </div>
+                </a>    
+    			</article>
             </div>
 
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-			<article class="borderBox p-3 m-3 destino-individual">
-				<div class="photo-container">
-                    <img class="photo" src="images/Destinos/Mendoza/mendozaCiudad.jpg" alt="pdto 03">
-                    <div class="tit-Destino">
-                        <h3>MENDOZA CITY TOUR</h3>
+			    <article class="borderBox m-3 destino-individual">
+                <a href="detalleProducto.php" title="Mas Informacion">
+				    <div class="photo-container">
+                        <img class="photo" src="images/Destinos/Mendoza/mendozaCiudad.jpg" alt="pdto 03">
+                        <div class="tit-Destino">
+                            <h3>MENDOZA CITY TOUR</h3>
+                        </div>
                     </div>
-                </div>
-                <div class=tit-enca-card><h3>MENDOZA</h3></div>
-				<p>Dia y Noche recorriendo una de las ciudades mas bella. Los mejores Restaurant y Bodegas. Desgutacion de Vino incluido.</p>
-                
-                <!-- /* iconos pie card */ -->
-                <div class="iconos-pie-card">
-                <img class="icon-compar" src="images/iconos/info-icon.png" alt="informacion">
-                <img class="icon-compar" src="images/iconos/compartir-Icon.png" alt="compartir">
-                <img class="icon-compar" src="images/iconos/botonCarritoCompra-2.png" alt="carrito">
-                </div>
-			</article>
+                </a>               
+			    </article>
             </div>
 
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-			<article class="borderBox p-3 m-3 destino-individual">
-				<div class="photo-container">
-					<img class="photo" src="images/Destinos/Cataratas/cataratasBote.jpg" alt="cataratas">
-					<img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
-                    <div class="tit-Destino" >
-                        <h3>CATARATAS EXTREM</h3>
-                        <h3>10 DIAS  $ 8.900</h3>
+			    <article class="borderBox m-3 destino-individual">
+                <a href="detalleProducto.php" title="Mas Informacion">
+				    <div class="photo-container">
+					    <img class="photo" src="images/Destinos/Cataratas/cataratasBote.jpg" alt="cataratas">
+					    <img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
+                        <div class="tit-Destino" >
+                            <h3>CATARATAS EXTREM</h3>
+                            <h3>10 DIAS  $ 8.900</h3>
+                        </div>
                     </div>
-                </div>
-                <div class=tit-enca-card><h3>CATARATAS</h3></div>
-                <p>¡Visita una de las 7 maravillas naturales del mundo moderno! Las cataratas del Iguazú, Patrimonio de la Humanidad.</p>
-                
-                <!-- /* iconos pie card */ -->
-                <div class="iconos-pie-card">
-                    <img class="icon-compar" src="images/iconos/info-icon.png" alt="informacion">
-                    <img class="icon-compar" src="images/iconos/compartir-Icon.png" alt="compartir">
-                    <img class="icon-compar" src="images/iconos/botonCarritoCompra-2.png" alt="carrito">
-                </div>
-			</article>
+                </a>    
+			    </article>
             </div>
 
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-			<article class="borderBox p-3 m-3 destino-individual">
-				<div class="photo-container">
-                    <img class="photo" src="images/Destinos/fondoMinaClavero.jpg" alt="mina clavero">
-                    <div class="tit-Destino" >
-                        <h3>MINA CLAVERO PURA AVENTURA</h3>
+		    	<article class="borderBox m-3 destino-individual">
+                <a href="detalleProducto.php" title="Mas Informacion">
+				    <div class="photo-container">
+                        <img class="photo" src="images/Destinos/fondoMinaClavero.jpg" alt="mina clavero">
+                        <div class="tit-Destino" >
+                            <h3>MINA CLAVERO PURA AVENTURA</h3>
+                        </div>
                     </div>
-                </div>
-                <div class=tit-enca-card><h3>MINA CLAVERO</h3></div>
-                <p>En el valle translasierra una de las mejores Localidades de Cordoba. Rios, Montaña y Diversion Nocturna.</p>
-                
-                <!-- /* iconos pie card */ -->
-                <div class="iconos-pie-card">
-                <img class="icon-compar" src="images/iconos/info-icon.png" alt="informacion">
-                <img class="icon-compar" src="images/iconos/compartir-Icon.png" alt="compartir">
-                <img class="icon-compar" src="images/iconos/botonCarritoCompra-2.png" alt="carrito">
-                </div>
-			</article>
+                </a>
+			    </article>
             </div>
 
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-			<article class="border-box p-3 m-3 destino-individual">
-				<div class="photo-container">
-                    <img class="photo" src="images/Destinos/Salta/saltaMontañaAlpinista.jpg" alt="salta">
-                    <img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
-                    <div class="tit-Destino" >
-                        <h3>SALTA ALPINISMO EXTREMO</h3>
+			    <article class="border-box m-3 destino-individual">
+                <a href="detalleProducto.php" title="Mas Informacion">
+				    <div class="photo-container">
+                        <img class="photo" src="images/Destinos/Salta/saltaMontañaAlpinista.jpg" alt="salta">
+                        <img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
+                        <div class="tit-Destino" >
+                            <h3>SALTA ALPINISMO EXTREMO</h3>
+                        </div>
                     </div>
-                </div>
-                <div class=tit-enca-card><h3>SALTA</h3></div>
-                <p>Las montañas mas hermosas de la Argentina. Alpinismo extremo hasta la ultima cima.</p>
-                
-                <!-- /* iconos pie card */ -->
-                <div class="iconos-pie-card">
-                <img class="icon-compar" src="images/iconos/info-icon.png" alt="informacion">
-                <img class="icon-compar" src="images/iconos/compartir-Icon.png" alt="compartir">
-                <img class="icon-compar" src="images/iconos/botonCarritoCompra-2.png" alt="carrito">
-                </div>
-			</article>
+                </a>
+			    </article>
             </div>
-  
-
             
         </div>
 
