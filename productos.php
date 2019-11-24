@@ -132,6 +132,7 @@
 				    <div class="photo-container">
                         <img class="photo" src="images/Destinos/Bariloche/barilocheEsquiando.jpg" alt="Bari Esquiando">
                         <img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
+                        <button class="favorito"><i class="fas fa-heart"></i></button>
 					    <div class="tit-Destino" >
                         <h3>BARILOCHE "SKI"</h3>
                         <h3>7 DIAS  $ 14.500</h3>
@@ -146,10 +147,11 @@
 			    <article class="borderBox m-3 destino-individual">
                 <a href="detalleProducto.php" title="Mas Informacion">
 				    <div class="photo-container">
-					    <img class="photo" src="images/Destinos/Salta/saltaTrenLasNubes.jpg" alt="Tren Las Nubes">
+                        <img class="photo" src="images/Destinos/Salta/saltaMontañaAlpinista.jpg" alt="Tren Las Nubes">
+                        <button class="favorito"><i class="fas fa-heart"></i></button>
                     <div class="tit-Destino" >
                         <h3>SALTA "LA LINDA"</h3>
-                        <h3>15 DIAS  $ 28.900</h3>
+                        <h3>$ 28.900</h3>
                     </div>
 				    </div>
                 </a>    
@@ -161,6 +163,7 @@
                 <a href="detalleProducto.php" title="Mas Informacion">
 				    <div class="photo-container">
                         <img class="photo" src="images/Destinos/Mendoza/mendozaCiudad.jpg" alt="pdto 03">
+                        <button class="favorito"><i class="fas fa-heart"></i></button>
                         <div class="tit-Destino">
                             <h3>MENDOZA CITY TOUR</h3>
                         </div>
@@ -173,8 +176,9 @@
 			    <article class="borderBox m-3 destino-individual">
                 <a href="detalleProducto.php" title="Mas Informacion">
 				    <div class="photo-container">
-					    <img class="photo" src="images/Destinos/Cataratas/cataratasBote.jpg" alt="cataratas">
-					    <img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
+					    <img class="photo" src="images/cataratas-iguazu.jpg" alt="cataratas">
+                        <img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
+                        <button class="favorito"><i class="fas fa-heart"></i></button>
                         <div class="tit-Destino" >
                             <h3>CATARATAS EXTREM</h3>
                             <h3>10 DIAS  $ 8.900</h3>
@@ -188,7 +192,8 @@
 		    	<article class="borderBox m-3 destino-individual">
                 <a href="detalleProducto.php" title="Mas Informacion">
 				    <div class="photo-container">
-                        <img class="photo" src="images/Destinos/fondoMinaClavero.jpg" alt="mina clavero">
+                        <img class="photo" src="images/paisaje1.jpg" alt="mina clavero">
+                        <button class="favorito"><i class="fas fa-heart"></i></button>
                         <div class="tit-Destino" >
                             <h3>MINA CLAVERO PURA AVENTURA</h3>
                         </div>
@@ -203,6 +208,7 @@
 				    <div class="photo-container">
                         <img class="photo" src="images/Destinos/Salta/saltaMontañaAlpinista.jpg" alt="salta">
                         <img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
+                        <button class="favorito"><i class="fas fa-heart"></i></button>
                         <div class="tit-Destino" >
                             <h3>SALTA ALPINISMO EXTREMO</h3>
                         </div>
