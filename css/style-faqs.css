@@ -1,19 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.contenedor_usuario{
-   background-image: url(../images/img-user/fondo1.JPG);  
-background-attachment: fixed;
+body{
+    background-image: url(../images/fondo.jpg);
+    background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.contenedor_col_nav{
-    padding: 0;
+    
 }
 
 .barraNavegacion{
@@ -77,60 +68,10 @@ background-attachment: fixed;
     color: black;
 }
 
-}
-.image_outer_container{
-    margin-top: auto;
-    margin-bottom: auto;
-    border-radius: 50%;
-    position: relative;
-}
+.contenedor_col_nav{
+    padding: 0;
 
-.image_inner_container{
-    border-radius: 50%;
-    padding: 5px;
- background: #833ab4; 
- background: -webkit-linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4); 
- background: linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);
-}
-.image_inner_container img{
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    border: 5px solid white;
-}
-
-.image_outer_container .green_icon{
-  background-color: #4cd137;
-  position: absolute;
-  right: 30px;
-  bottom: 10px;
-  height: 30px;
-  width: 30px;
-  border:5px solid white;
-  border-radius: 50%;
-}
-.jumbotron{
-    background-image: url(../img/fondos.jpg);
-}
-h2{
-    background-color: beige;
-    text-align: center;
-}
-.page{
-    background-color: rgb(167, 5, 5);
-}
-.fab{
-    border-radius: 50%;
-}
-
-@media (min-width: 992px){
-
-    /*---------------Barra de Navegacion -------------------*/
-
-.div-barralinks{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 10%;
+    
 }
 .contenedor-links{
     display: flex;
@@ -152,6 +93,71 @@ h2{
     width: initial;
    /* margin: initial !important;*/
 }
+@media (min-width: 992px){
+
+    .page{
+        background-color: rgb(167, 5, 5);
+    }
+    .fab{
+        border-radius: 50%;
+    }
+
+    .div-barralinks{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10%;
+
+}
+.contenedor-contacto{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* Preguntas */
+
+.mapa {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: inline;
+    float: right;
+}
+
+button{
+    border-radius: 50%;
+}
+
+.fab{
+    font-size: 20px;
+
+}
+
+h2{
+font-family: 'PT Sans Caption', sans-serif;
+font-size: 40px;
+text-align: center;
+color:black;
+background-color:white;
+}
+
+.titulo{
+    padding: 20px;
+    height: 200px;
+}
+h4{
+    font-family: 'Alata', sans-serif;
+font-size: 30px;
+color: black;
+text-decoration: none;
+}
+p{
+ font-family: 'PT Sans Caption', sans-serif;
+font-size: 15px;
+}
 
 
+a:hover{
+    text-decoration: none;
 }
