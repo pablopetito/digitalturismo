@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>user</title>
    
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
      <link rel="stylesheet" href="css/style-user.css">
 
@@ -13,7 +16,7 @@
   <div class="contenedor_usuario">
 
 
-    
+    <!--Nav-->
   <div class="container-fluid contenedor-nav">
         <div class="row">
           <div class="col-12 contenedor_col_nav">
@@ -44,23 +47,22 @@
                     </div>
                   </nav>
                 </header>
-
+<!-- Imagen usuario-->
 <div class="container">
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h2>@LionelMessi</h2>
+      <h2>@Dariofernandez</h2>
       <div class="d-flex justify-content-center h-100">
           <div class="image_outer_container">
-              <div class="green_icon"></div>
               <div class="image_inner_container">
-                  <img src="images/img-user/user.png">
+                  <img class="mujer" src="images/img-user/user.jpg">
               </div>
           </div>
       </div>
     </div>
   </div>
 
-
+<!--Datos-->
 
     <div class="row">
             <div class="col-4">
@@ -166,14 +168,14 @@
                           <div class="card-up teal lighten-2">
                           </div>
                   
-                          <div class="avatar mx-auto white"><img src="img/sanluis.jpg"
+                          <div class="avatar mx-auto white"><img src="images/img-user/sanluis.jpg"
                               alt="avatar mx-auto white" class="rounded-circle img-fluid">
                           </div>
                   
                           <div class="card-body">
                             <h4 class="card-title mt-1">Valle de Talampaya</h4>
                             <hr>
-                            <p><i class="fas fa-quote-left"></i>El parque nacional Talampaya se encuentra ubicado en el centro-oeste de la provincia de La Rioja en Argentina </p>
+                            <p>El parque nacional Talampaya se encuentra ubicado en el centro-oeste de la provincia de La Rioja en Argentina </p>
                           </div>
                   
                         </div>
@@ -187,7 +189,7 @@
                           <div class="card-up blue lighten-2">
                           </div>
                   
-                          <div class="avatar mx-auto white"><img src="img/bariloche.jpg"
+                          <div class="avatar mx-auto white"><img src="images/img-user/bariloche.jpg"
                               alt="avatar mx-auto white" class="rounded-circle img-fluid">
                           </div>
                   
@@ -195,7 +197,7 @@
                             <h4 class="card-title mt-1">Bariloche
                             </h4>
                             <hr>
-                            <p><i class="fas fa-quote-left"></i>San Carlos de Bariloche, conocida simplemente como Bariloche,1​ es una ciudad ubicada en la provincia de Río Negro, Argentina.
+                            <p>San Carlos de Bariloche, conocida simplemente como Bariloche,1​ es una ciudad ubicada en la provincia de Río Negro, Argentina.
                             </p>
                           </div>
                   
@@ -209,14 +211,14 @@
                   
                           <div class="card-up deep-purple lighten-2"></div>
                   
-                          <div class="avatar mx-auto white"><img src="img/calafate.jpg"
+                          <div class="avatar mx-auto white"><img src="images/img-user/calafate.jpg"
                               alt="avatar mx-auto white" class="rounded-circle img-fluid">
                           </div>
                   
                           <div class="card-body">
                             <h4 class="card-title mt-1">El Calafate</h4>
                             <hr>
-                            <p><i class="fas fa-quote-left"></i>Es una ciudad ubicada en la ribera meridional del lago Argentino, en la región de la Patagonia, en la provincia de Santa Cruz, Argentina</p>
+                            <p>Es una ciudad ubicada en la ribera meridional del lago Argentino, en la región de la Patagonia, en la provincia de Santa Cruz, Argentina</p>
                           </div>
                   
                         </div>
@@ -241,14 +243,14 @@
                           <div class="card-up teal lighten-2">
                           </div>
                   
-                          <div class="avatar mx-auto white"><img src="img/mariano.jpg"
+                          <div class="avatar mx-auto white"><img src="images/img-user/mariano.jpg"
                               alt="avatar mx-auto white" class="rounded-circle img-fluid">
                           </div>
                   
                           <div class="card-body">
                             <h4 class="card-title mt-1">Mariano Rojas</h4>
                             <hr>
-                            <p><i class="fas fa-quote-left"></i> @Mariano10</p>
+                            <p> @Mariano10</p>
                           </div>
                   
                         </div>
@@ -262,14 +264,14 @@
                           <div class="card-up blue lighten-2">
                           </div>
                   
-                          <div class="avatar mx-auto white"><img src="img/carlos.png"
+                          <div class="avatar mx-auto white"><img src="images/img-user/carlos.png"
                               alt="avatar mx-auto white" class="rounded-circle img-fluid">
                           </div>
                   
                           <div class="card-body">
                             <h4 class="card-title mt-1">Carlos Jose </h4>
                             <hr>
-                            <p><i class="fas fa-quote-left"></i> @JoseHernandez </p>
+                            <p> @JoseHernandez </p>
                           </div>
                   
                         </div>
@@ -282,14 +284,14 @@
                   
                           <div class="card-up deep-purple lighten-2"></div>
                   
-                          <div class="avatar mx-auto white"><img src="img/maria.png"
+                          <div class="avatar mx-auto white"><img src="images/img-user/maria.png"
                               alt="avatar mx-auto white" class="rounded-circle img-fluid">
                           </div>
                   
                           <div class="card-body">
                             <h4 class="card-title mt-1">Maria Sanchez</h4>
                             <hr>
-                            <p><i class="fas fa-quote-left"></i> @MariaSanchez </p>
+                            <p> @MariaSanchez </p>
                           </div>
                   
                         </div>
