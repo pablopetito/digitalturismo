@@ -5,59 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>user</title>
-    <link rel="stylesheet" href="css/style-user.css">
+   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/562bf078ff.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="css/style-user.css">
 
 <body>
-    <div class="container">
-<header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Digital Turismo</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Contacto</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Mi cuenta
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Registrarme</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Iniciar sesion</a>
-                      </div>
-                    </li>
-                  </ul>
-                  <a class="navbar-brand" href="#">
-                  <img src="img/svg.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-                  LionelMessi
-                <form class="form-inline my-2 my-lg-0">
-                </a> 
-                
-                </nav>
-</header>
+  <div class="contenedor_usuario">
 
 
-<div class="jumbotron jumbotron-fluid">
+    
+  <div class="container-fluid contenedor-nav">
+        <div class="row">
+          <div class="col-12 contenedor_col_nav">
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-dark barraNavegacion">
+                    <a class="navbar-brand" href="index.php"><img class="logo-barra" src="images/digitalTurismoLogoBlanco.png" alt="logo"> </a>
+                    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon menu-hamburguesa"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse div-barralinks" id="navbarSupportedContent">
+                      <ul class="navbar-nav contenedor-links">
+                        <li class="nav-item items-barra">
+                          <a class="nav-link" href="index.php"><i class="fas fa-home"></i><p>HOME</p></a>
+                        </li>
+                        <li class="nav-item items-barra">
+                          <a class="nav-link" href="#"><i class="far fa-question-circle"></i><p>FAQ</p></a>
+                        </li>
+                        <li class="nav-item items-barra">
+                          <a class="nav-link" href="productos.php"><i class="fas fa-suitcase"></i><p>DESTINOS</p></a>
+                        </li>
+                                               
+                      </ul>
+                      
+                        
+                        <button class="btn my-2 my-sm-0 boton-ingreso" type="submit"><i class="fas fa-user"></i>INGRESAR</button>
+                     
+                    </div>
+                  </nav>
+                </header>
+
+<div class="container">
+  <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h2>@LionelMessi</h2>
       <div class="d-flex justify-content-center h-100">
           <div class="image_outer_container">
               <div class="green_icon"></div>
               <div class="image_inner_container">
-                  <img src="img/user.png">
+                  <img src="images/img-user/user.png">
               </div>
           </div>
       </div>
@@ -307,34 +303,18 @@
               </div>
             </div>
           
-            <div class="footer">
-            <footer class="page-footer font-small blue pt-4">
-        <div class="container-fluid text-center text-md-left">
-                <div class="row">
-                  <div class="col-md-6 mt-md-0 mt-3">
-                    <h5 class="text-uppercase">Nuestra Mision</h5>
-              <p>DigitalTurismo busca fomentar el turismo en Argentina, para que crezca el sector, trayendole a los usuarios los mas lindos paisajes para visitar.</p>
-            </div>      
-            <div class="col-md-3 mb-md-0 mb-3">
-
-            <hr class="clearfix w-100 d-md-none pb-3">
-            <h5 class="text-uppercase font-weight-bold">Visitanos</h5>
-            <button><i class="fab fa-instagram"></i></button>
-            <button><i class="fab fa-twitter"></i></button>
-            <button><i class="fab fa-facebook-square"></i></button>
-            </div>
-         </div>      
-        </div>
-              <div class="footer-copyright text-center py-3">© 2019 Copyright:
-          <a href="#"> DigitalTurismo</a>
-        </div>      
-      </footer>
-          
-          </div>
+           
 
           </div>
 
 
     </div>
+
+
+  </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/562bf078ff.js" crossorigin="anonymous"></script>
 </body>
 </html>

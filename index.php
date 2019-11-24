@@ -98,14 +98,17 @@
                         
                             <div class="card carta-promocion">
                               <button class="favorito"><i class="fas fa-heart"></i></button>
-                              <img src="images/promoof.svg" alt="promo" class="logo-promo">
+                              <img src="images/iconos/OfertaEspecial.png" alt="promo" class="logo-promo">
+                              <div class="imagen-articulo-contenedor">
+                              <a href="" class="acceso-carrito">
+                                <h3>BARILOCHE</h3>
+                                <p>"SKI ADVENTURE 7 DIAS"</p>
+                                <h4>$ 14.500</h4>
+                              </a> 
+                             </div>
                               <img src="images/paisaje.jpg" class="card-img-top" alt="...">
-                              <div class="card-body texto-carta">
-                               <span><h5 class="card-title">Neuquen</h5></span>
-                                <span>Estadia paquete</span>
-                                <p class="card-text">Paquete $4500</p>
-                                <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
-                              </div>
+                              
+
                             </div>
                       
 
@@ -114,19 +117,22 @@
                       <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
                     
 
-                    
-                        
-                            <div class="card carta-promocion">
+                      <div class="card carta-promocion">
                               <button class="favorito"><i class="fas fa-heart"></i></button>
-                              <img src="images/promoof.svg" alt="promo" class="logo-promo">
+                              <img src="images/iconos/OfertaEspecial.png" alt="promo" class="logo-promo">
+                              <div class="imagen-articulo-contenedor">
+                              <a href="" class="acceso-carrito">
+                                <h3>BARILOCHE</h3>
+                                <p>"SKI ADVENTURE 7 DIAS"</p>
+                                <h4>$ 14.500</h4>
+                              </a> 
+                             </div>
                               <img src="images/paisaje.jpg" class="card-img-top" alt="...">
-                              <div class="card-body texto-carta">
-                               <span><h5 class="card-title">Neuquen</h5></span>
-                                <span>Estadia paquete</span>
-                                <p class="card-text">Paquete $4500</p>
-                                <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
-                              </div>
+                              
+
                             </div>
+                        
+                            
                       
 
                     
@@ -136,16 +142,19 @@
 
                     
                         
-                            <div class="card carta-promocion">
+                    <div class="card carta-promocion">
                               <button class="favorito"><i class="fas fa-heart"></i></button>
-                              <img src="images/promoof.svg" alt="promo" class="logo-promo">
+                              <img src="images/iconos/OfertaEspecial.png" alt="promo" class="logo-promo">
+                              <div class="imagen-articulo-contenedor">
+                              <a href="" class="acceso-carrito">
+                                <h3>BARILOCHE</h3>
+                                <p>"SKI ADVENTURE 7 DIAS"</p>
+                                <h4>$ 14.500</h4>
+                              </a> 
+                             </div>
                               <img src="images/paisaje.jpg" class="card-img-top" alt="...">
-                              <div class="card-body texto-carta">
-                               <span><h5 class="card-title">Neuquen</h5></span>
-                                <span>Estadia paquete</span>
-                                <p class="card-text">Paquete $4500</p>
-                                <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
-                              </div>
+                              
+
                             </div>
                       
 
@@ -173,21 +182,21 @@
 
                   <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
                     
+                  <div class="card carta-promocion">
+                              <button class="favorito"><i class="fas fa-heart"></i></button>
+                              <img class="star-destacado" src="images/stars.png" alt="">
+                              <div class="imagen-articulo-contenedor">
+                              <a href="" class="acceso-carrito">
+                                <h3>BARILOCHE</h3>
+                                <p>"SKI ADVENTURE 7 DIAS"</p>
+                                <h4>$ 14.500</h4>
+                              </a> 
+                             </div>
+                              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+                              
 
+                            </div>
                     
-                        
-                    <div class="card carta-promocion">
-                      <button class="favorito"><i class="fas fa-heart"></i></button>
-                      <img class="star-destacado" src="images/stars.png" alt="">
-                      
-                      <img src="images/paisaje.jpg" class="card-img-top" alt="...">
-                      <div class="card-body texto-carta">
-                       <span><h5 class="card-title">Neuquen</h5></span>
-                        <span>Estadia paquete</span>
-                        <p class="card-text">Paquete $4500</p>
-                        <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
-                      </div>
-                    </div>
               
 
             
@@ -197,18 +206,20 @@
 
                     
                         
-                    <div class="card carta-promocion">
-                      <button class="favorito"><i class="fas fa-heart"></i></button>
-                      <img class="star-destacado" src="images/stars.png" alt="">
-                      
-                      <img src="images/paisaje.jpg" class="card-img-top" alt="...">
-                      <div class="card-body texto-carta">
-                       <span><h5 class="card-title">Neuquen</h5></span>
-                        <span>Estadia paquete</span>
-                        <p class="card-text">Paquete $4500</p>
-                        <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
+                     <div class="card carta-promocion">
+                              <button class="favorito"><i class="fas fa-heart"></i></button>
+                              <img class="star-destacado" src="images/stars.png" alt="">
+                              <div class="imagen-articulo-contenedor">
+                              <a href="" class="acceso-carrito">
+                                <h3>BARILOCHE</h3>
+                                <p>"SKI ADVENTURE 7 DIAS"</p>
+                                <h4>$ 14.500</h4>
+                              </a> 
+                             </div>
+                              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+                              
+
                       </div>
-                    </div>
               
 
             
@@ -218,19 +229,20 @@
 
                     
                         
-                    <div class="card carta-promocion">
-                      <button class="favorito"><i class="fas fa-heart"></i></button>
-                      <img class="star-destacado" src="images/stars.png" alt="">
-                      
-                      <img src="images/paisaje.jpg" class="card-img-top" alt="...">
-                      <div class="card-body texto-carta">
-                       <span><h5 class="card-title">Neuquen</h5></span>
-                        <span>Estadia paquete</span>
-                        <p class="card-text">Paquete $4500</p>
-                        <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
-                      </div>
-                    </div>
-              
+                       <div class="card carta-promocion">
+                              <button class="favorito"><i class="fas fa-heart"></i></button>
+                              <img class="star-destacado" src="images/stars.png" alt="">
+                              <div class="imagen-articulo-contenedor">
+                              <a href="" class="acceso-carrito">
+                                <h3>BARILOCHE</h3>
+                                <p>"SKI ADVENTURE 7 DIAS"</p>
+                                <h4>$ 14.500</h4>
+                              </a> 
+                             </div>
+                              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+                              
+
+                        </div>
 
             
                 </article>
@@ -256,19 +268,21 @@
                     
 
                     
-                        
-                    <div class="card carta-promocion">
-                      <button class="favorito"><i class="fas fa-heart"></i></button>
-                      
-                      
-                      <img src="images/paisaje.jpg" class="card-img-top" alt="...">
-                      <div class="card-body texto-carta">
-                       <span><h5 class="card-title">Neuquen</h5></span>
-                        <span>Estadia paquete</span>
-                        <p class="card-text">Paquete $4500</p>
-                        <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
-                      </div>
-                    </div>
+                  <div class="card carta-promocion">
+                              <button class="favorito"><i class="fas fa-heart"></i></button>
+                              
+                              <div class="imagen-articulo-contenedor">
+                              <a href="" class="acceso-carrito">
+                                <h3>BARILOCHE</h3>
+                                <p>"SKI ADVENTURE 7 DIAS"</p>
+                                <h4>$ 14.500</h4>
+                              </a> 
+                             </div>
+                              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+                              
+
+                            </div>
+                    
               
 
             
@@ -278,18 +292,20 @@
 
                     
                         
-                    <div class="card carta-promocion">
-                      <button class="favorito"><i class="fas fa-heart"></i></button>
-                      
-                      
-                      <img src="images/paisaje.jpg" class="card-img-top" alt="...">
-                      <div class="card-body texto-carta">
-                       <span><h5 class="card-title">Neuquen</h5></span>
-                        <span>Estadia paquete</span>
-                        <p class="card-text">Paquete $4500</p>
-                        <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
-                      </div>
-                    </div>
+                <div class="card carta-promocion">
+                              <button class="favorito"><i class="fas fa-heart"></i></button>
+                              
+                              <div class="imagen-articulo-contenedor">
+                              <a href="" class="acceso-carrito">
+                                <h3>BARILOCHE</h3>
+                                <p>"SKI ADVENTURE 7 DIAS"</p>
+                                <h4>$ 14.500</h4>
+                              </a> 
+                             </div>
+                              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+                              
+
+                            </div>
               
 
             
@@ -299,18 +315,20 @@
 
                     
                         
-                    <div class="card carta-promocion">
-                      <button class="favorito"><i class="fas fa-heart"></i></button>
-                     
-                      
-                      <img src="images/paisaje.jpg" class="card-img-top" alt="...">
-                      <div class="card-body texto-carta">
-                       <span><h5 class="card-title">Neuquen</h5></span>
-                        <span>Estadia paquete</span>
-                        <p class="card-text">Paquete $4500</p>
-                        <p class="boton-contenedor"><a href="#" class="btn ver-comprar"><i class="far fa-eye"></i> VER MÁS/COMPRAR</a></p>
-                      </div>
-                    </div>
+                <div class="card carta-promocion">
+                              <button class="favorito"><i class="fas fa-heart"></i></button>
+                              
+                              <div class="imagen-articulo-contenedor">
+                              <a href="" class="acceso-carrito">
+                                <h3>BARILOCHE</h3>
+                                <p>"SKI ADVENTURE 7 DIAS"</p>
+                                <h4>$ 14.500</h4>
+                              </a> 
+                             </div>
+                              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+                              
+
+                </div>
               
 
             
