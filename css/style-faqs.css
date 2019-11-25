@@ -1,5 +1,5 @@
 .contenedor-faq{
-    height: 100vh;
+    min-height;: 100vh;
     background-image: url(../images/fondo.jpg);
     background-attachment: fixed;
   background-position: center;

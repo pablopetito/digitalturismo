@@ -6,7 +6,7 @@
 
 .contenedor_usuario{
     
-    height: 100vh;
+    min-height;: 100vh;
    background-image: url(../images/img-user/fondo1.JPG);  
 background-attachment: fixed;
   background-position: center;
