@@ -106,7 +106,7 @@
                   <h4>$ 14.500</h4>
                 </a> 
               </div>
-              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+              <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
               
               
             </div>
@@ -127,7 +127,7 @@
                   <h4>$ 14.500</h4>
                 </a> 
               </div>
-              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+              <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
               
               
             </div>
@@ -152,7 +152,7 @@
                   <h4>$ 14.500</h4>
                 </a> 
               </div>
-              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+              <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
               
               
             </div>
@@ -192,7 +192,7 @@
                   <h4>$ 14.500</h4>
                 </a> 
               </div>
-              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+              <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
               
               
             </div>
@@ -216,7 +216,7 @@
                   <h4>$ 14.500</h4>
                 </a> 
               </div>
-              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+              <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
               
               
             </div>
@@ -239,7 +239,7 @@
                   <h4>$ 14.500</h4>
                 </a> 
               </div>
-              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+              <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
               
               
             </div>
@@ -278,7 +278,7 @@
                   <h4>$ 14.500</h4>
                 </a> 
               </div>
-              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+              <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
               
               
             </div>
@@ -302,7 +302,7 @@
                   <h4>$ 14.500</h4>
                 </a> 
               </div>
-              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+              <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
               
               
             </div>
@@ -325,7 +325,7 @@
                   <h4>$ 14.500</h4>
                 </a> 
               </div>
-              <img src="images/paisaje.jpg" class="card-img-top" alt="...">
+              <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
               
               
             </div>
