@@ -4,8 +4,8 @@
     background: url(../images/paisaje1.jpg);
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 120vh;
+    padding: 3%;
     
 }
 
@@ -84,7 +84,7 @@
 }
 .formulario{
     background: white;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 10px;
     padding: 3px;
     
