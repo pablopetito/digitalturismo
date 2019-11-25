@@ -1,9 +1,11 @@
 .todo{
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
+   margin: 0;
     background: url(../images/paisaje1.jpg);
     background-size: cover;
     background-attachment: fixed;
+    height: 100vh;
+    overflow: hidden;
     
 }
 
@@ -11,7 +13,9 @@
     box-sizing: border-box;
 }
 
-
+.contenedor-nav{
+    padding: 0;
+}
 .barraNavegacion{
    
     background: #0f0c29;  /* fallback for old browsers */

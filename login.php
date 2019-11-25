@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style-login-registro.css">
     <title>DigitalTurismo</title>
 </head>
-<body class="todo">
+<body>
    
     <div class="container-fluid contenedor-nav">
         <div class="row">
@@ -44,7 +44,11 @@
                   </nav>
                 </header>
         
+                </div>
+              </div>
            </div>
+
+ <div class="todo">      
        
 <form class="formulario">
     <h1>Login</h1>
@@ -53,13 +57,13 @@
       
         <div class="input-contenedor">
                 <i class="fas fa-envelope icon"></i>
-                <input type="text" placeholder="Correo Electronico">
+                <input type="text" placeholder="Correo Electronico" name="email">
                 
 
         </div>
         <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
-                <input type="password" placeholder="Contraseña">
+                <input type="password" placeholder="Contraseña" name="password">
                 
         </div>
         <input type="submit" value="Login" class="button">
@@ -70,6 +74,14 @@
 
 
 </form>
+<div class="container">
+  <div class="alert alert-danger" role="alert">
+  A los profes les dejamos el acceso al usuario por medio de este link <a href="user.php" class="alert-link border border-dark">ACCESO USUARIO</a> (Más adelante cuando podamos loguearnos se agregará a la barra de navegación)
+</div>
+</div>
+
+</div>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

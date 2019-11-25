@@ -18,7 +18,7 @@
     <div class="col-12">
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark barraNavegacion">
-                <a class="navbar-brand" href="#"><img class="logo-barra" src="images/digitalTurismoLogoBlanco.png" alt="logo"> </a>
+                <a class="navbar-brand" href="index.php"><img class="logo-barra" src="images/digitalTurismoLogoBlanco.png" alt="logo"> </a>
                 <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon menu-hamburguesa"></span>
                 </button>
@@ -29,15 +29,15 @@
                           <a class="nav-link" href="index.php"><i class="fas fa-home"></i><p>HOME</p></a>
                         </li>
                         <li class="nav-item items-barra">
-                          <a class="nav-link" href="#"><i class="far fa-question-circle"></i><p>FAQ</p></a>
+                          <a class="nav-link" href="faq.php"><i class="far fa-question-circle"></i><p>FAQ</p></a>
                         </li>
                         <li class="nav-item items-barra">
-                          <a class="nav-link" href="#"><i class="fas fa-suitcase"></i><p>DESTINOS</p></a>
+                          <a class="nav-link" href="productos.php"><i class="fas fa-suitcase"></i><p>DESTINOS</p></a>
                         </li>
                                                
                     </ul>
                         
-                    <button class="btn my-2 my-sm-0 boton-ingreso" type="submit"><i class="fas fa-user"></i>INGRESAR</button>
+                    <a href="login.php"><button class="btn my-2 my-sm-0 boton-ingreso" type="submit"><i class="fas fa-user"></i>INGRESAR</button></a>
                     
                 </div>
             </nav>
@@ -103,25 +103,59 @@
 
 <!--------FOOTER------------------------------->
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <footer>
+        <div class="row">
+
+            <div class="col-12 p-0">
+              <footer>
                     <div class="social d-flex flex-wrap">
-                        <div class="red-social mt-1 col-md-6">
+                       
+                            <div class="contacto mt-5 col-md-6">
+                                  <h3>Contacto</h3>
+                                  <form>
+                                      <div class="form-group">
+                                        <label for="exampleInputEmail1">Email</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                                        
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Mensaje</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" palceholder="Mensaje..." rows="5" name="mensaje"></textarea>
+                                      </div>
+                                      
+                                      <button type="submit" class="btn btn-info btn-block">Enviar</button>
+                                  </form>
+                              </div>
+
+
+                        <div class="red-social mt-5 col-md-6">
                             <h3 class="mb-4">Visitanos</h3>
-                            <a class="a-iconos" href="#"><i class="fab fa-facebook-f icono-facebook mb-3"></i></a>
-                            <a class="a-iconos" href="#"><i class="fab fa-instagram mb-3"></i></a>
-                            <a class="a-iconos" href="#"><i class="fab fa-twitter mb-3"></i></a>
+                            <a class="a-iconos" href="#"><i class="fab fa-facebook-f icono-facebook mb-5"></i></a>
+                            <a class="a-iconos" href="#"><i class="fab fa-instagram mb-5"></i></a>
+                            <a class="a-iconos" href="#"><i class="fab fa-twitter mb-5"></i></a>
+                            
+                            
+
+                            
                         </div>
-                    </div>  
+
+                        
+                </div>  
               
-                    <div class="copyright p-3 bg-dark">
-                          <span>Design DigitalTeam<i class="far fa-copyright"></i> 2020</span>
-                    </div>
-            </footer>
+                <div class="copyright p-5 bg-dark">
+                      <span>Design DigitalTeam<i class="far fa-copyright"></i> 2020</span>
+                </div>
+              </footer>
+
+            </div>
+        
+        
+        
+        
+        
+        
         </div>
+    
     </div>
-</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
