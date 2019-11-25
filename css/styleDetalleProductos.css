@@ -86,7 +86,7 @@ font-family: 'Roboto', sans-serif;
  }
 
  .contenedor-detalle {
-     
+     position: relative;
      width: 80%;
      background-color: white;
      margin-left: 12%;
@@ -111,7 +111,6 @@ font-family: 'Roboto', sans-serif;
     overflow: hidden;
 }
 
-
 .collage {
     width: 50%;
     height: 50%;
@@ -128,7 +127,7 @@ font-family: 'Roboto', sans-serif;
     margin-top: 10px;
     margin-left: 20px;
     width: 85%;
-    height: 30vh;
+    height: 45vh;
     padding: 10px;
     text-align: justify;
 }
@@ -155,51 +154,96 @@ font-family: 'Roboto', sans-serif;
     height: 7vh;
 }
 
-.carrito {
+/* mi carrito  */
+.carritoIcono {
     position: absolute;
-    bottom: 0px;
-    left: 4%;
-    width: 30%;
-    background-color: rgb(235, 38, 3);
-    border-top-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 2%;
+    right: -8%;
+    width: 25%;
+    height: 13%;
+    background-color: #343a40;
+    border-radius: 50%;
+    z-index: 100;
 }
 
-.carrito .tit-carrito {
-    background-color:  black;
-    text-align: center;
-    font-size: 1.1rem;
+.carritoIcono .tit-carrito {
+    position: relative;
+    background-color: transparent;
+    font-size: 1.5rem;
     font-weight: bold;
     color: white;
-    border-top-right-radius: 20px;
 }
 
-.carrito .letra-carrito {
+.carritoIcono .tit-carrito i {
+    font-size: 1.3rem;
+}
+
+.carritoIcono .tit-carrito i:hover {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+/*-- modal --*/
+.modal .modal-header {
+    background-color: #2C3E50;
     color: white;
-    font-size: 1rem;
-    text-align: center;
 }
 
-.carrito .letra-cant-carrito {
-    color: white;
-    font-size: 2rem;
-    text-align: center;
+.modal h4 {
+    font-weight: bolder;
+
 }
 
-.carrito .pie-carrito {
-    background-color: black;
-    text-align: center;
-    height: 5vh;
-    padding: 5px;
+.modal ul {
+    list-style: none;
 }
 
-.carrito .pie-carrito .letra-pie-carrito {
-    color: white;
-    width: 100%;
-    background-color: orange;
+.modal h5 {
+    font-size: 0.9rem;
     text-align: center;
-    font-size: 12px;
-    height: 20px;
+    width: 80px;
 }
+
+.modal h6 {
+    display: inline-block;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 80px;
+}
+
+.modal .total {
+    text-align: right;
+}
+
+.modal .total h4 {
+    font-size: 0.8rem;
+    width: 150px;
+    color: red;
+}
+
+.boton-modal:hover {
+    cursor: pointer;
+}
+
+/* -- carrito --*/
+.carritoIcono .tit-carrito span {
+    position: absolute;
+    top: -50%;
+    right: 17%;
+    color: red;
+    font-weight: bolder;
+}
+
+.carritoIcono .tit-carrito .boton-modal {
+    position: relative;
+    background: transparent;
+    border: none;
+    z-index: -1;
+}
+
 
 /*--------------------FOOTER------------*/
 
@@ -252,7 +296,7 @@ font-family: 'Roboto', sans-serif;
         margin-top: 10px;
         margin-left: 20px;
         width: 85%;
-        height: 30vh;
+        height: 45vh;
         padding: 10px;
         text-align: justify;
     }
@@ -264,105 +308,118 @@ font-family: 'Roboto', sans-serif;
         height: 50vh;
     }
 
-    .carrito {
-        position: absolute;
-        bottom: 0px;
-        left: 4%;
-        width: 30%;
-        background-color: rgb(235, 38, 3);
-        border-top-right-radius: 20px;
-    }
-    
-    .carrito .tit-carrito {
-        background-color:  black;
-        text-align: center;
-        font-size: 1.1rem;
-        font-weight: bold;
-        color: white;
-        border-top-right-radius: 20px;
-    }
-    
-    .carrito .letra-carrito {
-        color: white;
-        font-size: 1rem;
-        text-align: center;
-    }
-    
-    .carrito .letra-cant-carrito {
-        color: white;
-        font-size: 2rem;
-        text-align: center;
-    }
-    
-    .carrito .pie-carrito {
-        background-color: black;
-        text-align: center;
-        height: 5vh;
-        padding: 5px;
-    }
-    
-    .carrito .pie-carrito .letra-pie-carrito {
-        color: white;
-        width: 100%;
-        background-color: orange;
-        text-align: center;
-        font-size: 12px;
-        height: 20px;
-    }
+    /* mi carrito  */
+.carritoIcono {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 2%;
+    right: -8%;
+    width: 20%;
+    height: 12%;
+    background-color: #343a40;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.carritoIcono .tit-carrito {
+    position: relative;
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.carritoIcono .tit-carrito span {
+    position: absolute;
+    top: -50%;
+    right: 17%;
+    color: red;
+    font-weight: bolder;
+}
+ 
 }
 
 
 @media (min-width : 576px) {
+   
     .box-iconos {
         width: 100%;
-        height: 10vh;
+        height: 15vh;
     }
-    
-    .carrito {
+
+/* mi carrito  */
+    .carritoIcono {
         position: absolute;
-        bottom: 0px;
-        left: 2%;
-        width: 30%;
-        background-color: rgb(235, 38, 3);
-        border-top-right-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 2%;
+        right: -8%;
+        width: 14%;
+        height: 9%;
+        background-color: #343a40;
+        border-radius: 50%;
+        z-index: 100;
     }
-    
-    .carrito .tit-carrito {
-        background-color:  black;
-        text-align: center;
-        font-size: 1.1rem;
+
+    .carritoIcono .tit-carrito {
+        position: relative;
+        background-color: transparent;
+        font-size: 1.3rem;
         font-weight: bold;
         color: white;
-        border-top-right-radius: 20px;
     }
-    
-    .carrito .letra-carrito {
+
+    .carritoIcono .tit-carrito span {
+        position: absolute;
+        top: -50%;
+        right: 17%;
+        color: red;
+        font-weight: bolder;
+    }
+
+    /*-- modal --*/
+    .modal .modal-header {
+        background-color: #2C3E50;
         color: white;
-        font-size: 1rem;
-        text-align: center;
     }
-    
-    .carrito .letra-cant-carrito {
-        color: white;
-        font-size: 2rem;
-        text-align: center;
+
+    .modal h4 {
+        font-weight: bolder;
     }
-    
-    .carrito .pie-carrito {
-        background-color: black;
-        text-align: center;
-        height: 5vh;
-        padding: 5px;
+
+    .modal ul {
+        list-style: none;
     }
-    
-    .carrito .pie-carrito .letra-pie-carrito {
-        color: white;
-        width: 100%;
-        background-color: orange;
+
+    .modal h5 {
         text-align: center;
-        font-size: 12px;
-        height: 20px;
+        width: 120px;
     }
+
+    .modal h6 {
+        display: inline-block;
+        text-align: center;
+        width: 120px;
+    }
+
+    .modal .total {
+        text-align: right;
+    }
+
+    .modal .total h4 {
+        font-size: 1.2rem;
+        width: 230px;
+        color: red;
+    }
+
+    .boton-modal:hover {
+        cursor: pointer;
+    }
+   
+ 
 }
 
 @media (min-width : 768px) {
@@ -390,7 +447,43 @@ font-family: 'Roboto', sans-serif;
 
     .box-iconos {
         width: 100%;
-        height: 7vh;
+        height: 10vh;
+    }
+
+    /* mi carrito  */
+    .carritoIcono {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 2%;
+        right: -8%;
+        width: 10%;
+        height: 16%;
+        background-color: #343a40;
+        border-radius: 50%;
+        z-index: 100;
+    }
+
+    .carritoIcono .tit-carrito .boton-modal {
+        background: black;
+        border: none;
+    }
+
+    .carritoIcono .tit-carrito {
+        position: relative;
+        background-color: transparent;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    .carritoIcono .tit-carrito span {
+        position: absolute;
+        top: -50%;
+        right: 17%;
+        color: red;
+        font-weight: bolder;
     }
 
 }
@@ -425,50 +518,73 @@ font-family: 'Roboto', sans-serif;
        /* margin: initial !important;*/
     }
 
-    .carrito {
+/* mi carrito  */
+       .carritoIcono {
         position: absolute;
-        bottom: 0px;
-        right: 1%;
-        width: 30%;
-        background-color: rgb(235, 38, 3);
-        border-top-right-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 2%;
+        right: -4%;
+        width: 8%;
+        height: 16%;
+        background-color: #343a40;
+        border-radius: 50%;
+        z-index: 100;
     }
-    
-    .carrito .tit-carrito {
-        background-color:  black;
-        text-align: center;
-        font-size: 1.1rem;
+
+    .carritoIcono .tit-carrito {
+        position: relative;
+        background-color: transparent;
+        font-size: 1.5rem;
         font-weight: bold;
         color: white;
-        border-top-right-radius: 20px;
     }
-    
-    .carrito .letra-carrito {
+
+    .carritoIcono .tit-carrito span {
+        position: absolute;
+        top: -50%;
+        right: 17%;
+        color: red;
+        font-weight: bolder;
+    }
+
+    /*-- modal --*/
+    .modal .modal-header {
+        background-color: #2C3E50;
         color: white;
-        font-size: 1rem;
-        text-align: center;
     }
-    
-    .carrito .letra-cant-carrito {
-        color: white;
-        font-size: 2rem;
-        text-align: center;
+
+    .modal h4 {
+        font-weight: bolder;
     }
-    
-    .carrito .pie-carrito {
-        background-color: black;
-        text-align: center;
-        height: 5vh;
-        padding: 5px;
+
+    .modal ul {
+        list-style: none;
     }
-    
-    .carrito .pie-carrito .letra-pie-carrito {
-        color: white;
-        width: 100%;
-        background-color: orange;
+
+    .modal h5 {
         text-align: center;
-        font-size: 12px;
-        height: 20px;
+        width: 120px;
+    }
+
+    .modal h6 {
+        display: inline-block;
+        text-align: center;
+        width: 120px;
+    }
+
+    .modal .total {
+        text-align: right;
+    }
+
+    .modal .total h4 {
+        width: 230px;
+        color: red;
+    }
+
+    .boton-modal:hover {
+        cursor: pointer;
     }
 
 }
@@ -517,7 +633,7 @@ font-family: 'Roboto', sans-serif;
        margin-top: 10px;
        margin-left: 20px;
        width: 85%;
-       height: 30vh;
+       height: 20vh;
        padding: 10px;
        text-align: justify;
    }
@@ -525,7 +641,6 @@ font-family: 'Roboto', sans-serif;
    .detalle-info .costos {
        text-align: right;
        width: 100%;
-       border-bottom: 1px solid gray;
    }
    
             /* -- Iconos pie Cards */
@@ -547,49 +662,35 @@ font-family: 'Roboto', sans-serif;
                 width: 100%;
                 height: 7vh;
             }
-            .carrito {
-                position: absolute;
-                bottom: 0px;
-                right: 1%;
-                width: 30%;
-                background-color: rgb(235, 38, 3);
-                border-top-right-radius: 20px;
-            }
-            
-            .carrito .tit-carrito {
-                background-color:  black;
-                text-align: center;
-                font-size: 1.1rem;
-                font-weight: bold;
-                color: white;
-                border-top-right-radius: 20px;
-            }
-            
-            .carrito .letra-carrito {
-                color: white;
-                font-size: 1rem;
-                text-align: center;
-            }
-            
-            .carrito .letra-cant-carrito {
-                color: white;
-                font-size: 2rem;
-                text-align: center;
-            }
-            
-            .carrito .pie-carrito {
-                background-color: black;
-                text-align: center;
-                height: 5vh;
-                padding: 5px;
-            }
-            
-            .carrito .pie-carrito .letra-pie-carrito {
-                color: white;
-                width: 100%;
-                background-color: orange;
-                text-align: center;
-                font-size: 12px;
-                height: 20px;
-            }
+
+ /* mi carrito  */
+    .carritoIcono {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 2%;
+        right: -4%;
+        width: 7%;
+        height: 16%;
+        background-color: #343a40;
+        border-radius: 50%;
+        z-index: 100;
+    }
+
+    .carritoIcono .tit-carrito {
+        position: relative;
+        background-color: transparent;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    .carritoIcono .tit-carrito span {
+        position: absolute;
+        top: -50%;
+        right: 17%;
+        color: red;
+        font-weight: bolder;
+    }
 }
