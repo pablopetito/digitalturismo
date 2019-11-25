@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
     <title>faq</title>
 </head>
-<body >
+<body>
         
 <div class="container-fluid contenedor-nav">
         <div class="row">
@@ -30,7 +30,7 @@
                           <a class="nav-link" href="index.php"><i class="fas fa-home"></i><p>HOME</p></a>
                         </li>
                         <li class="nav-item items-barra">
-                          <a class="nav-link" href="#"><i class="far fa-question-circle"></i><p>FAQ</p></a>
+                          <a class="nav-link" href="faq.php"><i class="far fa-question-circle"></i><p>FAQ</p></a>
                         </li>
                         <li class="nav-item items-barra">
                           <a class="nav-link" href="productos.php"><i class="fas fa-suitcase"></i><p>DESTINOS</p></a>
@@ -39,7 +39,7 @@
                       </ul>
                       
                         
-                        <button class="btn my-2 my-sm-0 boton-ingreso" type="submit"><i class="fas fa-user"></i>INGRESAR</button>
+                      <a href="login.php"><button class="btn my-2 my-sm-0 boton-ingreso" type="submit"><i class="fas fa-user"></i>INGRESAR</button></a>
                      
                     </div>
                   </nav>
@@ -47,11 +47,11 @@
 
 
 <!-- Seccion Preguntas-->
-
+<div class="container-fluid contenedor-faq">
 <div class="container"> 
 <div class="titulo">
 <h2>Preguntas Frecuentes</h2>
-</div
+</div>
 <section>
 <div class="accordion md-accordion accordion-4" id="accordionEx2" role="tablist" aria-multiselectable="true">
 
@@ -147,20 +147,27 @@ Condiciones de uso
                 <div id="collapse14" class="collapse" role="tabpanel" aria-labelledby="heading14"
             data-parent="#accordionEx2">
             <div class="card-body rgba-teal-strong white-text">
-            <div class="contenedor-contacto">
-            <div><i class="fas fa-phone-alt"> Telefono</i> <h2> (011) 5263-7400</h2> 
+            <div class="contenedor-contacto container-fluid ">
+              <div class="row">
+            <div class="col-12 p-0 col-md-7">
+                <i class="fas fa-phone-alt"> Telefono</i> <h2> (011) 5263-7400</h2> 
                 <i class="far fa-clock">Horario de atencion </i> <h2>Lun a Vier 09:00hs a 17:30hs <br>
                   Sab 09:00 a 13:00</h2>
                   <i class="far fa-envelope">Mail</i> <h2>info@digitalturismo.com.ar</h2>
             </div>
+            <div class="col-12 p-0 col-md-5 contenedor-mapa">
               <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3313139805828!2d-58.38386198468745!3d-34.62106686592359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb28ea8781cb%3A0x950feb519009506e!2sLima%201111%2C%20C1073AAW%20CABA!5e0!3m2!1ses-419!2sar!4v1573611372545!5m2!1ses-419!2sar" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
             </div>
+            </div>
+
             </div>
           </div>
         </div>
       </div>
       </section>
     </div>
+ </div>
  </div>
 
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

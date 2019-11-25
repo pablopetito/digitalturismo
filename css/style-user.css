@@ -5,6 +5,8 @@
 }
 
 .contenedor_usuario{
+    
+    height: 100vh;
    background-image: url(../images/img-user/fondo1.JPG);  
 background-attachment: fixed;
   background-position: center;
@@ -125,7 +127,32 @@ h2{
     border-radius: 50%;
 }
 
-@media (min-width: 992px){
+
+.mujer{
+height: 30px;
+width: auto;
+}
+ /* tipografia gral */
+ 
+ .row{
+     font-size: 15px;
+     font-family: font-family: 'Roboto', sans-serif;
+     ;
+ }
+ h2{
+     font-size: 25px;
+     font-family: 'Nunito Sans', sans-serif;
+     
+ }
+ .list-group-item{
+     background-color: #0f0c29;
+     color:white
+ }
+ .list-group-item:hover{
+background-color: azure;
+color: black;
+ }
+ @media (min-width: 992px){
 
     /*---------------Barra de Navegacion -------------------*/
 
@@ -154,28 +181,4 @@ h2{
     width: initial;
    /* margin: initial !important;*/
 }
-
-.mujer{
-height: 30px;
-width: auto;
 }
- /* tipografia gral */
- 
- .row{
-     font-size: 15px;
-     font-family: font-family: 'Roboto', sans-serif;
-     ;
- }
- h2{
-     font-size: 25px;
-     font-family: 'Nunito Sans', sans-serif;
-     
- }
- .list-group-item{
-     background-color: #0f0c29;
-     color:white
- }
- .list-group-item:hover{
-background-color: azure;
-color: black;
- }
