@@ -55,11 +55,11 @@
       <div class="container">
         <div class="jumbotron jumbotron-fluid mt-0">
           <div class="container">
-            <h2>@Dariofernandez</h2>
+            <h2>@VaderDeLaGente</h2>
             <div class="d-flex justify-content-center h-100">
               <div class="image_outer_container">
                 <div class="image_inner_container">
-                  <img class="mujer" src="images/img-user/user.jpg">
+                  <img class="mujer" src="images/img-user/vadercapo.jpg">
                 </div>
               </div>
             </div>
@@ -143,7 +143,7 @@
                     <label for="inputPassword6" class="font-weight-bold">Contraseña actual</label>
                     <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" name="password">
                     <small id="passwordHelpInline" class="text-muted">
-                      8-10 
+                      8-10 caracteres
                     </small>
                   </div>
                   
