@@ -1,3 +1,51 @@
+<?php 
+
+      include_once 'controladores/helpers.php';
+      include_once 'controladores/controladorValidacion.php';
+      include_once 'controladores/controladorUsuario.php';
+      $erroresRegistro =[];
+      $erroresArchivo=[];
+          if($_POST){
+
+              $erroresRegistro= validarFormulario($_POST);
+              if($_FILES){
+                $erroresArchivo = validarImagenPerfil($_FILES);
+              }
+                
+            
+             
+              
+              if(count($erroresRegistro) == 0 && count($erroresArchivo) == 0){
+
+                  $usuarioRegistro = armarArrayUsuario($_POST);
+                  $nombreImagen = guardarAvatar($_FILES);
+
+                  $usuarioRegistro['avatar'] = $nombreImagen;  
+                  
+                  
+              //Guardar en base de datos un array transformado enJSON
+                
+                $usuarioRegistro = json_encode($usuarioRegistro);
+                file_put_contents("usuarios.json", $usuarioRegistro . PHP_EOL, FILE_APPEND);
+                header("Location: login.php");
+              };
+
+          }
+ ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -48,50 +96,77 @@
 <div class="todo">
 
 
-    <form class="formulario">
+    <form class="formulario" action="" method="post" enctype="multipart/form-data">
   <h1>Registrate</h1>
   <div class="contenedor">
     
+  <div class="form-group">
     <div class="input-contenedor">
       <i class="fas fa-user icon"></i>
-      <input type="text" placeholder="Nombre Completo">
-      
-      
+      <input type="text" name="nombre" placeholder="Nombre Completo" value="<?= persistirDato($erroresRegistro, "nombre"); ?>">  
     </div>
+    <span id="nombrelHelp" class="form-text text-danger"><?= existeError($erroresRegistro, "nombre");?></span>
+  </div>
+
+  <div class="form-group">
     <div class="input-contenedor">
       <i class="fas fa-envelope icon"></i>
-      <input type="text" placeholder="Correo Electronico">
-      
-      
+      <input type="text" name="email" placeholder="Correo Electronico" value="<?= persistirDato($erroresRegistro, "email"); ?>">
+       
     </div>
+    <span id="emailHelp" class="form-text text-danger"><?= existeError($erroresRegistro, "email"); ?> 
+  </div>
+
+  <div class="form-group">
     <div class="input-contenedor">
       <i class="fab fa-facebook icon"></i>
-      <input type="text" placeholder="Facebook">
-      
-      
+      <input type="text" name="facebook" placeholder="Facebook" value="<?= persistirDato($erroresRegistro, "facebook"); ?>">
+ 
     </div>
+  
+  </div>
+
+  <div class="form-group">
     <div class="input-contenedor">
       <i class="fab fa-twitter-square icon"></i>
-      <input type="text" placeholder="Twitter">
+      <input type="text" name="twitter" placeholder="Twitter" value="<?= persistirDato($erroresRegistro, "twitter"); ?>">
       
       
+      </div>
     </div>
+    <div class="form-group">
     <div class="input-contenedor">
       <i class="fab fa-instagram icon"></i>
-      <input type="text" placeholder="Instagram">
+      <input type="text" name="instagram" placeholder="Instagram" value="<?= persistirDato($erroresRegistro, "instagram"); ?>">
       
       
     </div>
+    </div>
+
+    <div class="form-group">
     <div class="input-contenedor">
       <i class="fas fa-key icon"></i>
-      <input type="password" placeholder="Contraseña">
+      <input type="password" name="password" placeholder="Contraseña">
       
     </div>
-    <div class="custom-file mb-3">
-      <input type="file" class="custom-file-input" id="customFileLang" lang="es">
-      <label class="custom-file-label" for="customFileLang">Seleccionar Foto de Perfil</label>
+    <span id="repasswordHelp" class="form-text text-danger"><?=existeError($erroresRegistro, "repassword");?></span>
     </div>
-    <input type="submit" value="Registrate" class="button">
+  
+    <div class="form-group">
+    <div class="input-contenedor">
+      <i class="fas fa-key icon"></i>
+      <input type="password" name="repassword" placeholder="Repetir Contraseña">
+      
+    </div>
+    <span id="repasswordHelp" class="form-text text-danger"><?=existeError($erroresRegistro, "repassword");?></span>
+    </div>
+
+    <div class="custom-file mb-3">
+      <input type="file" class="custom-file-input" id="customFileLang" lang="es" name="imagenPerfil">
+      <label class="custom-file-label" for="customFileLang">Seleccionar Foto de Perfil</label>
+      <span id="archivoHelp" class="form-text text-danger"><?=existeError($erroresArchivo, "imagenPerfil");?></span>
+    </div>
+    <input type="submit" value="Registrate"  class="button">
     <p>Al hacer clic en "Registrate", aceptas nuestras Condiciones de uso y Politica de privacidad</p>
     <p>¿Ya tienes cuenta?<a class="link" href="login.php">Iniciar Sesion</a></p>
     
