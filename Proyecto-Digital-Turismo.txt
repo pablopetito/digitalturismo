@@ -70,6 +70,7 @@ usuarios
 destinos
 	id
 	nombrePaquete
+	provincia
 	detalleCorto 
 	detalleServicio 
 	costoXpasajero
