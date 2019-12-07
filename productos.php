@@ -1,3 +1,11 @@
+<?php 
+
+
+require('controladores/controladorValid-Busqueda.php');
+include_once 'controladores/helpers.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,6 +15,7 @@
     <title>Digital Turismo | Productos</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styleProductos.css">
+    <link rel="stylesheet" href="css/style-login-registro.css">
     <link href="https://fonts.googleapis.com/css?family=Anton|Oswald:500|Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/67f61afa3e.js" crossorigin="anonymous"></script>
 </head>
@@ -122,28 +131,14 @@
         <!-- Todos los destinos  -->
         <section class="destinos">
         <nav class="navbar navbar-light bg-dark d-flex justify-content-center">
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Buscar Destino" aria-label="Search">
-                <div class="col-auto my-1 mr-2">
-                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                    <option selected>Elegir Provincia</option>
-                    <option value="1">Salta</option>
-                    <option value="2">Neuqeun</option>
-                    <option value="3">Mendoza</option>
-                </select>
-                </div>
-                <div class="col-auto my-1 mr-2">
-                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                    <option selected>Rango de Precio</option>
-                    <option value="1">$5000-$10000</option>
-                    <option value="2">$10000-$20000</option>
-                    <option value="3">$20000-max</option>
-                </select>
-                </div>
+            <form class="form-inline" action="" method="post" enctype="multipart/form-data">
+                <input class="form-control mr-sm-3" type="search" name='destino' value="<?= isset($_POST['destino']) ? $_POST['destino'] : '' ?>" placeholder="Buscar Destino" aria-label="Default" 
+                aria-describedby="inputGroup-sizing-default"> 
+                <?php if(isset($errores['destino'])): ?> <br/>
+                    <span id="nombrelHelp" class="form-text text-danger mr-sm-3"><?= $errores['destino']?></span>
+                    <?php endif; ?>
                 
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                <button class="btn btn-outline-success my-2 my-sm-3" type="submit">Buscar</button>
             </form>
         </nav>
             <div class="container">
