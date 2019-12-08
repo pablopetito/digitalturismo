@@ -14,34 +14,10 @@
 <body>
 
 <!-- Cabecera - barra navegadora -->
-<div class="row">
-    <div class="col-12">
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark barraNavegacion">
-                <a class="navbar-brand" href="index.php"><img class="logo-barra" src="images/digitalTurismoLogoBlanco.png" alt="logo"> </a>
-                <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon menu-hamburguesa"></span>
-                </button>
+<div class="container-fluid p-0">
 
-                <div class="collapse navbar-collapse div-barralinks" id="navbarSupportedContent">
-                    <ul class="navbar-nav contenedor-links">
-                        <li class="nav-item items-barra">
-                          <a class="nav-link" href="index.php"><i class="fas fa-home"></i><p>HOME</p></a>
-                        </li>
-                        <li class="nav-item items-barra">
-                          <a class="nav-link" href="faq.php"><i class="far fa-question-circle"></i><p>FAQ</p></a>
-                        </li>
-                        <li class="nav-item items-barra">
-                          <a class="nav-link" href="productos.php"><i class="fas fa-suitcase"></i><p>DESTINOS</p></a>
-                        </li>
-                                               
-                    </ul>
-                        
-                    <a href="login.php"><button class="btn my-2 my-sm-0 boton-ingreso" type="submit"><i class="fas fa-user"></i>INGRESAR</button></a>
-                    
-                </div>
-            </nav>
-        </header>
+    <div class="row">
+        <?php include_once('nav.php') ?>
     </div>
 </div>
 
@@ -183,49 +159,9 @@
 </div>
 
 <!--------FOOTER------------------------------->
-<div class="container-fluid">
+<div class="container-fluid p-0">
         <div class="row">
-
-            <div class="col-12 p-0">
-              <footer>
-                    <div class="social d-flex flex-wrap">
-                       
-                            <div class="contacto mt-5 col-md-6">
-                                  <h3>Contacto</h3>
-                                  <form>
-                                      <div class="form-group">
-                                        <label for="exampleInputEmail1">Email</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
-                                        
-                                      </div>
-                                      <div class="form-group">
-                                        <label for="exampleFormControlTextarea1">Mensaje</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" palceholder="Mensaje..." rows="5" name="mensaje"></textarea>
-                                      </div>
-                                      
-                                      <button type="submit" class="btn btn-info btn-block">Enviar</button>
-                                  </form>
-                              </div>
-
-
-                        <div class="red-social mt-5 col-md-6">
-                            <h3 class="mb-4">Visitanos</h3>
-                            <a class="a-iconos" href="#"><i class="fab fa-facebook-f icono-facebook mb-5"></i></a>
-                            <a class="a-iconos" href="#"><i class="fab fa-instagram mb-5"></i></a>
-                            <a class="a-iconos" href="#"><i class="fab fa-twitter mb-5"></i></a>      
-                        </div>
-                </div>  
-              
-                <div class="copyright p-5 bg-dark">
-                      <span>Design DigitalTeam<i class="far fa-copyright"></i> 2020</span>
-                </div>
-              </footer>
-
-            </div>
-        
-        
-        
-        
+        <?php include_once('footer.php') ?>        
         
         
         </div>
