@@ -35,7 +35,7 @@
         if (isset($array["repassword"])) {
             if (empty($array["repassword"])) {
                 $errores["repassword"] = "Debes completar este campo";
-            }elseif ($array["password"] != $_POST["repassword"]) {
+            }elseif ($array["password"] != $array["repassword"]) {
                  $errores["repassword"] = "Las contraseñas deben coincidir";
             }
         }
@@ -83,6 +83,10 @@
                 }
         }
 
+    }
+
+    function validarLogin($array){
+        
     }
    
 

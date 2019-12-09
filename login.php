@@ -1,4 +1,19 @@
+<?php 
 
+    session_start();
+    include_once 'controladores/helpers.php';
+    include_once 'controladores/controladorValidacion.php';
+    include_once 'controladores/controladorUsuario.php';
+    include_once 'controladores/controladorBBDD.php';
+    $erroresLogin =[];
+    if($_POST){
+        $erroresLogin = validarFormulario();
+    }
+
+
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -21,14 +36,14 @@
 
  <div class="todo">      
        
-<form class="formulario">
+<form class="formulario" method="post">
     <h1>Login</h1>
     <div class="contenedor">
 
       
         <div class="input-contenedor">
                 <i class="fas fa-envelope icon"></i>
-                <input type="text" placeholder="Correo Electronico" name="email">
+                <input type="text" placeholder="Correo Electronico" name="email" value="<?= persistirDato($erroresLogin, "email"); ?>">
                 
 
         </div>
@@ -36,6 +51,10 @@
                 <i class="fas fa-key icon"></i>
                 <input type="password" placeholder="Contraseña" name="password">
                 
+        </div>
+        <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" class="custom-control-input" id="customCheck1" name="recordarme" value="1">
+            <label class="custom-control-label" for="customCheck1">Recordarme</label>
         </div>
         <input type="submit" value="Login" class="button">
         <p>¿No tienes cuenta aun?<a class="link" href="registro.php">Registrate</a></p>
