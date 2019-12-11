@@ -1,4 +1,19 @@
+<?php 
 
+    session_start();
+    include_once 'controladores/helpers.php';
+    include_once 'controladores/controladorValidacion.php';
+    include_once 'controladores/controladorUsuario.php';
+    include_once 'controladores/controladorBBDD.php';
+    $erroresLogin =[];
+    if($_POST){
+        $erroresLogin = validarFormulario();
+    }
+
+
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -15,49 +30,20 @@
    
     <div class="container-fluid contenedor-nav">
         <div class="row">
-          <div class="col-12">
-            <header>
-                <nav class="navbar navbar-expand-lg navbar-dark barraNavegacion">
-                    <a class="navbar-brand" href="index.php"><img class="logo-barra" src="images/digitalTurismoLogoBlanco.png" alt="logo"> </a>
-                    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon menu-hamburguesa"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse div-barralinks" id="navbarSupportedContent">
-                      <ul class="navbar-nav contenedor-links">
-                        <li class="nav-item items-barra">
-                          <a class="nav-link" href="index.php"><i class="fas fa-home"></i><p>HOME</p></a>
-                        </li>
-                        <li class="nav-item items-barra">
-                          <a class="nav-link" href="faq.php"><i class="far fa-question-circle"></i><p>FAQ</p></a>
-                        </li>
-                        <li class="nav-item items-barra">
-                          <a class="nav-link" href="productos.php"><i class="fas fa-suitcase"></i><p>DESTINOS</p></a>
-                        </li>
-                                               
-                      </ul>
-                      
-                        
-                        <button class="btn my-2 my-sm-0 boton-ingreso" type="submit"><i class="fas fa-user"></i>INGRESAR</button>
-                     
-                    </div>
-                  </nav>
-                </header>
-        
-                </div>
+         <?php include_once('nav.php') ?>
               </div>
            </div>
 
  <div class="todo">      
        
-<form class="formulario">
+<form class="formulario" method="post">
     <h1>Login</h1>
     <div class="contenedor">
 
       
         <div class="input-contenedor">
                 <i class="fas fa-envelope icon"></i>
-                <input type="text" placeholder="Correo Electronico" name="email">
+                <input type="text" placeholder="Correo Electronico" name="email" value="<?= persistirDato($erroresLogin, "email"); ?>">
                 
 
         </div>
@@ -65,6 +51,10 @@
                 <i class="fas fa-key icon"></i>
                 <input type="password" placeholder="Contraseña" name="password">
                 
+        </div>
+        <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" class="custom-control-input" id="customCheck1" name="recordarme" value="1">
+            <label class="custom-control-label" for="customCheck1">Recordarme</label>
         </div>
         <input type="submit" value="Login" class="button">
         <p>¿No tienes cuenta aun?<a class="link" href="registro.php">Registrate</a></p>
