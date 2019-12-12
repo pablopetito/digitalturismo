@@ -15,7 +15,6 @@
 
 <!-- Cabecera - barra navegadora -->
 <div class="container-fluid p-0">
-
     <div class="row">
         <?php include_once('nav.php') ?>
     </div>
@@ -24,22 +23,17 @@
 <div class="fondo_producto">
     
     <div class=contenedor-detalle>
-<!-- icono Mi carrtito-->
 
+<!-- icono Mi carrtito-->
     <div class="carritoIcono">
     
         <div class="tit-carrito">
-        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">       
-            <i class="fas fa-shopping-cart"></i>
-        </button>
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">       
+                <i class="fas fa-shopping-cart"></i>
+            </button>
             <span> 1 </span>
         </div>  
     </div> 
-
-<!-- Button trigger modal
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>-->
 
         <div class="row">
             <div class="col-xs-12 box1">
@@ -50,7 +44,6 @@
         <div class="row">
         
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-    
                 <div class="contenedor-collage">
                     <div class="collage">
                         <img class="img-Principal" src="images/Destinos/Bariloche/barilocheCentroCivico.jpg"  alt="Bariloche"> 
@@ -68,7 +61,6 @@
                         <img class="img-Principal" src="images/Destinos/Bariloche/barilocheAeroSilla.jpg"  alt="Bariloche">
                     </div>
                 </div>
-
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -86,28 +78,25 @@
                     <img class="icon-compar" src="images/iconos/compartir-Icon.png" alt="compartir" title="Compartir">
                     <img class="icon-compar" src="images/iconos/botonCarritoCompra-2.png" alt="carrito" title="Agregar al Carrito de Compras">
                 </div>
-            </div>
-        
+            </div>        
         </div>
-
     </div>
-
 </div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">MI CARRITO</h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">MI CARRITO</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
       
-        <div class="modal-body">
+            <div class="modal-body">
             <!-- <-- renglon titulos -->
-            <div class="row">
+                <div class="row">
                     <div class="col-xs-3">
                         <h5>Cant</h5>
                     </div>
@@ -123,10 +112,10 @@
                     <div class="col-xs-3">
                         <h5>Costo Total</h5>
                     </div> 
-            </div>
+                </div>
 
             <!-- renglon productos -->
-            <div class="row">
+                <div class="row">
                     <div class="col-xs-3">
                         <h6>2</h6>
                     </div>
@@ -139,39 +128,35 @@
                     <div class="col-xs-3">
                         <h6>$13.000,00</h6>
                     </div>
-            </div>
+                </div>
             <!-- renglon total -->           
-            <div class="row">
+                <div class="row">
                     <div class="col-xs-6 total">
                         <h4>TOTAL COMPRA</h4>
                     </div>
                     <div class="col-xs-6 total">
                         <h4>$13.000,00</h4>
                     </div>
+                </div>
             </div>
-</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-warning">Finalizar Compra</button>
-      </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-warning">Finalizar Compra</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <!--------FOOTER------------------------------->
 <div class="container-fluid p-0">
         <div class="row">
-        <?php include_once('footer.php') ?>        
-        
-        
+            <?php include_once('footer.php') ?>            
         </div>
-    
-    </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
 </body>
 </html>

@@ -1,6 +1,5 @@
 <?php 
 
-
 require('controladores/controladorValid-Busqueda.php');
 include_once 'controladores/helpers.php';
 
@@ -108,8 +107,7 @@ include_once 'controladores/helpers.php';
                 aria-describedby="inputGroup-sizing-default"> 
                 <?php if(isset($errores['destino'])): ?> <br/>
                     <span id="nombrelHelp" class="form-text text-danger mr-sm-3"><?= $errores['destino']?></span>
-                    <?php endif; ?>
-                
+                    <?php endif; ?>           
                 <button class="btn btn-outline-success my-2 my-sm-3" type="submit">Buscar</button>
             </form>
         </nav>
@@ -252,9 +250,7 @@ include_once 'controladores/helpers.php';
         <div class="container-fluid">
             <div class="row">             
                 <?php include_once('footer.php') ?>
-                
             </div>
-            
         </div>
         
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
