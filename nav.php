@@ -1,3 +1,4 @@
+
 <div class="col-12">
         <header>
           <nav class="navbar navbar-expand-lg navbar-dark barraNavegacion">
@@ -20,9 +21,27 @@
                 
               </ul>
               
-              
+              <?php if(!isset($_SESSION["nombre"])): ?>
+
               <a href="login.php"><button class="btn my-2 my-sm-0 boton-ingreso" type="submit"><i class="fas fa-user"></i>INGRESAR</button></a>
-              
+
+              <?php else : ?>
+                <ul class="navbar-nav ml-md-auto">
+									<li class="nav-item dropdown ">
+										 <a class="nav-link dropdown-toggle boton-ingreso p-2 d-flex justify-content-center align-items-center text-uppercase text-white" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><?= $_SESSION["nombre"] ?></a>
+										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+											 <a class="dropdown-item" href="index.php?m=perfil">Mi perfil</a>
+
+											  <div class="dropdown-divider"></div>
+											 
+											 <a class="dropdown-item" href="index.php?m=logout">Salir</a>
+										</div>
+									</li>
+								</ul>
+                 
+
+              <?php endif; ?> 
+
             </div>
           </nav>
         </header>

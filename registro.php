@@ -84,7 +84,7 @@
       <input type="text" name="email" placeholder="Correo Electronico" value="<?= persistirDato($erroresRegistro, "email"); ?>">
        
     </div>
-    <span id="emailHelp" class="form-text text-danger"><?= existeError($erroresRegistro, "email"); ?> 
+    <span id="emailHelp" class="form-text text-danger"><?= existeError($erroresRegistro, "email"); ?> </span> 
   </div>
 
   <div class="form-group">

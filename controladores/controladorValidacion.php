@@ -39,6 +39,13 @@
                  $errores["repassword"] = "Las contraseñas deben coincidir";
             }
         }
+        if (isset($array["mensaje"])) {
+             if (empty($array["mensaje"])) {
+                 $errores["mensaje"] = "Debes completar este campo";
+             }elseif (strlen($array["mensaje"]) < 10) {
+                $errores["mensaje"] = "Debes llenar este campo con al menos 10 caracteres";
+             }
+        }
         
         
 
