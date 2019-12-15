@@ -1,5 +1,5 @@
 <?php 
-
+ session_start();
 require('controladores/controladorValid-Busqueda.php');
 include_once 'controladores/helpers.php';
 

@@ -93,6 +93,13 @@
     }
 
     function validarLogin($array){
+        $errores = [];
+        if(isset($array["email"]) && isset($array["password"])){
+            //ESTO VA A VERIFICAR EN EL CONTROLADORBBDD
+            $errores = buscarUsuario($array);
+
+        }
+        return $errores;
         
     }
    
