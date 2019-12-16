@@ -1,15 +1,22 @@
 <?php 
 
     session_start();
-    include_once 'controladores/helpers.php';
-    include_once 'controladores/controladorValidacion.php';
-    include_once 'controladores/controladorUsuario.php';
-    include_once 'controladores/controladorBBDD.php';
+    include_once 'controladores/autoload.php';
     $erroresLogin =[];
     if($_POST){
-        $erroresLogin = validarFormulario();
+        $erroresLogin = validarFormulario($_POST);
+        if (!$erroresLogin) {
+            $erroresLogin = validarLogin($_POST, $_POST["recordarme"]);
+        }
     }
-
+    function okLogin(){
+        if (isset($_GET["registro"])) {
+            if ($_GET["registro"] == "ok") {
+                return true;                
+            }
+        }   
+    }
+    
 
 
 
@@ -28,15 +35,22 @@
 </head>
 <body>
    
-    <div class="container-fluid contenedor-nav">
-        <div class="row">
+    <div class="container-fluid contenedor-nav p-0 m-0">
+        <div class="row m-0">
          <?php include_once('nav.php') ?>
               </div>
            </div>
-
+   
+    <div>
+          <?php  if(okLogin()): ?>
+            <div class="alert alert-success m-0" role="alert">
+               <b>🌴 REGISTRO EXITOSO! 😄</b> 
+            </div>
+          <?php endif; ?>
+    </div>
  <div class="todo">      
        
-<form class="formulario" method="post">
+<form class="formulario" method="post" action="">
     <h1>Login</h1>
     <div class="contenedor">
 
@@ -47,11 +61,13 @@
                 
 
         </div>
+        <span id="emailHelp" class="form-text text-danger"><?= existeError($erroresLogin,"email"); ?> </span> 
         <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
                 <input type="password" placeholder="Contraseña" name="password">
                 
         </div>
+        <span id="passwordHelp" class="form-text text-danger"><?= existeError($erroresLogin, "password"); ?></span> 
         <div class="custom-control custom-checkbox mb-3">
             <input type="checkbox" class="custom-control-input" id="customCheck1" name="recordarme" value="1">
             <label class="custom-control-label" for="customCheck1">Recordarme</label>
@@ -64,11 +80,7 @@
 
 
 </form>
-<div class="container">
-  <div class="alert alert-danger" role="alert">
-  A los profes les dejamos el acceso al usuario por medio de este link <a href="user.php" class="alert-link border border-dark">ACCESO USUARIO</a> (Más adelante cuando podamos loguearnos se agregará a la barra de navegación)
-</div>
-</div>
+
 
 </div>
 

@@ -12,7 +12,7 @@
 
 
 ?>
-<div class="col-12">
+<div class="col-12 p-0">
         <footer>
           <div class="social d-flex flex-wrap">
             <div class="mision col-12">

@@ -1,3 +1,46 @@
+<?php 
+    session_start();
+    include_once 'controladores/autoload.php';
+    if (!isset($_SESSION["email"])){
+      header('Location:login.php');
+    }
+    $erroresActulizarPerfil =[];
+    $erroresArchivo =[];
+    
+     if($_POST){
+        $erroresActulizarPerfil = validarFormulario($_POST);
+        if($_FILES){
+          $erroresArchivo = validarImagenPerfil($_FILES);
+        }
+        //DIVIDO SI ME LLEGA CAMBIO DE PASSWORD NO ACTUALIZO LOS DEMAS ATRIBUTOS
+        if(!isset($_POST["password"])){
+
+          if(count($erroresActulizarPerfil)==0 && count($erroresArchivo) == 0){
+          $usuarioActualizarPerfil = armarArrayUsuarioActualizacion($_POST);
+          if($_FILES){
+           
+            if($_FILES["imagenPerfil"]["error"] != UPLOAD_ERR_NO_FILE){
+              $nombreImagen = guardarAvatar($_FILES);
+            }else{
+              $nombreImagen = $_SESSION["avatar"];
+            }
+            
+           $usuarioActualizarPerfil["avatar"] = $nombreImagen; 
+          }
+          actualizarUsuario($usuarioActualizarPerfil);
+          
+
+
+          }
+        }else{
+          if (count($erroresActulizarPerfil) == 0) {
+              cambiarPassword($_POST["password"]);
+          }
+
+        }
+        
+      }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,11 +70,11 @@
       <div class="container">
         <div class="jumbotron jumbotron-fluid mt-0">
           <div class="container">
-            <h2>@VaderDeLaGente</h2>
+            <h2><?= $_SESSION["nombre"] ?></h2>
             <div class="d-flex justify-content-center h-100">
               <div class="image_outer_container">
                 <div class="image_inner_container">
-                  <img class="mujer" src="images/img-user/vadercapo.jpg">
+                  <img class="mujer" src="images/<?= $_SESSION['avatar'] ?>">
                 </div>
               </div>
             </div>
@@ -43,21 +86,22 @@
         <div class="row">
           <div class="col-4">
             <div class="list-group" id="list-tab" role="tablist">
-              <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Informacion personal</a>
-              <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Cambiar contraseña</a>
+              <a class="list-group-item list-group-item-action <?= !isset($_POST["viejaPassword"]) ? "active" : "" ?>" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Información personal</a>
+              <a class="list-group-item list-group-item-action <?= isset($_POST["viejaPassword"]) ? "active" : "" ?>" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Cambiar contraseña</a>
               <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Favoritos</a>
               <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Contactos</a>
             </div>
           </div>
           <div class="col-8">
             <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-                <form action="user.php" method="GET">
+              <div class="tab-pane fade <?= !isset($_POST["viejaPassword"]) ? "show active" : "" ?>" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                <form action="user.php" method="post" enctype="multipart/form-data">
                   <div class="form-row">
                     <div class="col-md-12">
                       <div class="md-form form-group">
-                        <input type="email" class="form-control" id="inputEmail4MD" placeholder="Email @" name="email">
-                        <label for="inputEmail4MD"></label>
+                        <input type="email" class="form-control" id="inputEmail4MD" placeholder="Insertar Email" name="email" value="<?= $_SESSION['email'] ?>">
+                        
+                        <span id="emailHelp" class="form-text text-danger"><?= existeError($erroresActulizarPerfil, "email"); ?> </span>
                       </div>
                     </div>
                     
@@ -66,8 +110,9 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="md-form form-group">
-                        <input type="text" class="form-control" id="inputAddressMD" placeholder="Nombre" name="nombre"> 
-                        <label for="inputAddressMD"></label>
+                        <input type="text" class="form-control" id="inputAddressMD" placeholder="Insertar Nombre" name="nombre" value="<?= $_SESSION['nombre'] ?>"> 
+                        
+                        <span id="emailHelp" class="form-text text-danger"><?= existeError($erroresActulizarPerfil, "nombre"); ?> </span>
                       </div>
                     </div>
                     
@@ -77,61 +122,66 @@
                   <div class="form-row">
                     <div class="col-md-12">
                       <div class="md-form form-group">
-                        <input type="text" class="form-control" id="inputCityMD" placeholder="Facebook" name="facebook">
-                        <label for="inputCityMD"></label>
+                        <input type="text" class="form-control" id="inputCityMD" placeholder="Insertar Facebook" name="facebook" value="<?= $_SESSION['facebook'] ?>">
+                        
+                        
                       </div>
                     </div>
                     
                     <div class="col-md-12">
                       <div class="md-form form-group">
-                        <input type="text" class="form-control" id="inputZipMD" placeholder="Twitter" name="twitter">
-                        <label for="inputZipMD"></label>
+                        <input type="text" class="form-control" id="inputZipMD" placeholder="Insertar twitter" name="twitter" value="<?= $_SESSION['twitter'] ?>">
+                        
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="md-form form-group">
-                        <input type="text" class="form-control" id="inputZipMD" placeholder="Instagram" name="instagram">
-                        <label for="inputZipMD"></label>
+                        <input type="text" class="form-control" id="inputZipMD" placeholder="Insertar Instagram" name="instagram" value="<?= $_SESSION['instagram'] ?>"> 
+                        
                       </div>
                     </div>
                   </div>
                   
                   <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="customFileLang" lang="es" name="fotoPerfil">
+                    <input type="file" class="custom-file-input" id="customFileLang" lang="es" name="imagenPerfil">
                     <label class="custom-file-label" for="customFileLang">Seleccionar Foto de Perfil</label>
+                    <span id="archivoHelp" class="form-text text-danger"><?=existeError($erroresArchivo, "imagenPerfil");?></span>
                   </div>
                   <div class="mt-3">
                     <button type="submit" class="btn btn-primary btn-md">Actualizar datos</button>
-                    <button type="button" class="btn btn-light">Cerrar Sesion</button>
+                    
                   </div>
                   
                   
                 </form>
               </div>
-              <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+              <div class="tab-pane fade <?= isset($_POST["viejaPassword"]) ? "show active" : "" ?> " id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
                 <h2>Cambia tu contraseña</h2>
                 <form action="user.php" method="POST">
                   <div class="form-group">
                     <label for="inputPassword6" class="font-weight-bold">Contraseña actual</label>
-                    <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" name="password">
-                    <small id="passwordHelpInline" class="text-muted">
-                      8-10 caracteres
-                    </small>
+                    <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" name="viejaPassword">
+                    <span id="emailHelp" class="form-text text-danger"><b><?= existeError($erroresActulizarPerfil, "viejaPassword"); ?> </b></span>
                   </div>
                   
                   <br>
                   
                   <div class="form-group">
                     <label for="inputPassword6" class="font-weight-bold">Nueva contraseña</label>
-                    <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" name="nuevaPassword">
-                    <small id="passwordHelpInline" class="text-muted">
-                      8-10 caracteres
-                    </small>
+                    <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" name="password">
+                    <span id="emailHelp" class="form-text text-danger"><b><?= existeError($erroresActulizarPerfil, "password"); ?> </b></span>
+                  </div>
+                  
+                  <br>
+                  <div class="form-group">
+                    <label for="inputPassword6" class="font-weight-bold">Repetir nueva contraseña</label>
+                    <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" name="repassword">
+                    <span id="emailHelp" class="form-text text-danger"><b><?= existeError($erroresActulizarPerfil, "repassword"); ?> </b></span>
                   </div>
                   
                   <br>
                   <div>
-                    <button type="button" class="btn btn-dark">Cambia tu contraseña</button>
+                    <button type="submit" class="btn btn-dark">Cambia tu contraseña</button>
                     
                   </div>
                   
@@ -296,5 +346,13 @@
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
           <script src="https://kit.fontawesome.com/562bf078ff.js" crossorigin="anonymous"></script>
+          <script>
+                $('.custom-file-input').on('change', function(event) {
+                    var inputFile = event.currentTarget;
+                    $(inputFile).parent()
+                        .find('.custom-file-label')
+                        .html(inputFile.files[0].name);
+                }); 
+        </script>
         </body>
         </html>

@@ -13,6 +13,17 @@ function armarArrayUsuario($array){
 
     return $usuarioRegistro;
 }
+function armarArrayUsuarioActualizacion($array){
+    $usuarioRegistro = [
+        "nombre" => trim($array["nombre"]),
+        "email" => $array["email"],
+        "facebook" =>$array["facebook"],
+        "twitter" => $array["twitter"],
+        "instagram"=> $array["instagram"]
+    ];
+
+    return $usuarioRegistro;
+}
 
 function guardarAvatar($archivo){
     
