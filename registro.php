@@ -8,10 +8,7 @@
               $erroresRegistro= validarFormulario($_POST);
               if($_FILES){
                 $erroresArchivo = validarImagenPerfil($_FILES);
-              }
-                
-            
-             
+              }       
               
               if(count($erroresRegistro) == 0 && count($erroresArchivo) == 0){
 
@@ -20,6 +17,7 @@
 
                   $usuarioRegistro['avatar'] = $nombreImagen;  
                   //controloadorBBDD
+                  
                   registroUsuario($usuarioRegistro);
               //Guardar en base de datos un array transformado enJSON
               
@@ -27,19 +25,6 @@
 
           }
  ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -63,7 +48,7 @@
 <div class="todo">
 
 
-    <form class="formulario" action="" method="post" enctype="multipart/form-data">
+<form class="formulario" action="" method="post" enctype="multipart/form-data">
   <h1>Registrate</h1>
   <div class="contenedor">
     
@@ -78,8 +63,7 @@
   <div class="form-group">
     <div class="input-contenedor">
       <i class="fas fa-envelope icon"></i>
-      <input type="text" name="email" placeholder="Correo Electronico" value="<?= persistirDato($erroresRegistro, "email"); ?>">
-       
+      <input type="text" name="email" placeholder="Correo Electronico" value="<?= persistirDato($erroresRegistro, "email"); ?>">  
     </div>
     <span id="emailHelp" class="form-text text-danger"><?= existeError($erroresRegistro, "email"); ?> </span> 
   </div>
@@ -88,26 +72,20 @@
     <div class="input-contenedor">
       <i class="fab fa-facebook icon"></i>
       <input type="text" name="facebook" placeholder="Facebook" value="<?= persistirDato($erroresRegistro, "facebook"); ?>">
- 
     </div>
-  
   </div>
 
   <div class="form-group">
     <div class="input-contenedor">
       <i class="fab fa-twitter-square icon"></i>
       <input type="text" name="twitter" placeholder="Twitter" value="<?= persistirDato($erroresRegistro, "twitter"); ?>">
-      
-      
       </div>
     </div>
     <div class="form-group">
-    <div class="input-contenedor">
-      <i class="fab fa-instagram icon"></i>
-      <input type="text" name="instagram" placeholder="Instagram" value="<?= persistirDato($erroresRegistro, "instagram"); ?>">
-      
-      
-    </div>
+      <div class="input-contenedor">
+        <i class="fab fa-instagram icon"></i>
+        <input type="text" name="instagram" placeholder="Instagram" value="<?= persistirDato($erroresRegistro, "instagram"); ?>">
+      </div>
     </div>
 
     <div class="form-group">

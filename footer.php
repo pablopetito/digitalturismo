@@ -22,7 +22,7 @@
             
             <div id="contacto" class="contacto mt-5 col-md-6">
               <h3>Contacto</h3>
-              <form action="index.php#contacto" method="POST">
+              <form action="#contacto" method="POST">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email..." name="email" value="<?= persistirDato($erroresContacto, "email"); ?>">

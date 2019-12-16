@@ -6,7 +6,11 @@
     if($_POST){
         $erroresLogin = validarFormulario($_POST);
         if (!$erroresLogin) {
-            $erroresLogin = validarLogin($_POST, $_POST["recordarme"]);
+            if (isset($_POST["recordarme"])) {
+                $erroresLogin = validarLogin($_POST, $_POST["recordarme"]);
+            }else{
+                $erroresLogin = validarLogin($_POST);
+            }
         }
     }
     function okLogin(){
@@ -16,10 +20,6 @@
             }
         }   
     }
-    
-
-
-
 ?>
 
 <!DOCTYPE html>

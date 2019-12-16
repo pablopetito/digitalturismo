@@ -9,8 +9,10 @@ function dbDeUsuarios() {
 
 function registroUsuario($usuarioRegistro){
     $arrayUsuarios = dbDeUsuarios();
+    
     $arrayUsuarios[] = $usuarioRegistro;
-    $todosLosUsuarios = json_encode($arrayUsuarios); 
+    
+    $todosLosUsuarios = json_encode($arrayUsuarios);
     file_put_contents('usuarios.json', $todosLosUsuarios);
     header("Location: login.php?registro=ok");
 }
