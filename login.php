@@ -6,7 +6,7 @@
     if($_POST){
         $erroresLogin = validarFormulario($_POST);
         if (!$erroresLogin) {
-            $erroresLogin = validarLogin($_POST);
+            $erroresLogin = validarLogin($_POST, $_POST["recordarme"]);
         }
     }
     function okLogin(){
@@ -35,8 +35,8 @@
 </head>
 <body>
    
-    <div class="container-fluid contenedor-nav">
-        <div class="row">
+    <div class="container-fluid contenedor-nav p-0 m-0">
+        <div class="row m-0">
          <?php include_once('nav.php') ?>
               </div>
            </div>

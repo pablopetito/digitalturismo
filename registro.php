@@ -55,7 +55,7 @@
 <body>
 
 <div class="container-fluid contenedor-nav">
-  <div class="row">
+  <div class="row p-0 m-0">
      <?php include_once('nav.php') ?>
   </div>
 </div>

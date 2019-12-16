@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start();
+    include_once 'controladores/autoload.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,9 +16,12 @@
 
 <body>
 
+<div class="container-fluid p-0 m-0">
+<div class="row p-0 m-0">
+<div class="col-12 p-0 m-0">
 <!-- Cabecera - barra navegadora -->
 <div class="container-fluid p-0">
-    <div class="row">
+    <div class="row m-0">
         <?php include_once('nav.php') ?>
     </div>
 </div>
@@ -149,11 +154,15 @@
     </div>
 </div>
 
-<!--------FOOTER------------------------------->
-<div class="container-fluid p-0">
-        <div class="row">
-            <?php include_once('footer.php') ?>            
-        </div>
+    <!--------FOOTER------------------------------->
+    <div class="container-fluid p-0">
+            <div class="row m-0">
+                <?php include_once('footer.php') ?>            
+            </div>
+    </div>
+
+</div>
+</div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

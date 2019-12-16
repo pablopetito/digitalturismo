@@ -1,5 +1,5 @@
 
-<div class="col-12">
+<div class="col-12 p-0">
         <header>
           <nav class="navbar navbar-expand-lg navbar-dark barraNavegacion">
             <a class="navbar-brand" href="index.php"><img class="logo-barra" src="images/digitalTurismoLogoBlanco.png" alt="logo"> </a>

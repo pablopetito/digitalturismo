@@ -46,6 +46,15 @@
                 $errores["mensaje"] = "Debes llenar este campo con al menos 10 caracteres";
              }
         }
+        if(isset($array["viejaPassword"]) && isset($_SESSION["email"])){
+            $verificarPassword = $array["viejaPassword"];
+            //ARTICULO CON LA BASE DE DATOS PARA VERIFICAR QUE LA CONTRASEÑA DEL USUARIO ES LA MISMA QUE INGRESO
+            if (empty($array["viejaPassword"])) {
+                $errores["viejaPassword"] = "Debes completar este campo";
+            }elseif (verificarPassword($verificarPassword)) {
+                $errores["viejaPassword"] = "Contraseña incorrecta, intente nuevamente";
+            }
+        }
         
         
 
@@ -92,15 +101,27 @@
 
     }
 
-    function validarLogin($array){
+    function validarLogin($array, $recordarme = 0){
         $errores = [];
         if(isset($array["email"]) && isset($array["password"])){
             //ESTO VA A VERIFICAR EN EL CONTROLADORBBDD
-            $errores = buscarUsuario($array);
+            $errores = buscarUsuario($array, $recordarme);
 
         }
         return $errores;
         
+    }
+    function verificarPassword($password){
+        $arrayUsuarios = dbDeUsuarios();
+        foreach ($arrayUsuarios as $usuario) {
+            if ($_SESSION["email"] == $usuario["email"]) {
+                if (password_verify($password, $usuario["password"])) {
+                    return false;
+                }
+            }
+        }
+        return true;
+
     }
    
 

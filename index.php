@@ -1,6 +1,13 @@
 <?php
   session_start();
-  
+  include_once 'controladores/autoload.php';
+  function okActualizar(){
+    if (isset($_GET["actualizar"])) {
+        if ($_GET["actualizar"] == "ok") {
+            return true;                
+        }
+    }   
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,9 +28,17 @@
   
   <div class="container-fluid contenedor-nav">
     <div class="row">
+    
       <?php include_once('nav.php') ?>
-      
+      <div class="col-12">
+       <?php  if(okActualizar()): ?>
+            <div class="alert alert-success m-0" role="alert">
+               <b>🌴 ACTUALIZACIÓN EXITOSA! INGRESE PARA COMPROBAR CAMBIOS 😄</b> 
+            </div>
+        <?php endif; ?>
+    </div>
       <div class="col-12 carrusel-container">
+      
         <section class="texto-carrusel">
           
           <h1>DigitalTurismo <br>te acerca a los mejores destinos de Argentina<p>Veni a conocer nuestros Maravillosos Paisajes</p></h1>
