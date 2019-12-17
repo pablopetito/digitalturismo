@@ -56,16 +56,11 @@
             }
         }
         
-        
-
-
-
-
         return $errores;
 
     }
 
-        function validarImagenPerfil($archivo){
+    function validarImagenPerfil($archivo){
             $errores =[];
 
             if ($archivo["imagenPerfil"]["error"] != UPLOAD_ERR_NO_FILE) {
@@ -75,12 +70,10 @@
                 $ext = strtolower(pathinfo($archivo["imagenPerfil"]["name"], PATHINFO_EXTENSION));
                 if ($ext != "png" && $ext != "jpg" && $ext != "jpeg") {
                     $errores["imagenPerfil"] = "La imagen debe ser formato png, jpg o jpeg";
-                    
                 }
             }
         }
         return $errores;
-
         }
 
 
@@ -91,14 +84,13 @@
         }
 
     }
+
     function persistirDato($arrayE, $consulta){
         if (!(isset($arrayE[$consulta]))) {
-
                 if(isset($_POST[$consulta])){
                     return $_POST[$consulta];
                 }
         }
-
     }
 
     function validarLogin($array, $recordarme = 0){
@@ -106,11 +98,10 @@
         if(isset($array["email"]) && isset($array["password"])){
             //ESTO VA A VERIFICAR EN EL CONTROLADORBBDD
             $errores = buscarUsuario($array, $recordarme);
-
         }
-        return $errores;
-        
+        return $errores;     
     }
+
     function verificarPassword($password){
         $arrayUsuarios = dbDeUsuarios();
         foreach ($arrayUsuarios as $usuario) {
@@ -121,7 +112,6 @@
             }
         }
         return true;
-
     }
    
 

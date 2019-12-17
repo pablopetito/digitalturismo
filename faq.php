@@ -23,9 +23,7 @@
 
 <div class="container-fluid contenedor-nav">
         <div class="row">
-        <?php include_once('nav.php') ?>
-             
-              
+        <?php include_once('nav.php') ?>   
          </div>
 </div>
 

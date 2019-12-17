@@ -22,10 +22,7 @@
   <title>digitalturismo</title>
 </head>
 <body>
-  
-  
-  
-  
+ 
   <div class="container-fluid contenedor-nav">
     <div class="row">
     
@@ -54,14 +51,6 @@
               </div>
               
             </div>
-            <!-- <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a> -->
           </div>
         </section>
       </div> 
@@ -81,11 +70,22 @@
         
         <div class="img-cont-promo d-flex flex-wrap">
           
+          <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0"> 
+            <div class="card carta-promocion">
+              <button class="favorito"><i class="fas fa-heart"></i></button>
+              <img src="images/iconos/OfertaEspecial.png" alt="promo" class="logo-promo">
+              <div class="imagen-articulo-contenedor">
+                <a href="detalleProducto.php" class="acceso-carrito" title="Más información">
+                  <h3>BARILOCHE</h3>
+                  <p>"SKI ADVENTURE 7 DIAS"</p>
+                  <h4>$ 14.500</h4>
+                </a> 
+              </div>
+              <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="..."> 
+            </div>
+          </article>
+
           <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
-            
-            
-            
-            
             <div class="card carta-promocion">
               <button class="favorito"><i class="fas fa-heart"></i></button>
               <img src="images/iconos/OfertaEspecial.png" alt="promo" class="logo-promo">
@@ -97,16 +97,10 @@
                 </a> 
               </div>
               <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
-              
-              
-            </div>
-            
-            
-            
+            </div>  
           </article>
+
           <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
-            
-            
             <div class="card carta-promocion">
               <button class="favorito"><i class="fas fa-heart"></i></button>
               <img src="images/iconos/OfertaEspecial.png" alt="promo" class="logo-promo">
@@ -117,46 +111,9 @@
                   <h4>$ 14.500</h4>
                 </a> 
               </div>
-              <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
-              
-              
-            </div>
-            
-            
-            
-            
-            
+              <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">   
+            </div>  
           </article>
-          <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
-            
-            
-            
-            
-            <div class="card carta-promocion">
-              <button class="favorito"><i class="fas fa-heart"></i></button>
-              <img src="images/iconos/OfertaEspecial.png" alt="promo" class="logo-promo">
-              <div class="imagen-articulo-contenedor">
-                <a href="detalleProducto.php" class="acceso-carrito" title="Más información">
-                  <h3>BARILOCHE</h3>
-                  <p>"SKI ADVENTURE 7 DIAS"</p>
-                  <h4>$ 14.500</h4>
-                </a> 
-              </div>
-              <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
-              
-              
-            </div>
-            
-            
-            
-          </article>
-          
-          
-          
-          
-          
-          
-          
         </div>
       </section>
       
@@ -166,12 +123,9 @@
           <h2>
             <i class="fas fa-star"></i> Destacados
           </h2>
-          
         </div>
         <div class="img-cont-destacado d-flex flex-wrap">
-          
           <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
-            
             <div class="card carta-promocion">
               <button class="favorito"><i class="fas fa-heart"></i></button>
               <img class="star-destacado" src="images/stars.png" alt="">
@@ -183,19 +137,10 @@
                 </a> 
               </div>
               <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
-              
-              
             </div>
-            
-            
-            
-            
           </article>
+
           <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
-            
-            
-            
-            
             <div class="card carta-promocion">
               <button class="favorito"><i class="fas fa-heart"></i></button>
               <img class="star-destacado" src="images/stars.png" alt="">
@@ -207,18 +152,10 @@
                 </a> 
               </div>
               <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
-              
-              
             </div>
-            
-            
-            
           </article>
+
           <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
-            
-            
-            
-            
             <div class="card carta-promocion">
               <button class="favorito"><i class="fas fa-heart"></i></button>
               <img class="star-destacado" src="images/stars.png" alt="">
@@ -230,17 +167,9 @@
                 </a> 
               </div>
               <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
-              
-              
-            </div>
-            
-            
-          </article>
-          
-          
-        </div>
-        
-        
+            </div>    
+          </article> 
+        </div>  
       </section>
       
       <!--------------------- DESTINOS---------------------------->
@@ -252,15 +181,9 @@
           </h2> 
         </div>
         <div class="img-cont-destino d-flex flex-wrap"> 
-          
-          
           <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
-            
-            
-            
             <div class="card carta-promocion">
               <button class="favorito"><i class="fas fa-heart"></i></button>
-              
               <div class="imagen-articulo-contenedor">
                 <a href="detalleProducto.php" class="acceso-carrito" title="Más información">
                   <h3>BARILOCHE</h3>
@@ -269,22 +192,12 @@
                 </a> 
               </div>
               <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
-              
-              
             </div>
-            
-            
-            
-            
           </article>
+
           <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
-            
-            
-            
-            
             <div class="card carta-promocion">
               <button class="favorito"><i class="fas fa-heart"></i></button>
-              
               <div class="imagen-articulo-contenedor">
                 <a href="detalleProducto.php" class="acceso-carrito" title="Más información">
                   <h3>BARILOCHE</h3>
@@ -293,21 +206,12 @@
                 </a> 
               </div>
               <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
-              
-              
             </div>
-            
-            
-            
           </article>
+
           <article class="col-12 col-md-6 col-lg-4  flex-sm-shrink-0">
-            
-            
-            
-            
             <div class="card carta-promocion">
               <button class="favorito"><i class="fas fa-heart"></i></button>
-              
               <div class="imagen-articulo-contenedor">
                 <a href="detalleProducto.php" class="acceso-carrito" title="Más información">
                   <h3>BARILOCHE</h3>
@@ -316,19 +220,9 @@
                 </a> 
               </div>
               <img src="images/Destinos/Bariloche/barilocheEsquiando.jpg" class="card-img-top" alt="...">
-              
-              
             </div>
-            
-            
-            
           </article>
-          
-          
         </div>
-        
-        
-        
       </section>
     </div>
   </div>

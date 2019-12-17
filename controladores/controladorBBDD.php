@@ -1,21 +1,18 @@
 <?php
 
 function dbDeUsuarios() {
-
     $listaDeUsuarios = file_get_contents('usuarios.json');
     return json_decode($listaDeUsuarios, true);
-  
   }
 
 function registroUsuario($usuarioRegistro){
     $arrayUsuarios = dbDeUsuarios();
-    
     $arrayUsuarios[] = $usuarioRegistro;
-    
     $todosLosUsuarios = json_encode($arrayUsuarios);
     file_put_contents('usuarios.json', $todosLosUsuarios);
     header("Location: login.php?registro=ok");
 }
+
 function actualizarUsuario($usuarioActualizado){
     $arrayUsuarios = dbDeUsuarios();
     $len = count($arrayUsuarios);
@@ -30,14 +27,10 @@ function actualizarUsuario($usuarioActualizado){
             $arrayUsuarios[$i]["avatar"] = $usuarioActualizado["avatar"];
            
         }
-    }
-     
+    } 
     $todosLosUsuarios = json_encode($arrayUsuarios);
-    
     file_put_contents('usuarios.json', $todosLosUsuarios);
-    
     header("Location: logout.php?actualizar=ok");
-
 }
 
 function buscarUsuario($login, $recordar = 0){
@@ -73,24 +66,19 @@ function buscarUsuario($login, $recordar = 0){
     }
     $error["email"] = "El email ingresado no se encuentra registrado";
     return $error;
-
 }
 
 function cambiarPassword($password){
     $password = password_hash($password, PASSWORD_DEFAULT);
-   
     $arrayUsuarios = dbDeUsuarios();
     $len = count($arrayUsuarios);
     for($i= 0; $i< $len; $i++){
         if($_SESSION["email"] == $arrayUsuarios[$i]["email"]){
-             
             $arrayUsuarios[$i]["password"] = $password;
         }
     }
     $todosLosUsuarios = json_encode($arrayUsuarios);
-    
     file_put_contents('usuarios.json', $todosLosUsuarios);
-    
     header("Location: logout.php?actualizar=ok");
 }
  

@@ -21,12 +21,10 @@ function armarArrayUsuarioActualizacion($array){
         "twitter" => $array["twitter"],
         "instagram"=> $array["instagram"]
     ];
-
     return $usuarioRegistro;
 }
 
 function guardarAvatar($archivo){
-    
     $nombreImagen = "userImage.png";
             if ($archivo["imagenPerfil"]["error"] != UPLOAD_ERR_NO_FILE) {
                 $ext = strtolower(pathinfo($archivo["imagenPerfil"]["name"], PATHINFO_EXTENSION));
@@ -39,11 +37,8 @@ function guardarAvatar($archivo){
                 $carpetaFinal = $carpetaFinal . '/images/';
                 $carpetaFinal = $carpetaFinal . $nombreImagen;
                 move_uploaded_file($directorioTemporal, $carpetaFinal);
-            
             }
-            
             return $nombreImagen;
- 
 }
 
 

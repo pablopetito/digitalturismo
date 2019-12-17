@@ -1,4 +1,3 @@
-
 <div class="col-12 p-0">
         <header>
           <nav class="navbar navbar-expand-lg navbar-dark barraNavegacion">
@@ -18,13 +17,10 @@
                 <li class="nav-item items-barra">
                   <a class="nav-link" href="productos.php"><i class="fas fa-suitcase"></i><p>DESTINOS</p></a>
                 </li>
-                
               </ul>
               
               <?php if(!isset($_SESSION["nombre"])): ?>
-
               <a href="login.php"><button class="btn my-2 my-sm-0 boton-ingreso" type="submit"><i class="fas fa-user"></i>INGRESAR</button></a>
-
               <?php else : ?>
                 <ul class="navbar-nav ml-md-auto">
 									<li class="nav-item dropdown ">
@@ -38,12 +34,9 @@
 										</div>
 									</li>
 								</ul>
-                 
-
               <?php endif; ?> 
 
             </div>
           </nav>
-        </header>
-        
-      </div>
+        </header> 
+</div>
