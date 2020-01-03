@@ -16,20 +16,21 @@ if($destino == "") {
   return $errores;
 
 }
-
-
-
 if($_POST) {
+  if (isset($_POST["destino"])) {
+    // ver función validar() en archivo funciones.php
+      $errores = validarBuscar($_POST);
 
-// ver función validar() en archivo funciones.php
-$errores = validarBuscar($_POST);
+      if(!$errores) {
 
-if(!$errores) {
+          // redirecciono a buscar destinos
+          header('Location: buscarDestinos.php');
 
-    // redirecciono a buscar destinos
-    header('Location: buscarDestinos.php');
+      }
 
-}
+  }
+
+
 }
 
 ?>

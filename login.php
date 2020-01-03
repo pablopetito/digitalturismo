@@ -53,21 +53,18 @@
 <form class="formulario" method="post" action="">
     <h1>Login</h1>
     <div class="contenedor">
-
-      
         <div class="input-contenedor">
                 <i class="fas fa-envelope icon"></i>
                 <input type="text" placeholder="Correo Electronico" name="email" value="<?= persistirDato($erroresLogin, "email"); ?>">
-                
-
         </div>
-        <span id="emailHelp" class="form-text text-danger"><?= existeError($erroresLogin,"email"); ?> </span> 
+        <span id="emailHelp" class="form-text text-danger"><?= existeError($erroresLogin,"email"); ?> </span>
+
         <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
-                <input type="password" placeholder="Contraseña" name="password">
-                
+                <input type="password" placeholder="Contraseña" name="password">   
         </div>
         <span id="passwordHelp" class="form-text text-danger"><?= existeError($erroresLogin, "password"); ?></span> 
+
         <div class="custom-control custom-checkbox mb-3">
             <input type="checkbox" class="custom-control-input" id="customCheck1" name="recordarme" value="1">
             <label class="custom-control-label" for="customCheck1">Recordarme</label>
@@ -76,9 +73,6 @@
         <p>¿No tienes cuenta aun?<a class="link" href="registro.php">Registrate</a></p>
          
     </div>
-
-
-
 </form>
 
 
