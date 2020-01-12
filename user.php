@@ -65,7 +65,7 @@
             <div class="d-flex justify-content-center h-100">
               <div class="image_outer_container">
                 <div class="image_inner_container">
-                  <img class="mujer" src="images/<?= $_SESSION['avatar'] ?>">
+                  <img class="img-fluid img-thumbnail" src="images/<?= $_SESSION['avatar'] ?>">
                 </div>
               </div>
             </div>
