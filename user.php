@@ -1,36 +1,41 @@
 <?php 
-    session_start();
-    include_once 'controladores/autoload.php';
+
+    require_once 'config.php';
+
     if (!isset($_SESSION["email"])){
-      header('Location:login.php');
-    }
+          header('Location:login.php');
+      }else{
+          $usuario = new UsuarioComun($_SESSION);
+      }
+
+   
     $erroresActulizarPerfil =[];
     $erroresArchivo =[];
     
      if($_POST){
-        $erroresActulizarPerfil = validarFormulario($_POST);
+       
+        $erroresActulizarPerfil = Validador::validarFormulario($_POST);
         if($_FILES){
-          $erroresArchivo = validarImagenPerfil($_FILES);
+          $erroresArchivo = Validador::validarImagenPerfil($_FILES);
         }
         //DIVIDO SI ME LLEGA CAMBIO DE PASSWORD NO ACTUALIZO LOS DEMAS ATRIBUTOS
         if(!isset($_POST["password"])){
 
           if(count($erroresActulizarPerfil)==0 && count($erroresArchivo) == 0){
-          $usuarioActualizarPerfil = armarArrayUsuarioActualizacion($_POST);
+
           if($_FILES){
-           
-            if($_FILES["imagenPerfil"]["error"] != UPLOAD_ERR_NO_FILE){
-              $nombreImagen = guardarAvatar($_FILES);
+
+            if($_FILES["imagenPerfil"]["error"] != UPLOAD_ERR_NO_FILE){              
+              $nombreImagen = $usuario->guardarAvatar($_FILES);
             }else{
-              $nombreImagen = $_SESSION["avatar"];
+              $nombreImagen = $usuario->getImagenPerfil();
             }
-           $usuarioActualizarPerfil["avatar"] = $nombreImagen; 
           }
-          actualizarUsuario($usuarioActualizarPerfil);
+          $cambioPerfil = $usuario->actualizarUsuario($_POST, $nombreImagen);
           }
         }else{
           if (count($erroresActulizarPerfil) == 0) {
-              cambiarPassword($_POST["password"]);
+             $passCambiada=$usuario->cambiarPassword($_POST["password"]);
           }
         }
       }
@@ -61,11 +66,11 @@
       <div class="container">
         <div class="jumbotron jumbotron-fluid mt-0">
           <div class="container">
-            <h2><?= $_SESSION["nombre"] ?></h2>
+            <h2><?= $usuario->getNombre() ?></h2>
             <div class="d-flex justify-content-center h-100">
               <div class="image_outer_container">
                 <div class="image_inner_container">
-                  <img class="img-fluid img-thumbnail" src="images/<?= $_SESSION['avatar'] ?>">
+                  <img class="img-fluid img-thumbnail" src="images/<?= $usuario->getImagenPerfil() ?>">
                 </div>
               </div>
             </div>
@@ -86,44 +91,59 @@
           <div class="col-8">
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade <?= !isset($_POST["viejaPassword"]) ? "show active" : "" ?>" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                <h2 class="mb-3">Actualizar Usuario</h2>
                 <form action="user.php" method="post" enctype="multipart/form-data">
                   <div class="form-row">
                     <div class="col-md-12">
                       <div class="md-form form-group">
-                        <input type="email" class="form-control" id="inputEmail4MD" placeholder="Insertar Email" name="email" value="<?= $_SESSION['email'] ?>">      
-                        <span id="emailHelp" class="form-text text-danger"><?= existeError($erroresActulizarPerfil, "email"); ?> </span>
+                      <?php
+                    if (isset($cambioPerfil)):
+                      if ($cambioPerfil) : ?>
+                        <div class="alert alert-success" role="alert">
+                        🌴 Cambios realizados exitosamente. 😄
+                      </div>
+                      <?php else: ?>
+                        <div class="alert alert-danger" role="alert">
+                          No se pudieron realizar los cambios intente nuevamente.
+                      </div>
+                      <?php 
+                      endif;
+                      endif;
+                      ?>
+                        <input type="email" class="form-control" id="inputEmail4MD" placeholder="Insertar Email" name="email" value="<?= $usuario->getEmail() ?>">      
+                        <span id="emailHelp" class="form-text text-danger"><?=  Validador::existeError($erroresActulizarPerfil, "email"); ?> </span>
                       </div>
                     </div>                    
                   </div>
                   <div class="row">
                     <div class="col-md-12">
                       <div class="md-form form-group">
-                        <input type="text" class="form-control" id="inputAddressMD" placeholder="Insertar Nombre" name="nombre" value="<?= $_SESSION['nombre'] ?>"> 
-                        <span id="emailHelp" class="form-text text-danger"><?= existeError($erroresActulizarPerfil, "nombre"); ?> </span>
+                        <input type="text" class="form-control" id="inputAddressMD" placeholder="Insertar Nombre" name="nombre" value="<?= $usuario->getNombre()?>"> 
+                        <span id="emailHelp" class="form-text text-danger"><?=  Validador::existeError($erroresActulizarPerfil, "nombre"); ?> </span>
                       </div>
                     </div>  
                 </div>                  
                   <div class="form-row">
                     <div class="col-md-12">
                       <div class="md-form form-group">
-                        <input type="text" class="form-control" id="inputCityMD" placeholder="Insertar Facebook" name="facebook" value="<?= $_SESSION['facebook'] ?>">
+                        <input type="text" class="form-control" id="inputCityMD" placeholder="Insertar Facebook" name="facebook" value="<?= $usuario->getFacebook() ?>">
                       </div>
                     </div>                    
                     <div class="col-md-12">
                       <div class="md-form form-group">
-                        <input type="text" class="form-control" id="inputZipMD" placeholder="Insertar twitter" name="twitter" value="<?= $_SESSION['twitter'] ?>">      
+                        <input type="text" class="form-control" id="inputZipMD" placeholder="Insertar twitter" name="twitter" value="<?= $usuario->getTwitter() ?>">      
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="md-form form-group">
-                        <input type="text" class="form-control" id="inputZipMD" placeholder="Insertar Instagram" name="instagram" value="<?= $_SESSION['instagram'] ?>"> 
+                        <input type="text" class="form-control" id="inputZipMD" placeholder="Insertar Instagram" name="instagram" value="<?= $usuario->getInstagram() ?>"> 
                       </div>
                     </div>
                   </div>                  
                   <div class="custom-file">
                     <input type="file" class="custom-file-input" id="customFileLang" lang="es" name="imagenPerfil">
                     <label class="custom-file-label" for="customFileLang">Seleccionar Foto de Perfil</label>
-                    <span id="archivoHelp" class="form-text text-danger"><?=existeError($erroresArchivo, "imagenPerfil");?></span>
+                    <span id="archivoHelp" class="form-text text-danger"><?=  Validador::existeError($erroresArchivo, "imagenPerfil");?></span>
                   </div>
                   <div class="mt-3">
                     <button type="submit" class="btn btn-primary btn-md">Actualizar datos</button>                    
@@ -133,28 +153,46 @@
 
               <div class="tab-pane fade <?= isset($_POST["viejaPassword"]) ? "show active" : "" ?> " id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
                 <h2>Cambia tu contraseña</h2>
+                <?php
+                    if (isset($passCambiada)):
+                      if ($passCambiada) : ?>
+                        <div class="alert alert-success" role="alert">
+                        🌴 Contraseña cambiada exitosamente. 😄
+                      </div>
+                      <?php else: ?>
+                        <div class="alert alert-danger" role="alert">
+                          La contraseña no se pudo cambiar intente nuevamente.
+                      </div>
+                      <?php 
+                      endif;
+                      endif;
+                      ?>
                 <form action="user.php" method="POST">
                   <div class="form-group">
                     <label for="inputPassword6" class="font-weight-bold">Contraseña actual</label>
                     <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" name="viejaPassword">
-                    <span id="emailHelp" class="form-text text-danger"><b><?= existeError($erroresActulizarPerfil, "viejaPassword"); ?> </b></span>
+                    <span id="emailHelp" class="form-text text-danger"><b><?=  Validador::existeError($erroresActulizarPerfil, "viejaPassword"); ?> </b></span>
                   </div>                  
                   <br>                  
                   <div class="form-group">
                     <label for="inputPassword6" class="font-weight-bold">Nueva contraseña</label>
                     <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" name="password">
-                    <span id="emailHelp" class="form-text text-danger"><b><?= existeError($erroresActulizarPerfil, "password"); ?> </b></span>
+                    <span id="emailHelp" class="form-text text-danger"><b><?=  Validador::existeError($erroresActulizarPerfil, "password"); ?> </b></span>
                   </div>                  
                   <br>
                   <div class="form-group">
                     <label for="inputPassword6" class="font-weight-bold">Repetir nueva contraseña</label>
                     <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" name="repassword">
-                    <span id="emailHelp" class="form-text text-danger"><b><?= existeError($erroresActulizarPerfil, "repassword"); ?> </b></span>
+                    <span id="emailHelp" class="form-text text-danger"><b><?= Validador::existeError($erroresActulizarPerfil, "repassword"); ?> </b></span>
                   </div>                  
                   <br>
                   <div>
                     <button type="submit" class="btn btn-dark">Cambia tu contraseña</button>
                   </div>
+                  
+                  
+                  
+                  
                 </form>               
               </div>
 

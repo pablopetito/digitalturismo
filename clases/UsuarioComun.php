@@ -2,6 +2,7 @@
 
     class UsuarioComun extends Usuario
     {
+        private $id;
         private $facebook;
         private $twitter;
         private $instagram;
@@ -13,7 +14,16 @@
 
 
 
+        public function __construct($array){
+                $this->setId($array["id"]);
+                $this->setNombre($array["nombre"]);
+                $this->setEmail($array["email"]);
+                $this->setFacebook($array["facebook"]);
+                $this->setTwitter($array["twitter"]);
+                $this->setInstagram($array["instagram"]);
+                $this->setImagenPerfil($array["avatar"]);
 
+        }
 
 
         /**
@@ -142,12 +152,13 @@
             try {
                 $nombreImagen = $this->guardarAvatar($archivo);
                 $pass = password_hash($array["password"], PASSWORD_DEFAULT);
+                $nombre= trim($array["nombre"]);
                 $link = Conexion::conectar();
 
                 $sql = "INSERT INTO usuarios VALUES(null, :nombre, :email, :pass, :facebook, :instagram, :twitter, :avatar, now())";
                 
                 $stmt= $link->prepare($sql);
-                $stmt->bindValue(':nombre', $array["nombre"], PDO::PARAM_STR);
+                $stmt->bindValue(':nombre', $nombre, PDO::PARAM_STR);
                 $stmt->bindValue(':email', $array["email"], PDO::PARAM_STR);
                 $stmt->bindValue(':pass', $pass);
                 $stmt->bindValue(':facebook', $array["facebook"], PDO::PARAM_STR);
@@ -170,10 +181,7 @@
             if ($archivo["imagenPerfil"]["error"] != UPLOAD_ERR_NO_FILE) {
                 $ext = strtolower(pathinfo($archivo["imagenPerfil"]["name"], PATHINFO_EXTENSION));
                 $directorioTemporal = $archivo['imagenPerfil']['tmp_name'];
-
                 $nombreImagen = uniqid('img_') . '.' . $ext;
-                
-
                 $carpetaFinal= dirname(__DIR__);
                 $carpetaFinal = $carpetaFinal . '/images/';
                 $carpetaFinal = $carpetaFinal . $nombreImagen;
@@ -182,7 +190,81 @@
             return $nombreImagen;
         }
 
+        public function actualizarUsuario($array, $imagen){
+                try {
+                        
+                        $link = Conexion::conectar();
         
+                        $sql = "UPDATE usuarios SET nombre_usuario= :nombre, email= :email, facebook= :facebook, instagram= :instagram, twitter= :twitter, avatar= :avatar WHERE id_usuario = :id" ;
+                        
+                        $stmt= $link->prepare($sql);
+                        $stmt->bindValue(':nombre', $array["nombre"], PDO::PARAM_STR);
+                        $stmt->bindValue(':email', $array["email"], PDO::PARAM_STR);
+                        $stmt->bindValue(':facebook', $array["facebook"], PDO::PARAM_STR);
+                        $stmt->bindValue(':instagram', $array["instagram"], PDO::PARAM_STR);
+                        $stmt->bindValue(':twitter', $array["twitter"], PDO::PARAM_STR);
+                        $stmt->bindValue(':avatar', $imagen, PDO::PARAM_STR);
+                        $stmt->bindValue(':id', $_SESSION["id"], PDO::PARAM_INT);
+
+                        $stmt->execute();
+                        
+                        $this->setNombre($array["nombre"]);
+                        $this->setEmail($array["email"]);
+                        $this->setFacebook($array["facebook"]);
+                        $this->setTwitter($array["twitter"]);
+                        $this->setInstagram($array["instagram"]);
+                        $this->setImagenPerfil($imagen);
+
+                        $_SESSION["nombre"] = $this->getNombre();
+                        $_SESSION["email"] = $this->getEmail();
+                        $_SESSION["facebook"] = $this->getFacebook();
+                        $_SESSION["twitter"] = $this->getTwitter();
+                        $_SESSION["instagram"] = $this->getInstagram();
+                        $_SESSION["avatar"] = $this->getImagenPerfil();
+                        return true;
+                        
+                    } catch (\Throwable $th) {
+                        return false;
+                        
+                        
+                    }
+        }
+        public function cambiarPassword($pass){
+                try {
+                $pass = password_hash($pass, PASSWORD_DEFAULT);
+                $link = Conexion::conectar();
+                $sql = "UPDATE usuarios SET password = :pass WHERE id_usuario= :id";
+                $stmt = $link->prepare($sql);
+                $stmt->bindValue(':pass', $pass, PDO::PARAM_STR);
+                $stmt->bindValue(':id', $_SESSION["id"], PDO::PARAM_INT);
+                $stmt->execute();
+                } catch (\Throwable $th) {
+                        return false;
+                }
+                return true;
+        }
+
+        
+
+        /**
+         * Get the value of id
+         */ 
+        public function getId()
+        {
+                return $this->id;
+        }
+
+        /**
+         * Set the value of id
+         *
+         * @return  self
+         */ 
+        public function setId($id)
+        {
+                $this->id = $id;
+
+                return $this;
+        }
     }
 
 ?>

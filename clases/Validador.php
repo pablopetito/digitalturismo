@@ -54,7 +54,7 @@
             //ARTICULO CON LA BASE DE DATOS PARA VERIFICAR QUE LA CONTRASEÑA DEL USUARIO ES LA MISMA QUE INGRESO
             if (empty($array["viejaPassword"])) {
                 $errores["viejaPassword"] = "Debes completar este campo";
-            }elseif (verificarPassword($verificarPassword)) {
+            }elseif (Validador::verificarPassword($verificarPassword)) {
                 $errores["viejaPassword"] = "Contraseña incorrecta, intente nuevamente";
             }
         }
@@ -134,7 +134,7 @@
                 exit; */
 
                 if (password_verify($array["password"], $usuario["password"])) {
-
+                    $_SESSION["id"]= $usuario["id_usuario"];
                     $_SESSION["email"] = $usuario["email"];
                     $_SESSION["nombre"] = $usuario["nombre_usuario"];
                     $_SESSION["facebook"] = $usuario["facebook"];
@@ -142,12 +142,7 @@
                     $_SESSION["twitter"] = $usuario["twitter"];
                     $_SESSION["avatar"] = $usuario["avatar"];
                    
-                    if ($usuario["email"]= "admin") {
-                        $usuarioAdmin = new UsuarioAdmin($_SESSION);
-                    }else{
-                        $usuarioLog = new UsuarioComun($_SESSION);
-                    }
-
+                    
                     if ($recordar){
                                     
                         setcookie("email", $usuario["email"], time() + (60 * 60 * 24 * 7));
@@ -170,6 +165,22 @@
                 $error["email"] = "El email ingresado es incorrecto";
                 return $error;
     
+        }
+
+        public static function verificarPassword($password){
+            $link= Conexion::conectar();
+            $sql = "SELECT password FROM usuarios WHERE id_usuario = :id";
+            $stmt = $link->prepare($sql);
+            $stmt->bindValue(':id', $_SESSION["id"], PDO::PARAM_STR);
+            $stmt->execute();
+            $usuario=$stmt->fetch(PDO::FETCH_ASSOC);
+            
+                if (password_verify($password, $usuario["password"])) {
+                        return false;
+                    }
+                
+            
+            return true;
         }
          
 
