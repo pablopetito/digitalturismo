@@ -1,6 +1,6 @@
 <?php
-  session_start();
-  include_once 'controladores/autoload.php';
+  require_once 'config.php';
+  
   function okActualizar(){
     if (isset($_GET["actualizar"])) {
         if ($_GET["actualizar"] == "ok") {

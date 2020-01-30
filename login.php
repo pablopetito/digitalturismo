@@ -1,15 +1,15 @@
 <?php 
 
-    session_start();
-    include_once 'controladores/autoload.php';
+    
+    include_once 'config.php';
     $erroresLogin =[];
     if($_POST){
-        $erroresLogin = validarFormulario($_POST);
+        $erroresLogin = Validador::validarFormulario($_POST);
         if (!$erroresLogin) {
             if (isset($_POST["recordarme"])) {
-                $erroresLogin = validarLogin($_POST, $_POST["recordarme"]);
+                $erroresLogin = Validador::validarLogin($_POST, $_POST["recordarme"]);
             }else{
-                $erroresLogin = validarLogin($_POST);
+                $erroresLogin = Validador::validarLogin($_POST);
             }
         }
     }
@@ -55,15 +55,15 @@
     <div class="contenedor">
         <div class="input-contenedor">
                 <i class="fas fa-envelope icon"></i>
-                <input type="text" placeholder="Correo Electronico" name="email" value="<?= persistirDato($erroresLogin, "email"); ?>">
+                <input type="text" placeholder="Correo Electronico" name="email" value="<?= Validador::persistirDato($erroresLogin, "email"); ?>">
         </div>
-        <span id="emailHelp" class="form-text text-danger"><?= existeError($erroresLogin,"email"); ?> </span>
+        <span id="emailHelp" class="form-text text-danger"><?= Validador::existeError($erroresLogin,"email"); ?> </span>
 
         <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
                 <input type="password" placeholder="Contraseña" name="password">   
         </div>
-        <span id="passwordHelp" class="form-text text-danger"><?= existeError($erroresLogin, "password"); ?></span> 
+        <span id="passwordHelp" class="form-text text-danger"><?= Validador::existeError($erroresLogin, "password"); ?></span> 
 
         <div class="custom-control custom-checkbox mb-3">
             <input type="checkbox" class="custom-control-input" id="customCheck1" name="recordarme" value="1">
