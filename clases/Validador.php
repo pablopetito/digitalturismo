@@ -108,7 +108,7 @@
                     }
             }
         }
-        public static function validarLogin($array, $recordarme= 0){
+        public static function validarLogin($array, $recordarme = 0){
             $errores = [];
             if(isset($array["email"]) && isset($array["password"])){
             //ESTO VA A VERIFICAR EN EL CONTROLADORBBDD
@@ -141,17 +141,17 @@
                     $_SESSION["instagram"] = $usuario["instagram"];
                     $_SESSION["twitter"] = $usuario["twitter"];
                     $_SESSION["avatar"] = $usuario["avatar"];
-                   
                     
-                    if ($recordar){
-                                    
+                    
+                    if ($recordarme){
+                        setcookie("id", $usuario["id_usuario"], time() + (60 * 60 * 24 * 7));
                         setcookie("email", $usuario["email"], time() + (60 * 60 * 24 * 7));
-                        setcookie("nombre", $usuario["nombre"], time() + (60 * 60 * 24 * 7));
+                        setcookie("nombre", $usuario["nombre_usuario"], time() + (60 * 60 * 24 * 7));
                         setcookie("facebook", $usuario["facebook"], time() + (60 * 60 * 24 * 7));
                         setcookie("instagram", $usuario["instagram"], time() + (60 * 60 * 24 * 7));
                         setcookie("twitter", $usuario["twitter"], time() + (60 * 60 * 24 * 7));
                         setcookie("avatar", $usuario["avatar"], time() + (60 * 60 * 24 * 7));
-
+                        
                     }
 
                     header("Location: index.php");

@@ -76,6 +76,9 @@ font-family: 'Roboto', sans-serif;
 
 
 /*---- CARDS DESTINOS ----*/
+.texto-card-titulo{
+    text-shadow: 4px 4px 4px #000;
+}
 .destinos article{
     margin-bottom: 0px;
     margin-top: 0px;

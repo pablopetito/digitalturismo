@@ -1,8 +1,14 @@
 <?php 
- session_start();
-require('controladores/controladorValid-Busqueda.php');
-include_once 'controladores/autoload.php';
+        require_once 'config.php';
 
+        $destinos = Destino::listarDestinos();
+        $paises = Pais::listarPais();
+        $provincias = Provincia::listarProvincia();
+        if(isset($_POST["destino"])){   
+               $destinos = Destino::buscarDestinos($_POST["destino"], $_POST["provincia"]);
+                        
+        }
+        
 ?>
 
 <!DOCTYPE html>
@@ -106,122 +112,70 @@ include_once 'controladores/autoload.php';
         <!-- Todos los destinos  -->
         <section class="destinos">
         <nav class="navbar navbar-light bg-dark d-flex justify-content-center">
-            <form class="form-inline" action="" method="post" enctype="multipart/form-data">
-                <input class="form-control mr-sm-3" type="search" name='destino' value="<?= isset($_POST['destino']) ? $_POST['destino'] : '' ?>" placeholder="Buscar Destino" aria-label="Default" 
-                aria-describedby="inputGroup-sizing-default"> 
-                <?php if(isset($errores['destino'])): ?> <br/>
-                    <span id="nombrelHelp" class="form-text text-danger mr-sm-3"><?= $errores['destino']?></span>
-                    <?php endif; ?>           
-                <button class="btn btn-outline-success my-2 my-sm-3" type="submit">Buscar</button>
+            <form class="form" action="" method="post">
+             <div class="form-row">
+                <div class="form-group">
+                    <input class="form-control mr-sm-3" type="search" name='destino' value="<?= isset($_POST['destino']) ? $_POST['destino'] : '' ?>" placeholder="Buscar Destino" aria-label="Default" 
+                                    aria-describedby="inputGroup-sizing-default">
+                                     
+                </div>
+            
+           
+                 
+                <div class="form-group mx-3">
+                <select id="inputState" class="form-control mr-sm-5" name="provincia">
+                    <option value="">Elegir Provincia...</option>
+                    <?php foreach($provincias as $provincia) : ?>
+                        
+                            <option value="<?= $provincia->getId()?>"><?= $provincia->getNombre() ?></option>
+                    <?php endforeach;?>
+                </select>
+                </div> 
+
+
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </div>
+            
+               
             </form>
         </nav>
             <div class="container">
                 <div class="row">
-                    
-                    <!-- destinos  -->
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                    <?php if (is_array($destinos)):
+                        foreach ($destinos as $destino) : ?>
+                            
+                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                                    
+                                    <article class="borderBox m-3 destino-individual">
+                                        
+                                        <div class="photo-container">
+                                            <img class="photo" src="images/Destinos/<?=$destino->getAvatar()?>" alt="Bari Esquiando">
+                                            <?php if ($destino->getPromocion()) : ?>
+                                                <img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
+                                            <?php endif;?>
+                                            <button class="favorito"><i class="fas fa-heart"></i></button>
+                                            <a href="detalleProducto.php" title="Mas Informacion">
+                                                <div class="tit-Destino" >
+                                                    <h3 class="texto-card-titulo"><?= $destino->getNombre()?></h3>
+                                                    <h3 class="texto-card-titulo">$<?= $destino->getPrecio()?></h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        
+                                    </article>                                
+                                </div>
+
+                        <?php
+                        endforeach;   
+                        ?>
+
                         
-                        <article class="borderBox m-3 destino-individual">
-                            
-                            <div class="photo-container">
-                                <img class="photo" src="images/Destinos/Bariloche/barilocheEsquiando.jpg" alt="Bari Esquiando">
-                                <img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
-                                <button class="favorito"><i class="fas fa-heart"></i></button>
-                                <a href="detalleProducto.php" title="Mas Informacion">
-                                    <div class="tit-Destino" >
-                                        <h3>BARILOCHE "SKI"</h3>
-                                        <h3>7 DIAS  $ 14.500</h3>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                        </article>
-                        
+                   <?php else:?>
+                    <div class="alert alert-danger" role="alert">
+                        <span class="alert-link"><?= $destino ?></span>
                     </div>
-                    
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-                        <article class="borderBox m-3 destino-individual">
-                            
-                            <div class="photo-container">
-                                <img class="photo" src="images/Destinos/Salta/saltaMontañaAlpinista.jpg" alt="Tren Las Nubes">
-                                <button class="favorito"><i class="fas fa-heart"></i></button>
-                                <a href="detalleProducto.php" title="Mas Informacion">
-                                    <div class="tit-Destino" >
-                                        <h3>SALTA "LA LINDA"</h3>
-                                        <h3>$ 28.900</h3>
-                                    </div>
-                                </a>   
-                            </div>
-                            
-                        </article>
-                    </div>
-                    
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-                        <article class="borderBox m-3 destino-individual">
-                            
-                            <div class="photo-container">
-                                <img class="photo" src="images/Destinos/Mendoza/mendozaCiudad.jpg" alt="pdto 03">
-                                <button class="favorito"><i class="fas fa-heart"></i></button>
-                                <a href="detalleProducto.php" title="Mas Informacion">    
-                                    <div class="tit-Destino">
-                                        <h3>MENDOZA CITY TOUR</h3>
-                                    </div>
-                                </a> 
-                            </div>
-                            
-                        </article>
-                    </div>
-                    
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-                        <article class="borderBox m-3 destino-individual">
-                            
-                            <div class="photo-container">
-                                <img class="photo" src="images/cataratas-iguazu.jpg" alt="cataratas">
-                                <img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
-                                <button class="favorito"><i class="fas fa-heart"></i></button>
-                                <a href="detalleProducto.php" title="Mas Informacion">
-                                    <div class="tit-Destino" >
-                                        <h3>CATARATAS EXTREM</h3>
-                                        <h3>10 DIAS  $ 8.900</h3>
-                                    </div> 
-                                </a>
-                            </div>
-                            
-                        </article>
-                    </div>
-                    
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-                        <article class="borderBox m-3 destino-individual">
-                            
-                            <div class="photo-container">
-                                <img class="photo" src="images/paisaje1.jpg" alt="mina clavero">
-                                <button class="favorito"><i class="fas fa-heart"></i></button>
-                                <a href="detalleProducto.php" title="Mas Informacion">
-                                    <div class="tit-Destino" >
-                                        <h3>MINA CLAVERO PURA AVENTURA</h3>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                        </article>
-                    </div>
-                    
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-                        <article class="border-box m-3 destino-individual">
-                            
-                            <div class="photo-container">
-                                <img class="photo" src="images/Destinos/Salta/saltaMontañaAlpinista.jpg" alt="salta">
-                                <img class="special" src="images/iconos/OfertaEspecial.png" alt="promo">
-                                <button class="favorito"><i class="fas fa-heart"></i></button>
-                                <a href="detalleProducto.php" title="Mas Informacion">
-                                    <div class="tit-Destino" >
-                                        <h3>SALTA ALPINISMO EXTREMO</h3>
-                                    </div>
-                                </a>   
-                            </div>
-                            
-                        </article>
-                    </div>
+                   <?php endif;?>
+                   
                     
                 </div>
                 
