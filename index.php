@@ -1,6 +1,8 @@
 <?php
   
   include_once 'config.php';
+
+ 
   
   function okActualizar(){
     if (isset($_GET["actualizar"])) {
@@ -12,7 +14,7 @@
 
 if ($_SESSION) {
 
-      if ($_SESSION["email"] == "admin") {
+      if ($_SESSION["email"] == "admin@admin.com") {
           $usuarioAdmin = new UsuarioAdmin($_SESSION);
 
         }else{

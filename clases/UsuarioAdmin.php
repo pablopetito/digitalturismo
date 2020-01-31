@@ -2,7 +2,7 @@
 
     class UsuarioAdmin extends Usuario
     {
-
+        
         
     }
 

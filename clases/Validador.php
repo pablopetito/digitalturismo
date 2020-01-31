@@ -134,9 +134,9 @@
                 exit; */
 
                 if (password_verify($array["password"], $usuario["password"])) {
-                    $_SESSION["id"]= $usuario["id_usuario"];
+                    $_SESSION["id_usuario"]= $usuario["id_usuario"];
                     $_SESSION["email"] = $usuario["email"];
-                    $_SESSION["nombre"] = $usuario["nombre_usuario"];
+                    $_SESSION["nombre_usuario"] = $usuario["nombre_usuario"];
                     $_SESSION["facebook"] = $usuario["facebook"];
                     $_SESSION["instagram"] = $usuario["instagram"];
                     $_SESSION["twitter"] = $usuario["twitter"];
@@ -144,9 +144,9 @@
                     
                     
                     if ($recordarme){
-                        setcookie("id", $usuario["id_usuario"], time() + (60 * 60 * 24 * 7));
+                        setcookie("id_usuario", $usuario["id_usuario"], time() + (60 * 60 * 24 * 7));
                         setcookie("email", $usuario["email"], time() + (60 * 60 * 24 * 7));
-                        setcookie("nombre", $usuario["nombre_usuario"], time() + (60 * 60 * 24 * 7));
+                        setcookie("nombre_usuario", $usuario["nombre_usuario"], time() + (60 * 60 * 24 * 7));
                         setcookie("facebook", $usuario["facebook"], time() + (60 * 60 * 24 * 7));
                         setcookie("instagram", $usuario["instagram"], time() + (60 * 60 * 24 * 7));
                         setcookie("twitter", $usuario["twitter"], time() + (60 * 60 * 24 * 7));
@@ -171,7 +171,7 @@
             $link= Conexion::conectar();
             $sql = "SELECT password FROM usuarios WHERE id_usuario = :id";
             $stmt = $link->prepare($sql);
-            $stmt->bindValue(':id', $_SESSION["id"], PDO::PARAM_STR);
+            $stmt->bindValue(':id', $_SESSION["id_usuario"], PDO::PARAM_STR);
             $stmt->execute();
             $usuario=$stmt->fetch(PDO::FETCH_ASSOC);
             
