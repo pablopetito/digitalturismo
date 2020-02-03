@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-01-2020 a las 03:42:49
+-- Tiempo de generación: 03-02-2020 a las 15:46:12
 -- Versión del servidor: 10.3.16-MariaDB
 -- Versión de PHP: 7.3.6
 
@@ -62,7 +62,8 @@ INSERT INTO `destinos` (`id_destino`, `nombre_destino`, `precio`, `promocion`, `
 (3, 'MENDOZA CITY TOUR', '15000.00', 0, 'mendozaCiudad.jpg', 12),
 (4, 'CATARATAS EXTREM 10 DIAS', '8900.00', 10, 'cataratas-iguazu.jpg', 13),
 (5, 'MINA CLAVERO PURA AVENTURA', '10000.00', 0, 'paisaje1.jpg', 5),
-(6, 'SALTA ALPINISMO EXTREMO', '11000.00', 0, 'saltaMontañaAlpinista.jpg', 16);
+(6, 'SALTA ALPINISMO EXTREMO', '11000.00', 0, 'saltaMontañaAlpinista.jpg', 16),
+(8, 'USHUAIA \"EL FIN DEL MUNDO\"', '10000.00', 0, 'img_5e3827062232a.jpg', 22);
 
 -- --------------------------------------------------------
 
@@ -205,7 +206,9 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nombre_usuario`, `email`, `password`, `facebook`, `instagram`, `twitter`, `avatar`, `fecha_alta`) VALUES
-(5, 'Luciano Natiello', 'natielloluciano@gmail.com', '$2y$10$JdS1WZnL9ztP.7xkThWw6.3KLcXkU6OYqtz5NJsJENWL8uEfuCDo2', 'https://www.facebook.com/', 'https://www.instagram.com/?hl=es-la', 'https://twitter.com/home', 'img_5e322c738f8ab.png', '2020-01-29 22:08:03');
+(5, 'Luciano Natiello', 'natielloluciano@gmail.com', '$2y$10$JdS1WZnL9ztP.7xkThWw6.3KLcXkU6OYqtz5NJsJENWL8uEfuCDo2', 'https://www.facebook.com/', 'https://www.instagram.com/?hl=es-la', 'https://twitter.com/home', 'img_5e322c738f8ab.png', '2020-01-29 22:08:03'),
+(6, 'admin', 'admin@admin.com', '$2y$10$NDdk8Px.U0.htdVPkl0H4ublGKz4CZdJWPjJcdgnw6OBGLHBcbyj2', NULL, NULL, NULL, NULL, NULL),
+(7, 'Carlos', 'carlos@asd.com', '$2y$10$wfxHbOXOh2Y8HxReU3OZa.pzMnrJ27phgwbiLz3zLqvCrVx/Mq1XW', 'https://www.facebook.com/', 'https://www.instagram.com/?hl=es-la', 'https://twitter.com/home', 'userImage.png', '2020-02-03 10:41:03');
 
 -- --------------------------------------------------------
 
@@ -319,7 +322,7 @@ ALTER TABLE `comentarios`
 -- AUTO_INCREMENT de la tabla `destinos`
 --
 ALTER TABLE `destinos`
-  MODIFY `id_destino` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_destino` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `favoritos`
@@ -367,7 +370,7 @@ ALTER TABLE `provincia`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `viajes_comprados`

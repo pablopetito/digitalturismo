@@ -3,6 +3,7 @@
     require_once 'config.php';
     $erroresRegistro=[];
     $erroresArchivo=[];
+    $obtenerDestino= Destino::obtenerDestinoPorId($_GET["id"]);
         if($_POST){
             
             $erroresRegistro= Validador::validarFormulario($_POST);
@@ -10,8 +11,10 @@
               $erroresArchivo = Validador::validarImagenPerfil($_FILES);
             }       
             
-            if(count($erroresRegistro) == 0 && count($erroresArchivo) == 0){              
-                  Destino::agregarDestino($_POST, $_FILES);          
+            if(count($erroresRegistro) == 0 && count($erroresArchivo) == 0){
+                
+                
+                  Destino::actualizarDestino($_POST, $_FILES);          
             };
 
         }
@@ -45,8 +48,8 @@
                             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                 <div class="navbar-nav">
                                 <a class="nav-item nav-link active" href="adminIndex.php">Home Admin</a>
-                                <a class="nav-item nav-link active" href="?list=listU">Lista de Usuarios</a>
-                                <a class="nav-item nav-link active" href="?list=listD">Lista de Destinos</a>
+                                <a class="nav-item nav-link active" href="adminIndex.php?list=listU">Lista de Usuarios</a>
+                                <a class="nav-item nav-link active" href="adminIndex.php?list=listD">Lista de Destinos</a>
                                 <a class="nav-item nav-link active" href="#3">Viajes Comprados</a>
                                 
                                 </div>
@@ -72,21 +75,21 @@
              ?>
         
   <div class="col-12">   
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="" method="POST" enctype="multipart/form-data">
 
             <div class="form-group">
                 <label for="exampleInputEmail1">Nombre Destino</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre Destino" name="nombre">
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre Destino" name="nombre" value ="<?= $obtenerDestino->getNombre() ?>">
                 <span id="archivoHelp" class="form-text text-danger"><?=  Validador::existeError($erroresRegistro, "nombre");?></span>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail2">Precio(No colocar signos solo numero)</label>
-                <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="$precio" name="precio">
+                <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="$precio" name="precio" value ="<?= $obtenerDestino->getPrecio() ?>>
                 <span id="archivoHelp" class="form-text text-danger"><?=  Validador::existeError($erroresRegistro, "precio");?></span>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail3">Promocion(0-100%)"Si no tiene promo colocar 0"</label>
-                <input type="text" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="%promocion" name="promocion">
+                <input type="text" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="%promocion" name="promocion" value ="<?= $obtenerDestino->getPromocion() ?>>
                 <span id="archivoHelp" class="form-text text-danger"><?=  Validador::existeError($erroresRegistro, "promocion");?></span>
             </div>
             

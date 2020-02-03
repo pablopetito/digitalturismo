@@ -20,6 +20,18 @@
             $this->provincia = $provincia;
         }
 
+        public function obtenerDestinoPorId($id){
+                $link = Conexion::conectar();
+                $sql = "SELECT * FROM destinos WHERE id_destino = :id";
+                $stmt = $link->prepare($sql);
+                $stmt->bindValue(':id', $id, PARAM_INT);
+                $stmt->execute();
+                $destino = $stmt->fetch(PDO::FETCH_ASSOC);
+                $destino = new Destino($destino["id_destino"],$destino["nombre_destino"], $destino["precio"], $destino["promocion"], $destino["avatar_destino"], $destino["id_provincia"]);
+
+                return $destino;
+        }
+
         public function buscarDestinos($busqueda, $prov = 0)
         {
             $link = Conexion::conectar();
