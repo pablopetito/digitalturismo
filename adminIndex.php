@@ -7,10 +7,6 @@
 
 ?>
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,8 +33,8 @@
                             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                 <div class="navbar-nav">
                                 <a class="nav-item nav-link active" href="adminIndex.php">Home Admin</a>
-                                <a class="nav-item nav-link active" href="?list=listU">Lista de Usuarios</a>
-                                <a class="nav-item nav-link active" href="?list=listD">Lista de Destinos</a>
+                                <a class="nav-item nav-link active" href="adminIndex.php?list=listU">Lista de Usuarios</a>
+                                <a class="nav-item nav-link active" href="adminIndex.php?list=listD">Lista de Destinos</a>
                                 <a class="nav-item nav-link active" href="#3">Viajes Comprados</a>
                                 
                                 </div>
@@ -95,6 +91,29 @@
          case 'listD': ?>
                     <div class="container-fluid mt-5">
                         <div class="row">
+                        
+                        <?php if (isset($_GET["delete"])) {
+                            if ($_GET["delete"] =="ok") { ?>
+                            <div class="alert alert-success" role="alert">
+                                    🌴 Se borro el destino exitosamente. 😄
+                                </div>   
+                         <?php 
+                            }else if($_GET["delete"] =="nok"){
+                                ?>
+
+                            <div class="alert alert-danger" role="alert">
+                                    No se pudo borrar exitosamente.
+                                </div>      
+
+
+                        <?php    }
+                        } 
+                        ?>
+
+                        <div class="col-12 m-3">
+                                 <a href="destinoAlta.php" class="btn btn-primary btn-lg" tabindex="-1" role="button">AGREGAR DESTINO</a>
+                        </div>
+                            
 
                         <?php if(is_array($usuarios)): ?>
                                     <table class="table table-striped">
@@ -116,8 +135,8 @@
                                                     <td>$<?= $destino->getPrecio()?></td>
                                                     <td><?= $destino->getPromocion()?>%</td>
                                                     <td><?= $destino->getProvincia()?></td>
-                                                    <td><a  class="btn btn-success">Editar</a></td>
-                                                    <td><a  class="btn btn-danger">Eliminar</a></td>
+                                                    <td><a href="destinoMod.php?id=<?= $destino->getId() ?>" class="btn btn-success" tabindex="-1" role="button">Editar</a></td>
+                                                    <td><a href="destinoDelete.php?id=<?= $destino->getId() ?>" class="btn btn-danger" tabindex="-1" role="button">Eliminar</a></td>
                                                 </tr>
                                             <?php endforeach; ?>
                                             </tbody>

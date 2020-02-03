@@ -58,6 +58,29 @@
                 $errores["viejaPassword"] = "Contraseña incorrecta, intente nuevamente";
             }
         }
+
+        //Validacion para destinos
+
+        if (isset($array["precio"])) {
+            if (empty($array["precio"])) {
+               $errores["precio"] ="Debes completar este campo";
+            }else if($array["precio"] < 0){
+                $errores["precio"] = "Precio ingresado no válido";
+            }else if(is_integer($array["precio"])){
+                $errores["precio"] = "Precio ingresado no válido";
+            }
+            
+        }
+        if (isset($array["promocion"])) {
+            
+             if($array["promocion"] < 0 || $array["promocion"] >100){
+                $errores["promocion"] = "Promoción ingresada no válida";
+            }
+            else if(is_integer($array["promocion"])){
+                $errores["promocion"] = "Promoción ingresado no válido";
+            }
+            
+        }
         
         return $errores;
 

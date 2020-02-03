@@ -25,13 +25,13 @@
             $link = Conexion::conectar();
             
             if($prov){
-                $sql= "SELECT id_destino, nombre_destino, precio, promocion, avatar_destino FROM destinos WHERE nombre_destino LIKE :nombre AND id_provincia = :prov";
+                $sql= "SELECT id_destino, nombre_destino, precio, promocion, avatar_destino, id_provincia FROM destinos WHERE nombre_destino LIKE :nombre AND id_provincia = :prov";
                 $stmt = $link->prepare($sql);
                 $stmt->bindValue(':nombre', "%".$busqueda."%", PDO::PARAM_STR);
                 $stmt->bindValue(':prov', $prov, PDO::PARAM_INT);
 
             }else{
-                $sql= "SELECT id_destino, nombre_destino, precio, promocion, avatar_destino FROM destinos WHERE nombre_destino LIKE :nombre ";
+                $sql= "SELECT id_destino, nombre_destino, precio, promocion, avatar_destino, id_provincia FROM destinos WHERE nombre_destino LIKE :nombre ";
                 $stmt = $link->prepare($sql);
                 $stmt->bindValue(':nombre', "%".$busqueda."%", PDO::PARAM_STR);
 
@@ -44,7 +44,7 @@
             $destinosObject = [];
             foreach ($destinos as $destino) {
 
-                $finalDestino = new Destino($destino["id_destino"],$destino["nombre_destino"], $destino["precio"], $destino["promocion"], $destino["avatar_destino"]);
+                $finalDestino = new Destino($destino["id_destino"],$destino["nombre_destino"], $destino["precio"], $destino["promocion"], $destino["avatar_destino"], $destino["id_provincia"]);
                 
                 $destinosObject[] = $finalDestino;
             }
@@ -100,6 +100,63 @@
                 return $destinosObject;
             }
 
+
+            public function agregarDestino($array, $archivo){
+                try {
+                    $nombre = strtoupper($array["nombre"]);    
+                    $precio= (int)$array["precio"];
+                    $promocion = (int)$array["promocion"];    
+                    $nombreImagen = Destino::guardarAvatar($archivo);
+                   
+                    $link = Conexion::conectar();
+    
+                    $sql = "INSERT INTO destinos VALUES(null, :nombre, :precio, :promocion, :avatar, :provincia)";
+                    
+                    $stmt= $link->prepare($sql);                   
+                    $stmt->bindValue(':nombre', $nombre, PDO::PARAM_STR);                   
+                    $stmt->bindValue(':precio', $precio, PDO::PARAM_INT);
+                    $stmt->bindValue(':promocion', $promocion, PDO::PARAM_INT); 
+                    $stmt->bindValue(':avatar', $nombreImagen, PDO::PARAM_STR);
+                    $stmt->bindValue(':provincia', $array["provincia"], PDO::PARAM_INT);
+                    $stmt->execute();
+                    header("Location: destinoAlta.php?registro=ok");
+                } catch (\Throwable $th) {
+                    echo "<h2>No se pudo registrar al destino, intentelo nuevamente<br></h2>".$th->getMessage();
+                    header("refresh:5; url=destinoAlta.php");
+    
+                    
+                }
+    
+            }
+            public function guardarAvatar($archivo){
+                $nombreImagen = "userImage.png";
+                if ($archivo["imagenPerfil"]["error"] != UPLOAD_ERR_NO_FILE) {
+                    $ext = strtolower(pathinfo($archivo["imagenPerfil"]["name"], PATHINFO_EXTENSION));
+                    $directorioTemporal = $archivo['imagenPerfil']['tmp_name'];
+                    $nombreImagen = uniqid('img_') . '.' . $ext;
+                    $carpetaFinal= dirname(__DIR__);
+                    $carpetaFinal = $carpetaFinal . '/images/Destinos/';
+                    $carpetaFinal = $carpetaFinal . $nombreImagen;
+                    move_uploaded_file($directorioTemporal, $carpetaFinal);
+                }
+                return $nombreImagen;
+            }
+
+            public function borrarDestino($id){
+                    try {
+                        $link = Conexion::conectar();
+                        $sql = "DELETE FROM destinos WHERE id_destino=:id";
+                        $stmt= $link->prepare($sql);
+                        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+                        $stmt->execute();
+                        return "ok";
+                    } catch (\Throwable $th) {
+                          return "nok";
+                    }
+                    
+                
+
+            }
 
 
         

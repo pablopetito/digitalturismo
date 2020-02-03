@@ -174,7 +174,7 @@
         
         public function agregarUsuario($array, $archivo){
             try {
-                $nombreImagen = $this->guardarAvatar($archivo);
+                $nombreImagen = UsuarioComun::guardarAvatar($archivo);
                 $pass = password_hash($array["password"], PASSWORD_DEFAULT);
                 $nombre= trim($array["nombre"]);
                 $link = Conexion::conectar();

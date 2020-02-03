@@ -14,8 +14,8 @@
 
                   $erroresRegistro = Validador::validarEmailSimilar($_POST["email"]);
                   if (count($erroresRegistro)== 0) {
-                    $usuario = new UsuarioComun;
-                    $usuario->agregarUsuario($_POST, $_FILES);
+                    
+                    UsuarioComun::agregarUsuario($_POST, $_FILES);
                     
                   }
               
