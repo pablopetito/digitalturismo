@@ -2,15 +2,15 @@
     session_start();
 
         if (!isset($_SESSION["email"])) {
-                $hola = 'hola q hace';
+               
             
 
-                if (isset($_COOKIE["email"]) && isset($_COOKIE["nombre"]) && isset($_COOKIE["facebook"]) && isset($_COOKIE["twitter"]) && isset($_COOKIE["instagram"]) && isset($_COOKIE["avatar"])) {
+                if (isset($_COOKIE["email"]) && isset($_COOKIE["nombre_usuario"]) && isset($_COOKIE["facebook"]) && isset($_COOKIE["twitter"]) && isset($_COOKIE["instagram"]) && isset($_COOKIE["avatar"])) {
                     
-                    $_SESSION["id"] = $_COOKIE["id"];
+                    $_SESSION["id_usuario"] = $_COOKIE["id_usuario"];
                 
                     $_SESSION["email"] = $_COOKIE["email"];
-                    $_SESSION["nombre"] = $_COOKIE["nombre"];
+                    $_SESSION["nombre_usuario"] = $_COOKIE["nombre_usuario"];
                     $_SESSION["facebook"] = $_COOKIE["facebook"];
                     $_SESSION["twitter"] = $_COOKIE["twitter"];
                     $_SESSION["instagram"] = $_COOKIE["instagram"];

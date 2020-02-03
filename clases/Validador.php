@@ -58,6 +58,29 @@
                 $errores["viejaPassword"] = "Contraseña incorrecta, intente nuevamente";
             }
         }
+
+        //Validacion para destinos
+
+        if (isset($array["precio"])) {
+            if (empty($array["precio"])) {
+               $errores["precio"] ="Debes completar este campo";
+            }else if($array["precio"] < 0){
+                $errores["precio"] = "Precio ingresado no válido";
+            }else if(is_integer($array["precio"])){
+                $errores["precio"] = "Precio ingresado no válido";
+            }
+            
+        }
+        if (isset($array["promocion"])) {
+            
+             if($array["promocion"] < 0 || $array["promocion"] >100){
+                $errores["promocion"] = "Promoción ingresada no válida";
+            }
+            else if(is_integer($array["promocion"])){
+                $errores["promocion"] = "Promoción ingresado no válido";
+            }
+            
+        }
         
         return $errores;
 
@@ -134,9 +157,9 @@
                 exit; */
 
                 if (password_verify($array["password"], $usuario["password"])) {
-                    $_SESSION["id"]= $usuario["id_usuario"];
+                    $_SESSION["id_usuario"]= $usuario["id_usuario"];
                     $_SESSION["email"] = $usuario["email"];
-                    $_SESSION["nombre"] = $usuario["nombre_usuario"];
+                    $_SESSION["nombre_usuario"] = $usuario["nombre_usuario"];
                     $_SESSION["facebook"] = $usuario["facebook"];
                     $_SESSION["instagram"] = $usuario["instagram"];
                     $_SESSION["twitter"] = $usuario["twitter"];
@@ -144,9 +167,9 @@
                     
                     
                     if ($recordarme){
-                        setcookie("id", $usuario["id_usuario"], time() + (60 * 60 * 24 * 7));
+                        setcookie("id_usuario", $usuario["id_usuario"], time() + (60 * 60 * 24 * 7));
                         setcookie("email", $usuario["email"], time() + (60 * 60 * 24 * 7));
-                        setcookie("nombre", $usuario["nombre_usuario"], time() + (60 * 60 * 24 * 7));
+                        setcookie("nombre_usuario", $usuario["nombre_usuario"], time() + (60 * 60 * 24 * 7));
                         setcookie("facebook", $usuario["facebook"], time() + (60 * 60 * 24 * 7));
                         setcookie("instagram", $usuario["instagram"], time() + (60 * 60 * 24 * 7));
                         setcookie("twitter", $usuario["twitter"], time() + (60 * 60 * 24 * 7));
@@ -171,7 +194,7 @@
             $link= Conexion::conectar();
             $sql = "SELECT password FROM usuarios WHERE id_usuario = :id";
             $stmt = $link->prepare($sql);
-            $stmt->bindValue(':id', $_SESSION["id"], PDO::PARAM_STR);
+            $stmt->bindValue(':id', $_SESSION["id_usuario"], PDO::PARAM_STR);
             $stmt->execute();
             $usuario=$stmt->fetch(PDO::FETCH_ASSOC);
             

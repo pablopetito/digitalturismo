@@ -19,14 +19,19 @@
                 </li>
               </ul>
               
-              <?php if(!isset($_SESSION["nombre"])): ?>
+              <?php if(!isset($_SESSION["nombre_usuario"])): ?>
               <a href="login.php"><button class="btn my-2 my-sm-0 boton-ingreso" type="submit"><i class="fas fa-user"></i>INGRESAR</button></a>
               <?php else : ?>
                 <ul class="navbar-nav ml-md-auto">
 									<li class="nav-item dropdown ">
-										 <a class="nav-link dropdown-toggle boton-ingreso p-2 d-flex justify-content-center align-items-center text-uppercase text-white" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><?= $_SESSION["nombre"] ?></a>
+										 <a class="nav-link dropdown-toggle boton-ingreso p-2 d-flex justify-content-center align-items-center text-uppercase text-white" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><?= $_SESSION["nombre_usuario"] ?></a>
 										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-											 <a class="dropdown-item" href="user.php">Mi perfil</a>
+                    <?php if ($_SESSION["email"] == "admin@admin.com" ): ?>
+                      <a class="dropdown-item" href="adminIndex.php">Mi perfil</a>
+                    <?php else: ?>
+                        <a class="dropdown-item" href="user.php">Mi perfil</a>
+                    <?php endif; ?>
+											
 
 											  <div class="dropdown-divider"></div>
 											 

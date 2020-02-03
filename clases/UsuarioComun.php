@@ -15,14 +15,38 @@
 
 
         public function __construct($array){
-                $this->setId($array["id"]);
-                $this->setNombre($array["nombre"]);
+                $this->setId($array["id_usuario"]);
+                $this->setNombre($array["nombre_usuario"]);
                 $this->setEmail($array["email"]);
                 $this->setFacebook($array["facebook"]);
                 $this->setTwitter($array["twitter"]);
                 $this->setInstagram($array["instagram"]);
                 $this->setImagenPerfil($array["avatar"]);
+                
 
+        }
+
+
+        public function listarUsuarios(){
+                $link = Conexion::conectar();
+                $sql = "SELECT * FROM usuarios";
+
+                try {
+                        $stmt = $link->prepare($sql);
+                        $stmt->execute();
+
+                } catch (\Throwable $th) {
+                        return "No se pudo obtener los destinos intente nuevamente";
+                }
+
+                $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $usuariosObject= [];
+
+                foreach ($usuarios as $usuario) {
+                        $finalUsuario= new UsuarioComun($usuario);
+                        $usuariosObject[]= $finalUsuario;
+                }
+                return $usuariosObject;
         }
 
 
@@ -150,7 +174,7 @@
         
         public function agregarUsuario($array, $archivo){
             try {
-                $nombreImagen = $this->guardarAvatar($archivo);
+                $nombreImagen = UsuarioComun::guardarAvatar($archivo);
                 $pass = password_hash($array["password"], PASSWORD_DEFAULT);
                 $nombre= trim($array["nombre"]);
                 $link = Conexion::conectar();
@@ -208,14 +232,14 @@
 
                         $stmt->execute();
                         
-                        $this->setNombre($array["nombre"]);
+                        $this->setNombre($array["nombre_usuario"]);
                         $this->setEmail($array["email"]);
                         $this->setFacebook($array["facebook"]);
                         $this->setTwitter($array["twitter"]);
                         $this->setInstagram($array["instagram"]);
                         $this->setImagenPerfil($imagen);
 
-                        $_SESSION["nombre"] = $this->getNombre();
+                        $_SESSION["nombre_usuario"] = $this->getNombre();
                         $_SESSION["email"] = $this->getEmail();
                         $_SESSION["facebook"] = $this->getFacebook();
                         $_SESSION["twitter"] = $this->getTwitter();
@@ -236,7 +260,7 @@
                 $sql = "UPDATE usuarios SET password = :pass WHERE id_usuario= :id";
                 $stmt = $link->prepare($sql);
                 $stmt->bindValue(':pass', $pass, PDO::PARAM_STR);
-                $stmt->bindValue(':id', $_SESSION["id"], PDO::PARAM_INT);
+                $stmt->bindValue(':id', $_SESSION["id_usuario"], PDO::PARAM_INT);
                 $stmt->execute();
                 } catch (\Throwable $th) {
                         return false;

@@ -172,7 +172,7 @@
                         
                    <?php else:?>
                     <div class="alert alert-danger" role="alert">
-                        <span class="alert-link"><?= $destino ?></span>
+                        <span class="alert-link"><?= $destinos ?></span>
                     </div>
                    <?php endif;?>
                    
