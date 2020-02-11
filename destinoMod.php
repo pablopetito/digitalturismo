@@ -3,7 +3,9 @@
     require_once 'config.php';
     $erroresRegistro=[];
     $erroresArchivo=[];
-    $obtenerDestino= Destino::obtenerDestinoPorId($_GET["id"]);
+    $id = (int)$_GET["id"];
+    
+    $obtenerDestino= Destino::obtenerDestinoPorId($id);
         if($_POST){
             
             $erroresRegistro= Validador::validarFormulario($_POST);
@@ -20,6 +22,7 @@
         }
 
     $provincias= Provincia::listarProvincia();
+    $provinciaPorId= Provincia::provinciaPorId($obtenerDestino->getProvincia());
        
 ?>
 
@@ -84,19 +87,19 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail2">Precio(No colocar signos solo numero)</label>
-                <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="$precio" name="precio" value ="<?= $obtenerDestino->getPrecio() ?>>
+                <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="$precio" name="precio" value ="<?= $obtenerDestino->getPrecio() ?>">
                 <span id="archivoHelp" class="form-text text-danger"><?=  Validador::existeError($erroresRegistro, "precio");?></span>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail3">Promocion(0-100%)"Si no tiene promo colocar 0"</label>
-                <input type="text" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="%promocion" name="promocion" value ="<?= $obtenerDestino->getPromocion() ?>>
+                <input type="text" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="%promocion" name="promocion" value ="<?= $obtenerDestino->getPromocion() ?>">
                 <span id="archivoHelp" class="form-text text-danger"><?=  Validador::existeError($erroresRegistro, "promocion");?></span>
             </div>
             
             <div class="form-group">
             <label for="exampleInputEmail5">Provincia</label>
                 <select class="form-control" name="provincia">
-                    <option value="">Elegir provincia</option>
+                    <option value="<?= $obtenerDestino->getProvincia() ?>" selected><?= $provinciaPorId->getNombre()?></option>
                     <?php foreach($provincias as $provincia): ?>
                     <option value="<?= $provincia->getId() ?>">
                     <?= $provincia->getNombre() ?> </option>

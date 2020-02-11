@@ -74,7 +74,9 @@
          
     </div>
 </form>
-
+<div class="alert alert-danger m-0" role="alert">
+               <b> PARA HACER CRUD DE DESTINOS INGRESAR admin@admin.com, pass: 123456, luego ir a mi perfil y apareces en el perfil del admin </b> 
+            </div>
 
 </div>
 

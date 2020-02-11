@@ -34,6 +34,22 @@ class Provincia
         return $provinciasObject;
 
     }
+    public function provinciaPorId($id)
+    {
+        $link = Conexion::conectar();
+        $sql= "SELECT id_provincia, nombre_provincia, id_pais FROM provincia WHERE id_provincia = :id";      
+        $stmt = $link->prepare($sql);
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);  
+        $stmt->execute();
+
+        $provincia = $stmt->fetch(PDO::FETCH_ASSOC);
+ 
+            $provincia = new Provincia($provincia["id_provincia"], $provincia["nombre_provincia"], $provincia["id_pais"]);
+            
+        
+        return $provincia;
+
+    }
 
     /**
      * Get the value of nombre
